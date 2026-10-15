@@ -1,0 +1,131 @@
+id: "p17"
+order: 23
+year: 2
+section: "P"
+badge: "G"
+spec: "G"
+title: "Differentiation techniques"
+desc: "Derivatives of eˣ, ln x, aˣ and trig functions, the chain, product and quotient rules, and differentiating inverse functions."
+practicals: []
+summary:
+  - h: "Standard derivatives"
+    p:
+      - "`d/dx (eᵏˣ) = keᵏˣ`, `d/dx (ln x) = 1/x`, `d/dx (aˣ) = aˣ ln a`."
+      - "`d/dx (sin kx) = k cos kx`, `d/dx (cos kx) = −k sin kx`, `d/dx (tan kx) = k sec²kx`."
+      - "Also from the formula book: d/dx (sec x) = sec x tan x, d/dx (cosec x) = −cosec x cot x, d/dx (cot x) = −cosec²x."
+      - "Trig derivatives only work with x in **radians**."
+      - "sin x and cos x can be differentiated from first principles using small-angle approximations."
+  - h: "Chain rule"
+    p:
+      - "For a function of a function: `dy/dx = dy/du × du/dx`."
+      - "E.g. y = (3x + 1)⁵: dy/dx = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴."
+      - "`d/dx [ln f(x)] = f′(x)/f(x)` and `d/dx [e^f(x)] = f′(x)e^f(x)`."
+      - "Inverse: `dx/dy = 1 ÷ (dy/dx)`."
+  - h: "Product and quotient rules"
+    p:
+      - "**Product rule**: y = uv, `dy/dx = u dv/dx + v du/dx`."
+      - "**Quotient rule**: y = u/v, `dy/dx = (v du/dx − u dv/dx)/v²`."
+pitfalls:
+  - "Don't forget to multiply by the **derivative of the inside** in the chain rule."
+  - "The quotient rule has a **minus** and the order matters: v u′ − u v′."
+  - "d/dx (ln 3x) = 1/x, not 3/x, because ln 3x = ln 3 + ln x."
+examples:
+  - q: "Differentiate y = x² sin x."
+    steps:
+      - "u = x², v = sin x; u′ = 2x, v′ = cos x."
+      - "dy/dx = x² cos x + 2x sin x."
+    a: "x² cos x + 2x sin x"
+  - q: "Differentiate y = eˣ/(x + 1)."
+    steps:
+      - "u = eˣ, v = x + 1; u′ = eˣ, v′ = 1."
+      - "dy/dx = [(x + 1)eˣ − eˣ]/(x + 1)²."
+    a: "xeˣ/(x + 1)²"
+questions:
+  - q: "Differentiate y = e^(5x)."
+    o: ["e^(5x)", "5e^(5x)", "5x e^(5x)", "e^(5x)/5"]
+    a: 1
+    e: "d/dx (eᵏˣ) = keᵏˣ."
+  - q: "Differentiate y = ln x."
+    o: ["1/x", "ln x/x", "x", "eˣ"]
+    a: 0
+    e: "A standard result."
+  - q: "Differentiate y = sin 3x."
+    o: ["cos 3x", "−3 cos 3x", "3 cos 3x", "3 sin 3x"]
+    a: 2
+    e: "d/dx (sin kx) = k cos kx."
+  - q: "Differentiate y = cos 2x."
+    o: ["2 sin 2x", "sin 2x", "−sin 2x", "−2 sin 2x"]
+    a: 3
+    e: "d/dx (cos kx) = −k sin kx."
+  - q: "Differentiate y = (2x + 1)⁴."
+    o: ["8(2x + 1)³", "4(2x + 1)³", "2(2x + 1)³", "8(2x + 1)⁴"]
+    a: 0
+    e: "Chain rule: 4(2x + 1)³ × 2."
+  - q: "Differentiate y = ln(x² + 1)."
+    o: ["1/(x² + 1)", "2x/(x² + 1)", "2x ln(x² + 1)", "x/(x² + 1)"]
+    a: 1
+    e: "f′(x)/f(x) = 2x/(x² + 1)."
+  - q: "Differentiate y = e^(x²)."
+    o: ["e^(x²)", "x²e^(x²−1)", "2x e^(x²)", "2e^(x²)"]
+    a: 2
+    e: "Chain rule: e^(x²) × 2x."
+  - q: "Differentiate y = 2ˣ."
+    o: ["x 2ˣ⁻¹", "2ˣ", "2ˣ/ln 2", "2ˣ ln 2"]
+    a: 3
+    e: "d/dx (aˣ) = aˣ ln a."
+  - q: "Differentiate y = x eˣ."
+    o: ["eˣ(x + 1)", "eˣ", "x eˣ", "eˣ + 1"]
+    a: 0
+    e: "Product rule: x eˣ + eˣ."
+  - q: "Differentiate y = x³ ln x."
+    o: ["3x²/x", "3x² ln x + x²", "x² ln x", "3x² ln x + x³"]
+    a: 1
+    e: "u = x³, v = ln x. 3x² ln x + x³ × 1/x = 3x² ln x + x²."
+  - q: "Differentiate y = sin x/x."
+    o: ["cos x/1", "(x cos x + sin x)/x²", "(x cos x − sin x)/x²", "(sin x − x cos x)/x²"]
+    a: 2
+    e: "Quotient rule: (v u′ − u v′)/v² = (x cos x − sin x)/x²."
+  - q: "Differentiate y = tan 4x."
+    o: ["sec²4x", "4 tan 4x", "−4 sec²4x", "4 sec²4x"]
+    a: 3
+    e: "d/dx (tan kx) = k sec²kx."
+  - q: "Differentiate y = ln(5x)."
+    o: ["1/x", "5/x", "1/(5x)", "5 ln x"]
+    a: 0
+    e: "ln 5x = ln 5 + ln x, so the derivative is 1/x."
+  - q: "x = y³ + y. Find dy/dx in terms of y."
+    o: ["3y² + 1", "1/(3y² + 1)", "3y²", "y³"]
+    a: 1
+    e: "dx/dy = 3y² + 1, so dy/dx = 1/(3y² + 1)."
+  - q: "Differentiate y = √(1 + 2x)."
+    o: ["½(1 + 2x)^(−1/2)", "2(1 + 2x)^(−1/2)", "(1 + 2x)^(−1/2)", "(1 + 2x)^(1/2)"]
+    a: 2
+    e: "½(1 + 2x)^(−1/2) × 2 = (1 + 2x)^(−1/2)."
+  - q: "Find the gradient of y = eˣ sin x at x = 0."
+    o: ["0", "2", "e", "1"]
+    a: 3
+    e: "dy/dx = eˣ sin x + eˣ cos x = 0 + 1 = 1 at x = 0."
+  - q: "What is the quotient rule for y = u/v?"
+    o: ["(v u′ − u v′)/v²", "(u v′ − v u′)/v²", "u′/v′", "(u′v + uv′)/v²"]
+    a: 0
+    e: "Remember the order: v du/dx minus u dv/dx, over v squared."
+  - q: "Differentiate y = sin²x."
+    o: ["cos²x", "2 sin x cos x", "2 cos x", "−2 sin x cos x"]
+    a: 1
+    e: "Chain rule: 2 sin x × cos x (= sin 2x)."
+  - q: "Why must x be in radians when differentiating trig functions?"
+    o: ["Calculators require it", "Degrees don't have derivatives", "The results like d/dx(sin x) = cos x come from small-angle approximations, which only hold in radians", "It's a convention only"]
+    a: 2
+    e: "In degrees, extra factors of π/180 would appear."
+  - q: "Differentiate y = e^(−x) cos x."
+    o: ["e^(−x) sin x", "−e^(−x)(cos x − sin x)", "e^(−x)(cos x − sin x)", "−e^(−x)(cos x + sin x)"]
+    a: 3
+    e: "−e^(−x) cos x + e^(−x)(−sin x) = −e^(−x)(cos x + sin x)."
+  - q: "Differentiate y = sec x."
+    o: ["sec x tan x", "sec²x", "−sec x tan x", "cosec x"]
+    a: 0
+    e: "A standard result from the formula book."
+  - q: "Differentiate y = 1/(x² + 3)."
+    o: ["1/(2x)", "−2x/(x² + 3)²", "2x/(x² + 3)²", "−1/(x² + 3)²"]
+    a: 1
+    e: "(x² + 3)⁻¹ → −(x² + 3)⁻² × 2x."

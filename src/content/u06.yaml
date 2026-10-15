@@ -1,0 +1,137 @@
+id: "p6"
+order: 6
+year: 1
+section: "P"
+badge: "E"
+spec: "E"
+title: "Trigonometry"
+desc: "Sine and cosine rules, area of a triangle, trig graphs and exact values, the identities tan θ = sin θ/cos θ and sin²θ + cos²θ = 1, and solving trig equations."
+practicals: []
+summary:
+  - h: "Triangles"
+    p:
+      - "**Sine rule**: `a/sin A = b/sin B = c/sin C`. Use when you know a side and its opposite angle."
+      - "**Cosine rule**: `a² = b² + c² − 2bc cos A`. Use with two sides and the included angle, or three sides."
+      - "**Area**: `Area = ½ab sin C`."
+      - "**Ambiguous case**: when using the sine rule to find an angle, there may be two possible angles, θ and 180° − θ."
+  - h: "Exact values and graphs"
+    p:
+      - "sin 30° = ½, sin 45° = √2/2, sin 60° = √3/2. cos 30° = √3/2, cos 45° = √2/2, cos 60° = ½. tan 30° = 1/√3, tan 45° = 1, tan 60° = √3."
+      - "y = sin x and y = cos x have **period 360°** and range −1 to 1. y = tan x has **period 180°** and asymptotes at x = 90°, 270°, ..."
+      - "Symmetries: sin(180° − θ) = sin θ, cos(360° − θ) = cos θ, tan(180° + θ) = tan θ."
+  - h: "Identities"
+    p:
+      - "`tan θ = sin θ / cos θ`"
+      - "`sin²θ + cos²θ = 1`"
+      - "Use these to rewrite equations in a single trig function."
+  - h: "Solving trig equations"
+    p:
+      - "Find the **principal value** with a calculator, then use the graph or CAST diagram to find all solutions in the given interval."
+      - "For sin x = k: x = α and 180° − α. For cos x = k: x = α and 360° − α. For tan x = k: x = α and α + 180°."
+      - "For sin 2x = k in 0 ≤ x < 360°, solve for 2x in **0 ≤ 2x < 720°**, then halve."
+      - "Quadratics in sin or cos: factorise, then solve each factor. Reject values outside −1 to 1."
+pitfalls:
+  - "Make sure your calculator is in **degrees** (or radians for Year 2 questions)."
+  - "Don't divide by sin x or cos x: you lose solutions. Factorise instead."
+  - "Adjust the interval when the angle is 2x, x + 30°, etc."
+examples:
+  - q: "Solve 2cos²x + 3sin x − 3 = 0 for 0° ≤ x < 360°."
+    steps:
+      - "Replace cos²x with 1 − sin²x: 2 − 2sin²x + 3sin x − 3 = 0."
+      - "So 2sin²x − 3sin x + 1 = 0, giving (2sin x − 1)(sin x − 1) = 0."
+      - "sin x = ½: x = 30° or 150°. sin x = 1: x = 90°."
+    a: "x = 30°, 90°, 150°"
+  - q: "In triangle ABC, a = 7 cm, b = 5 cm and angle C = 60°. Find c."
+    steps:
+      - "c² = 7² + 5² − 2(7)(5)cos 60°."
+      - "c² = 49 + 25 − 35 = 39."
+    a: "c = √39 ≈ 6.24 cm"
+questions:
+  - q: "What is the exact value of sin 60°?"
+    o: ["1/2", "√3/2", "√2/2", "√3"]
+    a: 1
+    e: "From the equilateral triangle: sin 60° = √3/2."
+  - q: "What is the exact value of tan 45°?"
+    o: ["1", "√2/2", "0", "√3"]
+    a: 0
+    e: "In a right isosceles triangle, opposite = adjacent."
+  - q: "Which formula is the cosine rule?"
+    o: ["a/sin A = b/sin B", "Area = ½ab sin C", "a² = b² + c² − 2bc cos A", "sin²A + cos²A = 1"]
+    a: 2
+    e: "Use it for two sides and the included angle, or three sides."
+  - q: "Find the area of a triangle with sides 6 cm and 8 cm and included angle 30°."
+    o: ["48 cm²", "24 cm²", "6 cm²", "12 cm²"]
+    a: 3
+    e: "½ × 6 × 8 × sin 30° = 24 × ½ = 12 cm²."
+  - q: "What is the period of y = tan x (in degrees)?"
+    o: ["180°", "360°", "90°", "720°"]
+    a: 0
+    e: "tan repeats every 180°."
+  - q: "Solve sin x = 0.5 for 0° ≤ x < 360°."
+    o: ["30° only", "30° and 150°", "30° and 330°", "60° and 120°"]
+    a: 1
+    e: "sin x = ½ at 30° and 180° − 30° = 150°."
+  - q: "Solve cos x = −0.5 for 0° ≤ x < 360°."
+    o: ["60° and 300°", "120° only", "120° and 240°", "150° and 210°"]
+    a: 2
+    e: "Principal value 120°; the other is 360° − 120° = 240°."
+  - q: "Solve tan x = √3 for 0° ≤ x < 360°."
+    o: ["60° only", "60° and 120°", "30° and 210°", "60° and 240°"]
+    a: 3
+    e: "tan x = √3 at 60°, and again 180° later at 240°."
+  - q: "Which identity is always true?"
+    o: ["sin²θ + cos²θ = 1", "sin θ + cos θ = 1", "tan θ = cos θ / sin θ", "sin²θ − cos²θ = 1"]
+    a: 0
+    e: "This comes from Pythagoras on the unit circle."
+  - q: "Simplify sin x / cos x."
+    o: ["cot x", "tan x", "1", "sec x"]
+    a: 1
+    e: "By definition, tan x = sin x / cos x."
+  - q: "In triangle ABC, a = 10, A = 30° and B = 45°. Find b (exact)."
+    o: ["5√2", "20", "10√2", "10√3"]
+    a: 2
+    e: "b = a sin B / sin A = 10 × (√2/2) ÷ ½ = 10√2."
+  - q: "Find angle A if a = 7, b = 5, c = 3."
+    o: ["60°", "90°", "30°", "120°"]
+    a: 3
+    e: "cos A = (25 + 9 − 49)/(2 × 5 × 3) = −15/30 = −½, so A = 120°."
+  - q: "Solve sin 2x = 1 for 0° ≤ x < 360°."
+    o: ["45° and 225°", "90° only", "45° only", "90° and 270°"]
+    a: 0
+    e: "2x = 90° or 450° (range 0° to 720°), so x = 45° or 225°."
+  - q: "Solve 3 tan x = √3 for 0° ≤ x < 360°."
+    o: ["60° and 240°", "30° and 210°", "30° and 150°", "30° only"]
+    a: 1
+    e: "tan x = 1/√3, so x = 30° or 210°."
+  - q: "Why can sin x = 2 not be solved?"
+    o: ["It needs radians", "2 is irrational", "The range of sin x is −1 ≤ sin x ≤ 1", "It has infinitely many solutions"]
+    a: 2
+    e: "Sine never exceeds 1."
+  - q: "Write 4 − 3cos²x in terms of sin x."
+    o: ["1 + 3sin x", "4 − 3sin²x", "7 − 3sin²x", "1 + 3sin²x"]
+    a: 3
+    e: "cos²x = 1 − sin²x, so 4 − 3 + 3sin²x = 1 + 3sin²x."
+  - q: "How many solutions does cos x = 0.3 have for 0° ≤ x < 720°?"
+    o: ["4", "2", "1", "3"]
+    a: 0
+    e: "Two solutions in each 360° cycle."
+  - q: "What is the exact value of cos 30°?"
+    o: ["1/2", "√3/2", "√2/2", "1/√3"]
+    a: 1
+    e: "cos 30° = sin 60° = √3/2."
+  - q: "Solve sin x cos x = sin x for 0° ≤ x ≤ 360°. Which method is correct?"
+    o: ["Divide by sin x to get cos x = 1", "Square both sides", "Rearrange to sin x(cos x − 1) = 0 and solve both factors", "Use the sine rule"]
+    a: 2
+    e: "Dividing by sin x loses the solutions where sin x = 0. Answers: 0°, 180°, 360°."
+  - q: "What is the maximum value of y = 3 sin x?"
+    o: ["1", "1/3", "−3", "3"]
+    a: 3
+    e: "sin x has maximum 1, so 3 sin x has maximum 3."
+  - q: "Using the sine rule to find angle B gives sin B = 0.8. Which angles are possible?"
+    o: ["53.1° or 126.9°", "53.1° only", "36.9° or 143.1°", "53.1° or 233.1°"]
+    a: 0
+    e: "sin⁻¹ 0.8 = 53.1°, and 180° − 53.1° = 126.9°. Check each fits the triangle."
+  - q: "What is the exact value of sin 45°?"
+    o: ["1/2", "√2/2", "√3/2", "1"]
+    a: 1
+    e: "sin 45° = 1/√2 = √2/2."

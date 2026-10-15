@@ -1,0 +1,138 @@
+id: "p8"
+order: 8
+year: 1
+section: "P"
+badge: "G"
+spec: "G"
+title: "Differentiation"
+desc: "Differentiation from first principles, differentiating xⁿ, tangents and normals, increasing and decreasing functions, stationary points and optimisation."
+practicals: []
+summary:
+  - h: "First principles"
+    p:
+      - "The derivative is the **gradient of the tangent**, the limit of the gradient of a chord as h → 0."
+      - "`f′(x) = lim (h→0) [f(x + h) − f(x)] / h`"
+      - "E.g. for f(x) = x²: [(x + h)² − x²]/h = (2xh + h²)/h = 2x + h → 2x."
+  - h: "Rules"
+    p:
+      - "`d/dx (xⁿ) = nxⁿ⁻¹` for any rational n."
+      - "`d/dx (kxⁿ) = knxⁿ⁻¹`. Constants differentiate to 0."
+      - "Rewrite roots and fractions as powers first: √x = x^(1/2), 1/x² = x⁻²."
+      - "dy/dx is the gradient function. d²y/dx² is the **second derivative**."
+  - h: "Tangents and normals"
+    p:
+      - "Gradient of the **tangent** at x = a is f′(a)."
+      - "The **normal** is perpendicular to the tangent: gradient −1/f′(a)."
+      - "Then use y − y₁ = m(x − x₁)."
+  - h: "Stationary points"
+    p:
+      - "**Increasing** where dy/dx > 0. **Decreasing** where dy/dx < 0."
+      - "**Stationary points**: dy/dx = 0."
+      - "If d²y/dx² > 0 it's a **minimum**. If d²y/dx² < 0 it's a **maximum**. If it's 0, check the gradient either side."
+      - "**Optimisation**: form an expression for the quantity, differentiate, set to zero, solve, then check it's a max or min."
+pitfalls:
+  - "Rewrite 1/x³ as x⁻³ **before** differentiating."
+  - "The normal gradient is the **negative reciprocal**, not just the negative."
+  - "When asked to 'show' a first-principles result, show the h terms cancelling and the limit."
+examples:
+  - q: "Find the stationary points of y = x³ − 3x + 2 and determine their nature."
+    steps:
+      - "dy/dx = 3x² − 3 = 0, so x² = 1, x = ±1."
+      - "x = 1: y = 0. x = −1: y = 4."
+      - "d²y/dx² = 6x. At x = 1 it's 6 > 0 (minimum). At x = −1 it's −6 < 0 (maximum)."
+    a: "Minimum (1, 0); maximum (−1, 4)"
+  - q: "Find the equation of the normal to y = x² + 1 at (2, 5)."
+    steps:
+      - "dy/dx = 2x = 4 at x = 2."
+      - "Normal gradient = −1/4."
+      - "y − 5 = −¼(x − 2), so 4y − 20 = −x + 2."
+    a: "x + 4y − 22 = 0"
+questions:
+  - q: "Differentiate y = 5x³."
+    o: ["5x²", "15x²", "15x³", "3x²"]
+    a: 1
+    e: "dy/dx = 5 × 3x² = 15x²."
+  - q: "Differentiate y = 4√x."
+    o: ["2x^(−1/2)", "4x^(1/2)", "2x^(1/2)", "8x^(−1/2)"]
+    a: 0
+    e: "4x^(1/2) differentiates to 4 × ½ x^(−1/2) = 2x^(−1/2) = 2/√x."
+  - q: "Differentiate y = 3/x²."
+    o: ["−3/x", "6/x³", "−6/x³", "3/(2x)"]
+    a: 2
+    e: "3x⁻² → −6x⁻³ = −6/x³."
+  - q: "Find the gradient of y = x² − 4x at x = 3."
+    o: ["−3", "−1", "5", "2"]
+    a: 3
+    e: "dy/dx = 2x − 4 = 2 at x = 3."
+  - q: "Differentiate y = 7."
+    o: ["0", "7", "7x", "1"]
+    a: 0
+    e: "A constant has zero gradient."
+  - q: "What is f′(x) defined as from first principles?"
+    o: ["[f(x) − f(h)]/x", "lim (h→0) [f(x + h) − f(x)]/h", "f(x + 1) − f(x)", "lim (h→∞) f(x)/h"]
+    a: 1
+    e: "The gradient of a chord as its width h shrinks to zero."
+  - q: "From first principles for f(x) = x², what is [f(x + h) − f(x)]/h?"
+    o: ["2x", "x + h", "2x + h", "h²"]
+    a: 2
+    e: "(x² + 2xh + h² − x²)/h = 2x + h, which tends to 2x."
+  - q: "The tangent to a curve at a point has gradient 2. What is the gradient of the normal?"
+    o: ["2", "−2", "1/2", "−1/2"]
+    a: 3
+    e: "Normal gradient = −1/2."
+  - q: "Find the equation of the tangent to y = x² at (3, 9)."
+    o: ["y = 6x − 9", "y = 6x + 9", "y = 3x", "y = 9x − 18"]
+    a: 0
+    e: "dy/dx = 6 at x = 3. y − 9 = 6(x − 3), so y = 6x − 9."
+  - q: "For what values of x is y = x² − 6x increasing?"
+    o: ["x < 3", "x > 3", "x > 6", "x < 0"]
+    a: 1
+    e: "dy/dx = 2x − 6 > 0 when x > 3."
+  - q: "Find the x-coordinate of the stationary point of y = x² − 10x + 3."
+    o: ["10", "−5", "5", "3"]
+    a: 2
+    e: "2x − 10 = 0, so x = 5."
+  - q: "d²y/dx² is positive at a stationary point. What type is it?"
+    o: ["Maximum", "Point of inflection", "Cannot tell", "Minimum"]
+    a: 3
+    e: "Positive second derivative means the curve is U-shaped there."
+  - q: "Find d²y/dx² for y = x⁴ − 2x³."
+    o: ["12x² − 12x", "4x³ − 6x²", "12x² − 6x", "4x² − 6x"]
+    a: 0
+    e: "dy/dx = 4x³ − 6x², then d²y/dx² = 12x² − 12x."
+  - q: "Differentiate y = (x + 2)(x − 3) by expanding first."
+    o: ["2x − 6", "2x − 1", "x − 1", "2x + 1"]
+    a: 1
+    e: "y = x² − x − 6, so dy/dx = 2x − 1."
+  - q: "Differentiate y = (x³ + x)/x."
+    o: ["3x² + 1", "2x + 1", "2x", "x²"]
+    a: 2
+    e: "Simplify first: y = x² + 1, so dy/dx = 2x."
+  - q: "y = x³ − 12x. Find the coordinates of the maximum point."
+    o: ["(2, −16)", "(0, 0)", "(−2, −16)", "(−2, 16)"]
+    a: 3
+    e: "3x² − 12 = 0 gives x = ±2. At x = −2, y = −8 + 24 = 16, and d²y/dx² = −12 < 0."
+  - q: "A rectangle has perimeter 20 cm. What is its maximum area?"
+    o: ["25 cm²", "20 cm²", "100 cm²", "24 cm²"]
+    a: 0
+    e: "A = x(10 − x). dA/dx = 10 − 2x = 0 at x = 5, giving A = 25 cm² (a square)."
+  - q: "What does dy/dx represent?"
+    o: ["The area under the curve", "The rate of change of y with respect to x (gradient)", "The y-intercept", "The value of y"]
+    a: 1
+    e: "dy/dx is the gradient function."
+  - q: "Differentiate y = x^(3/2)."
+    o: ["(2/3)x^(1/2)", "x^(1/2)", "(3/2)x^(1/2)", "(3/2)x^(5/2)"]
+    a: 2
+    e: "Multiply by the power, then reduce it by 1."
+  - q: "Find the gradient of y = 2/x at x = 2."
+    o: ["1", "−1", "1/2", "−1/2"]
+    a: 3
+    e: "y = 2x⁻¹, dy/dx = −2x⁻² = −2/4 = −½."
+  - q: "At a stationary point, what is the value of dy/dx?"
+    o: ["0", "1", "Undefined", "Positive"]
+    a: 0
+    e: "The tangent is horizontal at a stationary point."
+  - q: "Find the equation of the normal to y = 2x² at (1, 2)."
+    o: ["y = 4x − 2", "x + 4y − 9 = 0", "4x + y − 6 = 0", "x − 4y + 7 = 0"]
+    a: 1
+    e: "dy/dx = 4x = 4. Normal gradient −1/4. y − 2 = −¼(x − 1) gives x + 4y − 9 = 0."

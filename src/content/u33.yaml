@@ -1,0 +1,128 @@
+id: "m4"
+order: 33
+year: 2
+section: "M"
+badge: "Q"
+spec: "Q"
+title: "Variable acceleration and vectors in kinematics"
+desc: "Using calculus for displacement, velocity and acceleration as functions of time, and kinematics with vectors in two dimensions."
+practicals: []
+summary:
+  - h: "Calculus in kinematics"
+    p:
+      - "When acceleration is **not constant**, suvat can't be used. Use calculus."
+      - "**Differentiate** to go down: `v = ds/dt`, `a = dv/dt = d²s/dt²`."
+      - "**Integrate** to go up: `v = ∫a dt`, `s = ∫v dt`. Use **initial conditions** to find the constant of integration."
+      - "**Maximum or minimum displacement**: set v = 0. **Maximum velocity**: set a = 0."
+      - "Distance travelled may differ from displacement if the particle **changes direction**: find when v = 0 and split the integral."
+  - h: "Vectors in kinematics"
+    p:
+      - "Position, velocity and acceleration can be vectors, e.g. `r = (2t² i + 3t j)` m."
+      - "Differentiate or integrate **each component** separately: `v = dr/dt`, `a = dv/dt`."
+      - "With constant acceleration, suvat works in vector form: `v = u + at`, `r = ut + ½at²`."
+      - "**Speed** is the magnitude of velocity: `|v| = √(x² + y²)`."
+pitfalls:
+  - "Don't use suvat unless acceleration is **constant**."
+  - "Always add **+ c** when integrating, then use given conditions to find it."
+  - "Speed is the **magnitude** of the velocity vector. Direction is found with tan."
+examples:
+  - q: "A particle moves in a straight line with v = 3t² − 12t + 9 m s⁻¹. Find when it is instantaneously at rest and its acceleration at t = 4."
+    steps:
+      - "At rest: 3t² − 12t + 9 = 0, so t² − 4t + 3 = 0, (t − 1)(t − 3) = 0."
+      - "t = 1 s and t = 3 s."
+      - "a = dv/dt = 6t − 12. At t = 4: a = 24 − 12 = 12."
+    a: "At rest at t = 1 s and t = 3 s; a = 12 m s⁻² at t = 4"
+  - q: "A particle has a = (2i − 4j) m s⁻² and starts at rest at the origin. Find its velocity and speed at t = 3."
+    steps:
+      - "v = u + at = 0 + 3(2i − 4j) = 6i − 12j."
+      - "Speed = √(6² + 12²) = √180 = 13.4 m s⁻¹."
+    a: "v = 6i − 12j m s⁻¹, speed ≈ 13.4 m s⁻¹"
+questions:
+  - q: "How is velocity found from displacement s(t)?"
+    o: ["Integrate s", "Differentiate s with respect to t", "Divide s by t", "Multiply s by t"]
+    a: 1
+    e: "v = ds/dt."
+  - q: "s = t³ − 6t² + 4. What is v?"
+    o: ["3t² − 12t", "t⁴/4 − 2t³ + 4t", "3t² − 12t + 4", "6t − 12"]
+    a: 0
+    e: "Differentiate each term: 3t² − 12t."
+  - q: "v = 4t − 3. What is a?"
+    o: ["4t", "2t² − 3t", "4", "−3"]
+    a: 2
+    e: "a = dv/dt = 4."
+  - q: "a = 6t and the particle starts from rest. What is v?"
+    o: ["6", "6t + c with c unknown", "3t", "3t²"]
+    a: 3
+    e: "v = ∫6t dt = 3t² + c. At t = 0, v = 0, so c = 0."
+  - q: "Why can't suvat be used when a = 2t?"
+    o: ["The acceleration isn't constant", "The acceleration is negative", "It is a vector", "t must be positive"]
+    a: 0
+    e: "suvat equations assume constant acceleration."
+  - q: "v = 3t² − 12. When is the particle at rest (t > 0)?"
+    o: ["t = 4", "t = 2", "t = 12", "t = 3"]
+    a: 1
+    e: "3t² = 12, t² = 4, t = 2."
+  - q: "v = 2t + 1 and s = 0 when t = 0. What is s at t = 3?"
+    o: ["7 m", "9 m", "12 m", "10 m"]
+    a: 2
+    e: "s = t² + t, so s(3) = 9 + 3 = 12 m."
+  - q: "How is maximum velocity found when v is a function of t?"
+    o: ["Set v = 0", "Set s = 0", "Integrate a", "Set a = 0 and solve"]
+    a: 3
+    e: "At a maximum of v, dv/dt = a = 0."
+  - q: "v = 6t − t². What is the maximum velocity?"
+    o: ["9 m s⁻¹", "6 m s⁻¹", "3 m s⁻¹", "12 m s⁻¹"]
+    a: 0
+    e: "a = 6 − 2t = 0 at t = 3. v(3) = 18 − 9 = 9 m s⁻¹."
+  - q: "r = (t² i + 4t j) m. What is the velocity?"
+    o: ["(t i + 4 j)", "(2t i + 4 j)", "(2 i)", "(2t i + 4t j)"]
+    a: 1
+    e: "Differentiate each component: 2t and 4."
+  - q: "v = (3i + 4j) m s⁻¹. What is the speed?"
+    o: ["7 m s⁻¹", "12 m s⁻¹", "5 m s⁻¹", "25 m s⁻¹"]
+    a: 2
+    e: "√(3² + 4²) = 5 m s⁻¹."
+  - q: "u = (2i + j), a = (i − j), t = 2. What is v (constant acceleration)?"
+    o: ["(3i)", "(2i + j)", "(i + 3j)", "(4i − j)"]
+    a: 3
+    e: "v = u + at = (2i + j) + 2(i − j) = 4i − j."
+  - q: "u = 0, a = (2i + 6j), t = 3. What is the displacement r (constant acceleration)?"
+    o: ["(9i + 27j)", "(6i + 18j)", "(3i + 9j)", "(18i + 54j)"]
+    a: 0
+    e: "r = ½at² = ½(2i + 6j)(9) = 9i + 27j."
+  - q: "v = (4t i − 3 j). What is the acceleration?"
+    o: ["(4t i)", "(4 i)", "(2t² i − 3t j)", "(4 i − 3 j)"]
+    a: 1
+    e: "Differentiate: 4 and 0."
+  - q: "v = 4 − t². Why might the distance travelled in 0 ≤ t ≤ 3 differ from the displacement?"
+    o: ["Acceleration is constant", "v is always positive", "The particle changes direction at t = 2", "Distance is always smaller"]
+    a: 2
+    e: "v = 0 at t = 2, so the integral must be split to find total distance."
+  - q: "a = 2t − 4. The particle starts with v = 3 at t = 0. What is v?"
+    o: ["2t − 4", "t² − 4t", "t² + 3", "t² − 4t + 3"]
+    a: 3
+    e: "v = t² − 4t + c, with c = 3."
+  - q: "s = 2t³ − 9t² + 12t. At which times is the particle at rest?"
+    o: ["t = 1 and t = 2", "t = 2 and t = 3", "t = 0 only", "t = 1.5"]
+    a: 0
+    e: "v = 6t² − 18t + 12 = 6(t − 1)(t − 2) = 0."
+  - q: "What does the gradient of a velocity–time graph represent?"
+    o: ["Displacement", "Acceleration", "Speed", "Distance"]
+    a: 1
+    e: "a = dv/dt is the gradient."
+  - q: "What does the area under a velocity–time graph represent?"
+    o: ["Acceleration", "Speed", "Displacement", "Force"]
+    a: 2
+    e: "s = ∫v dt is the area under the graph."
+  - q: "r = (3t i + (2t² − 5) j). When is the particle due east of the origin (j-component zero)?"
+    o: ["t = 5", "t = 2.5", "t = 0", "t = √2.5 ≈ 1.58"]
+    a: 3
+    e: "2t² − 5 = 0 gives t² = 2.5, t ≈ 1.58 s."
+  - q: "v = (6i − 8j). What angle does the velocity make with the i direction?"
+    o: ["53.1° below i", "36.9° below i", "53.1° above i", "36.9° above i"]
+    a: 0
+    e: "tan α = 8/6, α = 53.1°. The j-component is negative, so it's below."
+  - q: "a = 12t² and v = 0, s = 0 at t = 0. What is s?"
+    o: ["4t³", "t⁴", "12t⁴", "24t"]
+    a: 1
+    e: "v = 4t³, then s = t⁴."

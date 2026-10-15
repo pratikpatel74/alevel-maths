@@ -1,0 +1,135 @@
+id: "s7"
+order: 31
+year: 2
+section: "S"
+badge: "O"
+spec: "L, O"
+title: "Correlation and hypothesis testing"
+desc: "The product moment correlation coefficient, testing for correlation, the distribution of the sample mean, and testing a normal mean."
+practicals: []
+summary:
+  - h: "Correlation"
+    p:
+      - "The **product moment correlation coefficient (PMCC)**, r, measures the strength of **linear** correlation: −1 ≤ r ≤ 1."
+      - "r close to 1: strong positive. Close to −1: strong negative. Close to 0: little or no linear correlation."
+      - "Calculate r using a calculator's statistics mode."
+  - h: "Testing for correlation"
+    p:
+      - "Hypotheses use **ρ** (rho), the population correlation coefficient: H₀: ρ = 0."
+      - "H₁: ρ > 0 or ρ < 0 (one-tailed), or ρ ≠ 0 (two-tailed)."
+      - "Compare the sample r with the **critical value** from tables for the sample size n and significance level."
+      - "If |r| is greater than the critical value (in the direction of H₁), **reject H₀**."
+  - h: "Distribution of the sample mean"
+    p:
+      - "If X ~ N(μ, σ²), the mean of a random sample of size n has `X̄ ~ N(μ, σ²/n)`."
+      - "The standard deviation of X̄ is **σ/√n** (smaller for larger samples)."
+  - h: "Testing a normal mean"
+    p:
+      - "H₀: μ = μ₀. H₁: μ > μ₀, μ < μ₀ or μ ≠ μ₀."
+      - "Under H₀, X̄ ~ N(μ₀, σ²/n). Find P(X̄ ≥ x̄) (or ≤) and compare with the significance level. Or use `z = (x̄ − μ₀)/(σ/√n)` and compare with the critical z-value."
+      - "Conclude in context, without claiming proof."
+pitfalls:
+  - "PMCC tests use **ρ** in hypotheses, not r."
+  - "For X̄, divide the **variance** by n (or the standard deviation by √n)."
+  - "A significant correlation doesn't prove causation."
+examples:
+  - q: "A sample of 10 pairs gives r = 0.72. Test at the 5% level for positive correlation (critical value 0.5494)."
+    steps:
+      - "H₀: ρ = 0. H₁: ρ > 0."
+      - "0.72 > 0.5494, so the result is significant."
+    a: "Reject H₀: there is evidence of positive correlation."
+  - q: "X ~ N(μ, 10²). A sample of 25 has mean 84. Test H₀: μ = 80 against H₁: μ > 80 at 5%."
+    steps:
+      - "Under H₀, X̄ ~ N(80, 10²/25) = N(80, 2²)."
+      - "P(X̄ ≥ 84) = 0.0228."
+      - "0.0228 < 0.05, so reject H₀."
+    a: "There is evidence at the 5% level that the mean is greater than 80."
+questions:
+  - q: "What is the range of possible values of the PMCC?"
+    o: ["0 to 1", "−1 to 1", "−∞ to ∞", "0 to 100"]
+    a: 1
+    e: "r = 1 or −1 means perfect linear correlation."
+  - q: "A PMCC of −0.92 indicates:"
+    o: ["Strong negative linear correlation", "Weak negative correlation", "No correlation", "Strong positive correlation"]
+    a: 0
+    e: "Close to −1 means strong negative."
+  - q: "What symbol is used for the population correlation coefficient in hypotheses?"
+    o: ["r", "μ", "ρ", "σ"]
+    a: 2
+    e: "ρ (rho) is the population parameter; r is the sample statistic."
+  - q: "What is the null hypothesis in a test for correlation?"
+    o: ["ρ = 1", "r = 0", "ρ > 0", "ρ = 0"]
+    a: 3
+    e: "H₀ assumes no correlation in the population."
+  - q: "r = 0.45, n = 12, critical value for ρ > 0 at 5% is 0.4973. Conclusion?"
+    o: ["Do not reject H₀: insufficient evidence of positive correlation", "Reject H₀", "There is negative correlation", "Prove ρ = 0"]
+    a: 0
+    e: "0.45 < 0.4973, so not significant."
+  - q: "A test for correlation is two-tailed. What is H₁?"
+    o: ["ρ > 0", "ρ ≠ 0", "ρ < 0", "r ≠ 0"]
+    a: 1
+    e: "Testing for correlation of either sign."
+  - q: "X ~ N(μ, σ²). What is the distribution of the sample mean of n observations?"
+    o: ["N(μ, σ²)", "N(μ/n, σ²)", "N(μ, σ²/n)", "N(nμ, nσ²)"]
+    a: 2
+    e: "The mean is unchanged; the variance is divided by n."
+  - q: "X ~ N(80, 10²). What is the standard deviation of the mean of 25 observations?"
+    o: ["10", "0.4", "4", "2"]
+    a: 3
+    e: "σ/√n = 10/5 = 2."
+  - q: "Why does the sample mean have a smaller spread than individual values?"
+    o: ["Averaging reduces variability: extreme values tend to cancel out", "Samples are always biased", "The mean is always smaller", "It doesn't"]
+    a: 0
+    e: "Var(X̄) = σ²/n decreases as n increases."
+  - q: "H₀: μ = 80, H₁: μ > 80, σ = 10, n = 25, x̄ = 84. P(X̄ ≥ 84) = 0.0228. Conclusion at 5%?"
+    o: ["Do not reject H₀", "Reject H₀: evidence that μ > 80", "Accept H₀", "The test is invalid"]
+    a: 1
+    e: "0.0228 < 0.05."
+  - q: "H₀: μ = 100, H₁: μ < 100, σ = 12, n = 16, x̄ = 95.2. P(X̄ ≤ 95.2) = 0.0548. Conclusion at 5%?"
+    o: ["Reject H₀", "Accept H₁", "Do not reject H₀: insufficient evidence that μ < 100", "μ = 95.2"]
+    a: 2
+    e: "0.0548 > 0.05, so not significant."
+  - q: "What is the test statistic z for testing a normal mean?"
+    o: ["(x̄ − μ₀)/σ", "(x̄ − μ₀) × √n", "x̄/σ", "(x̄ − μ₀)/(σ/√n)"]
+    a: 3
+    e: "Standardise using the standard deviation of X̄."
+  - q: "For a one-tailed test (upper) at 5%, what is the critical z-value?"
+    o: ["1.6449", "1.96", "2.3263", "1.2816"]
+    a: 0
+    e: "P(Z > 1.6449) = 0.05."
+  - q: "For a two-tailed test at 5%, what are the critical z-values?"
+    o: ["±1.6449", "±1.96", "±2.5758", "±1.2816"]
+    a: 1
+    e: "2.5% in each tail."
+  - q: "Two variables have a significant positive correlation. What can you conclude?"
+    o: ["One causes the other", "The relationship is non-linear", "There is evidence of a linear association, but not necessarily causation", "They are independent"]
+    a: 2
+    e: "Correlation doesn't imply causation."
+  - q: "A sample of 8 gives r = −0.81. Critical value for ρ < 0 at 1% is 0.7887. Conclusion?"
+    o: ["Not significant", "Positive correlation", "Test invalid", "Reject H₀: evidence of negative correlation at 1%"]
+    a: 3
+    e: "|−0.81| = 0.81 > 0.7887 and r is negative, matching H₁."
+  - q: "Why does the PMCC only measure linear correlation?"
+    o: ["It measures how closely the points fit a straight line; a strong curved relationship can have r near 0", "It only works for positive data", "It ignores outliers", "It uses medians"]
+    a: 0
+    e: "Always check a scatter diagram too."
+  - q: "z = 2.1 in an upper-tailed test of a mean at the 5% level. Conclusion?"
+    o: ["Do not reject H₀", "Reject H₀, since 2.1 > 1.6449", "Accept H₀", "Reject H₀ only at 10%"]
+    a: 1
+    e: "The test statistic is in the critical region."
+  - q: "X ~ N(μ, 4²). A sample of 64 values is taken. What is Var(X̄)?"
+    o: ["16", "0.5", "0.25", "4"]
+    a: 2
+    e: "σ²/n = 16/64 = 0.25."
+  - q: "Which hypothesis is correct for 'the mean weight has decreased from 500 g'?"
+    o: ["H₀: μ < 500", "H₁: μ > 500", "H₁: μ ≠ 500", "H₁: μ < 500"]
+    a: 3
+    e: "H₀: μ = 500 and H₁: μ < 500."
+  - q: "What is assumed about the population when testing a mean using X̄ ~ N(μ, σ²/n)?"
+    o: ["The population is normally distributed with known σ", "The sample is biased", "n = 1", "σ = μ"]
+    a: 0
+    e: "At A-level, the population is normal with a known standard deviation."
+  - q: "Increasing the sample size in a test for a mean makes it:"
+    o: ["Less sensitive", "More likely to detect a real difference, because σ/√n is smaller", "Impossible to reject H₀", "Two-tailed"]
+    a: 1
+    e: "A smaller standard error means smaller differences become significant."

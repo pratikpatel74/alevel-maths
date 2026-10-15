@@ -1,0 +1,132 @@
+id: "s2"
+order: 12
+year: 1
+section: "S"
+badge: "M"
+spec: "M"
+title: "Probability"
+desc: "Mutually exclusive and independent events, Venn diagrams, tree diagrams, two-way tables and the addition rule."
+practicals: []
+summary:
+  - h: "Basic rules"
+    p:
+      - "Probabilities lie between 0 and 1. P(A′) = 1 − P(A), where A′ is 'not A'."
+      - "`P(A ∪ B) = P(A) + P(B) − P(A ∩ B)` (addition rule)."
+      - "∪ means 'or' (union). ∩ means 'and' (intersection)."
+  - h: "Mutually exclusive and independent events"
+    p:
+      - "**Mutually exclusive**: A and B can't both happen. `P(A ∩ B) = 0`, so `P(A ∪ B) = P(A) + P(B)`."
+      - "**Independent**: one event doesn't affect the other. `P(A ∩ B) = P(A) × P(B)`."
+      - "To **test** for independence, check whether P(A) × P(B) equals P(A ∩ B)."
+  - h: "Diagrams"
+    p:
+      - "**Venn diagrams** show overlapping events. Fill in the intersection first, then work outwards. All regions add to 1."
+      - "**Tree diagrams**: multiply along branches for 'and', add the end results for 'or'."
+      - "**Without replacement**, probabilities on later branches change."
+      - "**Two-way tables** show counts for two categories. Use totals to find probabilities."
+pitfalls:
+  - "Don't add probabilities of events that can overlap without subtracting the intersection."
+  - "Mutually exclusive and independent are **different** ideas. Mutually exclusive events (with non-zero probabilities) can't be independent."
+  - "On a tree diagram, each set of branches from one point must sum to 1."
+examples:
+  - q: "P(A) = 0.4, P(B) = 0.5 and P(A ∪ B) = 0.7. Are A and B independent?"
+    steps:
+      - "P(A ∩ B) = 0.4 + 0.5 − 0.7 = 0.2."
+      - "P(A) × P(B) = 0.4 × 0.5 = 0.2."
+      - "These are equal."
+    a: "Yes, A and B are independent."
+  - q: "A bag has 3 red and 2 blue balls. Two are taken without replacement. Find P(both red)."
+    steps:
+      - "P(first red) = 3/5."
+      - "P(second red | first red) = 2/4."
+      - "Multiply: 3/5 × 2/4 = 6/20."
+    a: "3/10"
+questions:
+  - q: "P(A) = 0.35. What is P(A′)?"
+    o: ["0.35", "0.65", "0.30", "1.35"]
+    a: 1
+    e: "P(A′) = 1 − 0.35 = 0.65."
+  - q: "A and B are mutually exclusive, with P(A) = 0.2 and P(B) = 0.5. What is P(A ∪ B)?"
+    o: ["0.7", "0.1", "0.6", "0.3"]
+    a: 0
+    e: "Add, since they can't both happen."
+  - q: "A and B are independent, with P(A) = 0.3 and P(B) = 0.6. What is P(A ∩ B)?"
+    o: ["0.9", "0.3", "0.18", "0.5"]
+    a: 2
+    e: "Multiply: 0.3 × 0.6 = 0.18."
+  - q: "P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.1. Find P(A ∪ B)."
+    o: ["0.9", "1.0", "0.2", "0.8"]
+    a: 3
+    e: "0.5 + 0.4 − 0.1 = 0.8."
+  - q: "For mutually exclusive events A and B, what is P(A ∩ B)?"
+    o: ["0", "1", "P(A) × P(B)", "P(A) + P(B)"]
+    a: 0
+    e: "They can't both happen."
+  - q: "Which condition shows A and B are independent?"
+    o: ["P(A ∩ B) = 0", "P(A ∩ B) = P(A) × P(B)", "P(A) + P(B) = 1", "P(A ∪ B) = 1"]
+    a: 1
+    e: "This is the definition of independence."
+  - q: "A fair die is rolled twice. What is the probability of two sixes?"
+    o: ["1/6", "1/12", "1/36", "2/6"]
+    a: 2
+    e: "Independent rolls: 1/6 × 1/6 = 1/36."
+  - q: "A coin is tossed 3 times. What is the probability of at least one head?"
+    o: ["1/2", "3/8", "1/8", "7/8"]
+    a: 3
+    e: "1 − P(no heads) = 1 − 1/8 = 7/8."
+  - q: "A bag has 4 red and 6 green sweets. Two are taken without replacement. What is P(both green)?"
+    o: ["1/3", "9/25", "3/5", "2/5"]
+    a: 0
+    e: "6/10 × 5/9 = 30/90 = 1/3."
+  - q: "On a tree diagram, how do you find P(A and then B)?"
+    o: ["Add along the branches", "Multiply along the branches", "Subtract", "Divide"]
+    a: 1
+    e: "Multiply along a path for 'and'."
+  - q: "In a Venn diagram, P(A only) = 0.3, P(A ∩ B) = 0.2 and P(B only) = 0.25. What is P(neither)?"
+    o: ["0.75", "0.5", "0.25", "0.2"]
+    a: 2
+    e: "1 − (0.3 + 0.2 + 0.25) = 0.25."
+  - q: "From the previous question, what is P(B)?"
+    o: ["0.25", "0.2", "0.5", "0.45"]
+    a: 3
+    e: "P(B) = B only + intersection = 0.25 + 0.2 = 0.45."
+  - q: "In a class of 30, 18 study French, 12 study Spanish and 5 study both. How many study neither?"
+    o: ["5", "0", "25", "10"]
+    a: 0
+    e: "French or Spanish = 18 + 12 − 5 = 25. Neither = 30 − 25 = 5."
+  - q: "P(A) = 0.6, P(B) = 0.5, P(A ∩ B) = 0.3. Are A and B independent?"
+    o: ["No", "Yes, because 0.6 × 0.5 = 0.3", "No, because they overlap", "Cannot tell"]
+    a: 1
+    e: "P(A) × P(B) = 0.3 = P(A ∩ B)."
+  - q: "Can two events with non-zero probabilities be both mutually exclusive and independent?"
+    o: ["Yes, always", "Only if P(A) = P(B)", "No, because P(A ∩ B) = 0 but P(A) × P(B) > 0", "Only for dice"]
+    a: 2
+    e: "If one happens, the other definitely can't, so they affect each other."
+  - q: "On a tree diagram, what must the probabilities on branches from a single point add up to?"
+    o: ["0", "It depends", "0.5", "1"]
+    a: 3
+    e: "One of the outcomes must happen."
+  - q: "Two-way table: 40 of 100 students are left-handed; 15 of these wear glasses. What is P(left-handed and glasses)?"
+    o: ["0.15", "0.375", "0.4", "0.55"]
+    a: 0
+    e: "15 out of 100 students."
+  - q: "What does A ∪ B mean?"
+    o: ["A and B", "A or B (or both)", "Not A", "A given B"]
+    a: 1
+    e: "Union means at least one of the events happens."
+  - q: "A spinner gives red with probability 0.3. It is spun twice. What is P(exactly one red)?"
+    o: ["0.09", "0.21", "0.42", "0.6"]
+    a: 2
+    e: "P(RN) + P(NR) = 0.3 × 0.7 + 0.7 × 0.3 = 0.42."
+  - q: "What does A ∩ B′ mean?"
+    o: ["Neither A nor B", "A or B", "B but not A", "A but not B"]
+    a: 3
+    e: "In A and not in B."
+  - q: "A card is drawn from a standard pack. What is P(red or a king)?"
+    o: ["28/52", "30/52", "26/52", "2/52"]
+    a: 0
+    e: "26 + 4 − 2 = 28 cards (two red kings counted once)."
+  - q: "P(A) = 0.7. P(B) = 0.6. What is the smallest possible value of P(A ∩ B)?"
+    o: ["0", "0.3", "0.42", "0.1"]
+    a: 1
+    e: "P(A ∪ B) ≤ 1, so P(A ∩ B) ≥ 0.7 + 0.6 − 1 = 0.3."

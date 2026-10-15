@@ -1,0 +1,130 @@
+id: "m6"
+order: 35
+year: 2
+section: "M"
+badge: "S"
+spec: "S"
+title: "Moments"
+desc: "Moments of a force, equilibrium of rigid bodies, uniform and non-uniform rods, tilting, and ladder problems."
+practicals: []
+summary:
+  - h: "Moments"
+    p:
+      - "The **moment** of a force about a point = `force × perpendicular distance` from the point to the line of action of the force. Units **N m**."
+      - "Moments can be **clockwise** or **anticlockwise**."
+      - "If a force acts at an angle, use its perpendicular component, or the perpendicular distance: `moment = Fd sin θ`."
+  - h: "Equilibrium of rigid bodies"
+    p:
+      - "A rigid body is in equilibrium when: **resultant force = 0** (forces balance in every direction) **and** the **sum of moments about any point = 0**."
+      - "Take moments about a point where an **unknown force acts**, so it disappears from the equation."
+      - "A **uniform** rod's weight acts at its **centre**. For a **non-uniform** rod, the centre of mass is elsewhere and may need to be found."
+  - h: "Tilting and ladders"
+    p:
+      - "When a rod is **on the point of tilting** about a support, the reaction at the **other** support is **zero**."
+      - "**Ladders**: a ladder against a smooth wall has a horizontal reaction at the wall and a normal reaction plus friction at the ground. Resolve and take moments (usually about the foot)."
+pitfalls:
+  - "Use the **perpendicular** distance, not the distance along the rod, when a force is at an angle."
+  - "On the point of tilting about one support, the reaction at the **other** support is zero."
+  - "Choose your pivot to eliminate unknowns, and state 'taking moments about A'."
+examples:
+  - q: "A uniform rod AB of length 4 m and mass 10 kg rests on supports at A and B. A 5 kg mass sits 1 m from A. Find the reactions (g = 9.8)."
+    steps:
+      - "Weight of rod 10g acts at 2 m from A. The 5 kg mass is at 1 m from A."
+      - "Moments about A: R_B × 4 = 10g × 2 + 5g × 1 = 25g, so R_B = 6.25g = 61.25 N."
+      - "Resolving vertically: R_A + R_B = 15g, so R_A = 15g − 6.25g = 8.75g = 85.75 N."
+    a: "R_A ≈ 85.8 N, R_B ≈ 61.3 N"
+  - q: "A uniform plank of length 6 m and mass 20 kg rests on supports 1 m from each end. How far beyond a support can a 40 kg person stand before it tilts?"
+    steps:
+      - "On the point of tilting about the right support C, the reaction at the left support is zero."
+      - "The plank's weight acts at the centre, 2 m left of C. Person at distance x to the right of C."
+      - "Moments about C: 20g × 2 = 40g × x, so x = 1 m."
+    a: "1 m beyond the support, which is the end of the plank"
+questions:
+  - q: "What is the moment of a 20 N force acting perpendicular to a rod at 3 m from the pivot?"
+    o: ["6.67 N m", "60 N m", "23 N m", "17 N m"]
+    a: 1
+    e: "Moment = 20 × 3 = 60 N m."
+  - q: "What are the units of a moment?"
+    o: ["N m", "N", "N/m", "kg m"]
+    a: 0
+    e: "Force (N) × distance (m)."
+  - q: "What two conditions are needed for a rigid body to be in equilibrium?"
+    o: ["Zero velocity and zero acceleration", "Equal forces on each end", "Resultant force zero and sum of moments zero", "Moments clockwise only"]
+    a: 2
+    e: "Forces must balance and the total moment about any point must be zero."
+  - q: "Where does the weight of a uniform rod act?"
+    o: ["At one end", "At a third of its length", "It depends on the supports", "At its centre"]
+    a: 3
+    e: "Uniform means the mass is evenly distributed."
+  - q: "A 10 N force acts at 30° to a rod, 2 m from the pivot. What is its moment?"
+    o: ["10 N m", "17.3 N m", "20 N m", "5 N m"]
+    a: 0
+    e: "Moment = 10 × 2 × sin 30° = 10 N m."
+  - q: "Why do we take moments about the point where an unknown force acts?"
+    o: ["It makes the force larger", "The unknown force has zero moment about that point, so it is eliminated", "It's always the centre", "To find the weight"]
+    a: 1
+    e: "A force has no moment about a point on its line of action."
+  - q: "A rod is on the point of tilting about support B. What is the reaction at the other support A?"
+    o: ["Equal to the weight", "Equal to the reaction at B", "Zero", "Half the weight"]
+    a: 2
+    e: "The rod is about to lift off A, so A exerts no force."
+  - q: "A 4 m uniform rod of weight 30 N is pivoted at its centre. A 10 N weight hangs 1.5 m from the centre. Where must a 15 N weight hang on the other side to balance?"
+    o: ["1.5 m", "2 m", "0.5 m", "1 m"]
+    a: 3
+    e: "10 × 1.5 = 15 × d, so d = 1 m."
+  - q: "A uniform 2 m rod of weight 40 N rests on supports at its ends. What is the reaction at each support?"
+    o: ["20 N", "40 N", "80 N", "10 N"]
+    a: 0
+    e: "By symmetry, each support takes half the weight."
+  - q: "A uniform rod AB, 5 m long, weight 50 N, rests on supports at A and 1 m from B. What is the reaction at the support near B?"
+    o: ["50 N", "31.25 N", "18.75 N", "25 N"]
+    a: 1
+    e: "Moments about A: R × 4 = 50 × 2.5, so R = 31.25 N."
+  - q: "What is a non-uniform rod?"
+    o: ["A rod with no weight", "A bent rod", "A rod whose centre of mass is not at its midpoint", "A rod with friction"]
+    a: 2
+    e: "Its mass isn't evenly distributed, so its weight acts elsewhere."
+  - q: "A ladder rests against a smooth wall. What force does the wall exert?"
+    o: ["Friction only", "A vertical force", "Both friction and a normal reaction", "A normal reaction perpendicular to the wall (horizontal)"]
+    a: 3
+    e: "A smooth wall can't exert friction, so only a horizontal reaction acts."
+  - q: "For a ladder on rough ground against a smooth wall, what balances the wall's reaction horizontally?"
+    o: ["Friction at the ground", "The weight", "The normal reaction at the ground", "Nothing"]
+    a: 0
+    e: "Resolving horizontally: friction at the foot equals the wall reaction."
+  - q: "A ladder on rough ground: what balances the weight vertically?"
+    o: ["The wall reaction", "The normal reaction at the ground", "Friction at the ground", "Tension"]
+    a: 1
+    e: "Resolving vertically: R(ground) = weight (if the wall is smooth)."
+  - q: "Clockwise moments are 120 N m and anticlockwise moments are 90 N m. What happens?"
+    o: ["Equilibrium", "Rotates anticlockwise", "Rotates clockwise", "Moves sideways"]
+    a: 2
+    e: "There is a resultant clockwise moment of 30 N m."
+  - q: "What is meant by 'light' in a modelling question about a rod?"
+    o: ["It is smooth", "It is uniform", "It is short", "Its mass is negligible"]
+    a: 3
+    e: "A light rod's weight can be ignored."
+  - q: "A non-uniform rod of length 3 m and weight 60 N balances on a pivot 1.2 m from end A. Where is its centre of mass?"
+    o: ["1.2 m from A", "1.5 m from A", "1.8 m from A", "0.6 m from A"]
+    a: 0
+    e: "It balances on the pivot alone, so the weight acts directly above the pivot."
+  - q: "A force of 25 N acts at 4 m from a pivot, at 90° to the rod. What is the moment?"
+    o: ["6.25 N m", "100 N m", "29 N m", "21 N m"]
+    a: 1
+    e: "25 × 4 = 100 N m."
+  - q: "Which modelling assumption is made about a rod in moments problems?"
+    o: ["It bends", "It stretches", "It is rigid (doesn't bend)", "It has no length"]
+    a: 2
+    e: "Rigid bodies keep their shape."
+  - q: "A uniform rod of mass 8 kg and length 2 m is held horizontal by a vertical string at one end and a hinge at the other. What is the tension? (g = 9.8)"
+    o: ["78.4 N", "19.6 N", "156.8 N", "39.2 N"]
+    a: 3
+    e: "Moments about the hinge: T × 2 = 8g × 1, so T = 4g = 39.2 N."
+  - q: "A ladder makes angle θ with the ground. The perpendicular distance from the foot to the line of action of the ladder's weight (length L, uniform) is:"
+    o: ["(L/2) cos θ", "(L/2) sin θ", "L", "L tan θ"]
+    a: 0
+    e: "The weight acts vertically at the midpoint, so the horizontal distance from the foot is (L/2) cos θ."
+  - q: "Why might a real ladder slip even if the model predicts equilibrium?"
+    o: ["The ladder is uniform", "μ may not be constant and the wall may not be smooth", "Moments don't apply", "The ladder is light"]
+    a: 1
+    e: "Real surfaces don't behave exactly as the model assumes."

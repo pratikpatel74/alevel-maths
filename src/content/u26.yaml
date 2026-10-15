@@ -1,0 +1,133 @@
+id: "p20"
+order: 26
+year: 2
+section: "P"
+badge: "H"
+spec: "H"
+title: "Differential equations and areas"
+desc: "Integration as the limit of a sum, areas between curves, areas under parametric curves, and solving first-order separable differential equations in context."
+practicals: []
+summary:
+  - h: "Integration as the limit of a sum"
+    p:
+      - "The area under a curve is the limit of the sum of thin rectangles: `∫ₐᵇ y dx = lim (δx→0) Σ y δx`."
+  - h: "Areas"
+    p:
+      - "**Between two curves**: ∫ (upper − lower) dx between intersection points."
+      - "**Parametric curves**: `Area = ∫ y (dx/dt) dt`, with limits in **t**."
+  - h: "Separable differential equations"
+    p:
+      - "A **first-order separable** equation can be written `dy/dx = f(x) g(y)`."
+      - "**Separate** the variables: `∫ 1/g(y) dy = ∫ f(x) dx`, then integrate both sides and add **one** constant."
+      - "The **general solution** contains a constant. A **particular solution** uses given values to find it."
+      - "Example: dy/dx = ky gives ln|y| = kx + c, so y = Aeᵏˣ (exponential growth or decay)."
+  - h: "Modelling"
+    p:
+      - "Form the equation from words: 'rate of change of N is proportional to N' gives dN/dt = kN."
+      - "Interpret the solution in context, including limitations (e.g. a population can't grow forever)."
+pitfalls:
+  - "Only one + c is needed after integrating both sides."
+  - "When exponentiating ln|y| = kx + c, the constant becomes a **multiplier**: y = Aeᵏˣ."
+  - "For parametric areas, change the limits to t values."
+examples:
+  - q: "Solve dy/dx = 2xy, given y = 3 when x = 0."
+    steps:
+      - "Separate: ∫ 1/y dy = ∫ 2x dx."
+      - "ln|y| = x² + c, so y = Ae^(x²)."
+      - "y = 3 at x = 0 gives A = 3."
+    a: "y = 3e^(x²)"
+  - q: "Find the area enclosed by y = x² and y = 2x."
+    steps:
+      - "Intersections: x² = 2x, so x = 0 and x = 2."
+      - "∫₀² (2x − x²) dx = [x² − x³/3]₀²."
+      - "= 4 − 8/3."
+    a: "4/3"
+questions:
+  - q: "Which is a separable differential equation?"
+    o: ["dy/dx = x + y", "dy/dx = xy²", "dy/dx = sin(x + y)", "dy/dx = x² + y²"]
+    a: 1
+    e: "xy² is a product of a function of x and a function of y."
+  - q: "What is the general solution of dy/dx = 3y?"
+    o: ["y = Ae^(3x)", "y = 3x + c", "y = e^(3x)", "y = 3eˣ + c"]
+    a: 0
+    e: "ln|y| = 3x + c, so y = Ae^(3x)."
+  - q: "Solve dy/dx = x/y."
+    o: ["y = x + c", "y² = x + c", "y² = x² + c", "y = ln x + c"]
+    a: 2
+    e: "∫ y dy = ∫ x dx gives y²/2 = x²/2 + c, so y² = x² + C."
+  - q: "What is the difference between a general and a particular solution?"
+    o: ["There is no difference", "A particular solution has more constants", "A general solution has no constant", "A general solution contains an arbitrary constant; a particular solution uses given conditions to find it"]
+    a: 3
+    e: "Initial conditions pin down the constant."
+  - q: "A population grows at a rate proportional to its size. Which equation models this?"
+    o: ["dP/dt = kP", "dP/dt = k", "P = kt", "dP/dt = −kP²"]
+    a: 0
+    e: "Proportional to its size means dP/dt = kP, k > 0."
+  - q: "dP/dt = 0.2P, P = 100 when t = 0. Find P when t = 5."
+    o: ["200", "100e ≈ 272", "100e^0.2 ≈ 122", "500"]
+    a: 1
+    e: "P = 100e^(0.2t). At t = 5, P = 100e¹ ≈ 272."
+  - q: "Find the area enclosed between y = x and y = x²."
+    o: ["1/2", "1/3", "1/6", "1"]
+    a: 2
+    e: "∫₀¹ (x − x²) dx = ½ − ⅓ = 1/6."
+  - q: "What is the formula for the area under a parametric curve?"
+    o: ["∫ x dy", "∫ y dt", "∫ (dy/dt) dx", "∫ y (dx/dt) dt"]
+    a: 3
+    e: "Since dx = (dx/dt) dt."
+  - q: "x = t², y = 2t for 0 ≤ t ≤ 2. Find the area under the curve."
+    o: ["32/3", "16/3", "8", "4"]
+    a: 0
+    e: "∫₀² 2t × 2t dt = ∫ 4t² dt = [4t³/3]₀² = 32/3."
+  - q: "Solve dy/dx = eˣ/y, given y = 2 when x = 0."
+    o: ["y = eˣ + 1", "y² = 2eˣ + 2", "y = 2eˣ", "y² = eˣ + 3"]
+    a: 1
+    e: "y²/2 = eˣ + c. At (0, 2): 2 = 1 + c, c = 1. So y² = 2eˣ + 2."
+  - q: "What does integration as the limit of a sum mean?"
+    o: ["Integration adds constants", "Integration is the same as differentiation", "Area is the limit of the sum of thin rectangles as their width tends to zero", "The integral is always a whole number"]
+    a: 2
+    e: "∫ y dx = lim Σ y δx."
+  - q: "How many arbitrary constants appear in the general solution of a first-order separable equation?"
+    o: ["Two", "None", "It depends on the equation", "One"]
+    a: 3
+    e: "Combine the constants from both sides into one."
+  - q: "A liquid cools at a rate proportional to the temperature difference with the room: dθ/dt = −k(θ − 20). What happens as t → ∞?"
+    o: ["θ → 20", "θ → 0", "θ → ∞", "θ oscillates"]
+    a: 0
+    e: "The solution is θ = 20 + Ae^(−kt), which tends to room temperature."
+  - q: "Solve dy/dx = y cos x."
+    o: ["y = A cos x", "y = Ae^(sin x)", "y = sin x + c", "y = Ae^(cos x)"]
+    a: 1
+    e: "ln|y| = sin x + c."
+  - q: "The area between y = 4 − x² and y = 0 is split by the y-axis. What is the area for x from 0 to 2?"
+    o: ["32/3", "8", "16/3", "4"]
+    a: 2
+    e: "[4x − x³/3]₀² = 8 − 8/3 = 16/3."
+  - q: "Why might an exponential model for population growth become inaccurate?"
+    o: ["The constant is wrong", "Integration is approximate", "Populations always decrease", "Resources are limited, so growth slows over time"]
+    a: 3
+    e: "Real populations level off at a carrying capacity."
+  - q: "Solve dy/dx = 2y, y = 5 when x = 0."
+    o: ["y = 5e^(2x)", "y = 2e^(5x)", "y = 5 + 2x", "y = e^(2x) + 4"]
+    a: 0
+    e: "y = Ae^(2x), A = 5."
+  - q: "To solve dy/dx = (1 + y²)/x, what is the first step?"
+    o: ["Integrate both sides directly", "Separate: ∫ 1/(1 + y²) dy = ∫ 1/x dx", "Multiply by x²", "Differentiate again"]
+    a: 1
+    e: "Get all y terms with dy and all x terms with dx."
+  - q: "The rate at which a radioactive mass m decays is proportional to m. If m halves in 10 years, what is k in dm/dt = −km?"
+    o: ["0.1", "10 ln 2", "(ln 2)/10", "ln 10"]
+    a: 2
+    e: "m = m₀e^(−kt). ½ = e^(−10k), so k = ln 2/10 ≈ 0.0693."
+  - q: "Find the area enclosed by y = x² and y = 4."
+    o: ["8", "16", "16/3", "32/3"]
+    a: 3
+    e: "∫₋₂² (4 − x²) dx = 32/3."
+  - q: "In ln|y| = 2x + c, what is y in terms of x?"
+    o: ["y = Ae^(2x)", "y = e^(2x) + c", "y = 2x + eᶜ", "y = A + e^(2x)"]
+    a: 0
+    e: "y = e^(2x + c) = eᶜ e^(2x) = Ae^(2x)."
+  - q: "What is the area between y = sin x and the x-axis from 0 to π?"
+    o: ["1", "2", "0", "π"]
+    a: 1
+    e: "[−cos x]₀^π = 1 + 1 = 2."

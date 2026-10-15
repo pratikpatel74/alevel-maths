@@ -1,0 +1,134 @@
+id: "p4"
+order: 4
+year: 1
+section: "P"
+badge: "C"
+spec: "C"
+title: "Coordinate geometry: lines and circles"
+desc: "Equations of straight lines, gradients, parallel and perpendicular lines, midpoints and distances, and the equation of a circle with tangents and chords."
+practicals: []
+summary:
+  - h: "Straight lines"
+    p:
+      - "`gradient m = (y₂ − y₁) / (x₂ − x₁)`"
+      - "Equation forms: `y = mx + c`, `y − y₁ = m(x − x₁)`, and `ax + by + c = 0` (a, b, c integers)."
+      - "**Parallel** lines have **equal gradients**. **Perpendicular** lines have gradients that multiply to **−1**: m₂ = −1/m₁."
+      - "`Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2)`"
+      - "`Distance = √[(x₂ − x₁)² + (y₂ − y₁)²]`"
+  - h: "Circles"
+    p:
+      - "Centre (a, b), radius r: `(x − a)² + (y − b)² = r²`"
+      - "If given in expanded form x² + y² + 2fx + 2gy + c = 0, **complete the square** in x and in y to find the centre and radius."
+      - "Centre of x² + y² − 6x + 4y − 12 = 0: (x − 3)² + (y + 2)² = 25, so centre (3, −2), radius 5."
+  - h: "Circle properties"
+    p:
+      - "The **tangent** at a point is **perpendicular** to the **radius** at that point."
+      - "The **perpendicular bisector of a chord** passes through the **centre**."
+      - "The angle in a semicircle is a **right angle**: if AB is a diameter, angle ACB = 90°."
+      - "To find where a line meets a circle, substitute and solve the quadratic. Use the discriminant to decide if the line crosses, touches or misses."
+pitfalls:
+  - "The circle equation has r², so take the **square root** for the radius."
+  - "Watch signs: (x + 3)² means the centre's x-coordinate is **−3**."
+  - "For a tangent, find the gradient of the **radius** first, then use the negative reciprocal."
+examples:
+  - q: "Find the equation of the line through (2, 5) perpendicular to y = 3x − 1."
+    steps:
+      - "Gradient of the given line is 3, so the perpendicular gradient is −1/3."
+      - "y − 5 = −1/3 (x − 2)."
+      - "Multiply by 3: 3y − 15 = −x + 2, so x + 3y − 17 = 0."
+    a: "x + 3y − 17 = 0"
+  - q: "The circle (x − 1)² + (y − 2)² = 25 passes through P(4, 6). Find the tangent at P."
+    steps:
+      - "Gradient of radius from (1, 2) to (4, 6) = 4/3."
+      - "Tangent gradient = −3/4."
+      - "y − 6 = −3/4 (x − 4), so 4y − 24 = −3x + 12."
+    a: "3x + 4y − 36 = 0"
+questions:
+  - q: "Find the gradient of the line through (1, 3) and (4, 12)."
+    o: ["9", "3", "1/3", "−3"]
+    a: 1
+    e: "(12 − 3) ÷ (4 − 1) = 9 ÷ 3 = 3."
+  - q: "Find the equation of the line with gradient 2 through (3, 1)."
+    o: ["y = 2x − 5", "y = 2x + 1", "y = 2x − 1", "y = 2x + 5"]
+    a: 0
+    e: "y − 1 = 2(x − 3), so y = 2x − 5."
+  - q: "What is the gradient of a line perpendicular to y = −4x + 7?"
+    o: ["4", "−4", "1/4", "−1/4"]
+    a: 2
+    e: "m₂ = −1/(−4) = 1/4."
+  - q: "Which line is parallel to y = 3x + 2?"
+    o: ["y = −3x + 2", "y = (1/3)x + 2", "3y = x", "y = 3x − 5"]
+    a: 3
+    e: "Parallel lines have the same gradient, 3."
+  - q: "Find the midpoint of (−2, 5) and (6, 1)."
+    o: ["(2, 3)", "(4, 6)", "(8, −4)", "(2, 2)"]
+    a: 0
+    e: "((−2 + 6)/2, (5 + 1)/2) = (2, 3)."
+  - q: "Find the distance between (1, 2) and (7, 10)."
+    o: ["14", "10", "100", "√28"]
+    a: 1
+    e: "√(6² + 8²) = √100 = 10."
+  - q: "What is the gradient of 2x + 5y − 10 = 0?"
+    o: ["2", "5/2", "−2/5", "−5/2"]
+    a: 2
+    e: "5y = −2x + 10, so y = −(2/5)x + 2."
+  - q: "What are the centre and radius of (x − 3)² + (y + 1)² = 16?"
+    o: ["Centre (−3, 1), radius 4", "Centre (3, −1), radius 16", "Centre (−3, 1), radius 16", "Centre (3, −1), radius 4"]
+    a: 3
+    e: "Centre (a, b) = (3, −1). r² = 16 so r = 4."
+  - q: "Write the equation of the circle with centre (−2, 5) and radius 3."
+    o: ["(x + 2)² + (y − 5)² = 9", "(x − 2)² + (y + 5)² = 9", "(x + 2)² + (y − 5)² = 3", "(x − 2)² + (y − 5)² = 9"]
+    a: 0
+    e: "(x − (−2))² + (y − 5)² = 3²."
+  - q: "Find the centre of x² + y² − 8x + 2y + 8 = 0."
+    o: ["(−4, 1)", "(4, −1)", "(8, −2)", "(−8, 2)"]
+    a: 1
+    e: "(x − 4)² + (y + 1)² = 16 + 1 − 8 = 9. Centre (4, −1)."
+  - q: "Find the radius of x² + y² − 8x + 2y + 8 = 0."
+    o: ["9", "8", "3", "√8"]
+    a: 2
+    e: "(x − 4)² + (y + 1)² = 9, so r = 3."
+  - q: "What is the angle between a tangent and the radius at the point of contact?"
+    o: ["45°", "180°", "60°", "90°"]
+    a: 3
+    e: "A tangent is perpendicular to the radius at that point."
+  - q: "The perpendicular bisector of a chord of a circle always passes through:"
+    o: ["The centre", "The tangent point", "The midpoint of the radius", "The origin"]
+    a: 0
+    e: "This is used to find the centre from two chords."
+  - q: "AB is a diameter of a circle and C is on the circle. What is angle ACB?"
+    o: ["180°", "90°", "45°", "It depends on C"]
+    a: 1
+    e: "The angle in a semicircle is a right angle."
+  - q: "Does the point (5, 1) lie inside, on or outside the circle (x − 2)² + (y − 1)² = 9?"
+    o: ["Inside", "Outside", "On", "Cannot tell"]
+    a: 2
+    e: "(5 − 2)² + 0² = 9 = r², so it is on the circle."
+  - q: "A line meets a circle and the resulting quadratic has discriminant zero. What does this mean?"
+    o: ["The line misses the circle", "The line crosses twice", "The line passes through the centre", "The line is a tangent"]
+    a: 3
+    e: "One repeated solution means one point of contact."
+  - q: "Find the equation of the line through (0, 4) and (2, 0)."
+    o: ["y = −2x + 4", "y = 2x + 4", "y = −x/2 + 4", "y = 2x − 4"]
+    a: 0
+    e: "Gradient = (0 − 4)/(2 − 0) = −2, intercept 4."
+  - q: "Write y = (2/3)x − 4 in the form ax + by + c = 0 with integer coefficients."
+    o: ["2x + 3y − 12 = 0", "2x − 3y − 12 = 0", "2x − 3y + 12 = 0", "3x − 2y − 4 = 0"]
+    a: 1
+    e: "Multiply by 3: 3y = 2x − 12, so 2x − 3y − 12 = 0."
+  - q: "The radius from centre (1, 1) to P(4, 5) has gradient 4/3. What is the gradient of the tangent at P?"
+    o: ["4/3", "3/4", "−3/4", "−4/3"]
+    a: 2
+    e: "Tangent is perpendicular to the radius: −1 ÷ (4/3) = −3/4."
+  - q: "Lines y = 2x + 1 and y = −x + 7 intersect at:"
+    o: ["(3, 4)", "(1, 3)", "(4, 3)", "(2, 5)"]
+    a: 3
+    e: "2x + 1 = −x + 7 so x = 2, y = 5."
+  - q: "Do the lines y = 3x + 1 and 3y + x = 6 meet at right angles?"
+    o: ["Yes: 3 × (−1/3) = −1", "No: the gradients are equal", "No: 3 × 1/3 = 1", "Cannot tell"]
+    a: 0
+    e: "The second line has gradient −1/3, and 3 × (−1/3) = −1."
+  - q: "A circle has diameter from (0, 0) to (6, 8). What is its equation?"
+    o: ["(x − 6)² + (y − 8)² = 100", "(x − 3)² + (y − 4)² = 25", "(x − 3)² + (y − 4)² = 100", "x² + y² = 25"]
+    a: 1
+    e: "Centre is the midpoint (3, 4). Diameter = 10, so r = 5 and r² = 25."

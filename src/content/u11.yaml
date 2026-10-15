@@ -1,0 +1,137 @@
+id: "s1"
+order: 11
+year: 1
+section: "S"
+badge: "K·L"
+spec: "K, L"
+title: "Sampling and data presentation"
+desc: "Populations and samples, sampling methods, the large data set, measures of location and spread, outliers, diagrams, and correlation."
+practicals: []
+summary:
+  - h: "Sampling"
+    p:
+      - "A **population** is the whole set of items of interest. A **sample** is a subset. A **census** measures every member."
+      - "**Simple random sampling**: every sample of size n is equally likely (e.g. random number generator)."
+      - "**Systematic**: every kth item from a list, starting at a random point."
+      - "**Stratified**: the population is split into groups (strata) and sampled in **proportion** to group size."
+      - "**Quota**: interviewer picks people to fill quotas for each group. Non-random, may be biased."
+      - "**Opportunity**: whoever is available. Easy but likely to be biased."
+      - "Be familiar with the AQA **large data set** and its context."
+  - h: "Measures of location and spread"
+    p:
+      - "**Mean** x̄ = Σx/n. **Median**: middle value. **Mode**: most common."
+      - "**Range**, **interquartile range** (IQR = Q₃ − Q₁), **variance** and **standard deviation**."
+      - "`Variance = Σx²/n − x̄²` and `standard deviation = √variance`."
+      - "**Coding**: if y = (x − a)/b, then ȳ = (x̄ − a)/b and σᵧ = σₓ/b."
+      - "**Outliers**: often defined as more than 1.5 × IQR beyond the quartiles, or more than 2 standard deviations from the mean."
+  - h: "Diagrams"
+    p:
+      - "**Histograms**: frequency density = frequency ÷ class width. **Area** represents frequency."
+      - "**Box plots** show min, Q₁, median, Q₃, max (and outliers)."
+      - "**Cumulative frequency** graphs estimate the median and quartiles."
+      - "**Scatter diagrams** show **correlation** between two variables. Correlation doesn't imply causation."
+      - "A **regression line** of y on x can be used to predict y within the data range (**interpolation**). Predicting outside the range (**extrapolation**) is unreliable."
+pitfalls:
+  - "On a histogram, use **frequency density**, not frequency, on the vertical axis."
+  - "Stratified sampling needs the **proportion** in each stratum."
+  - "Correlation does **not** prove that one variable causes the other."
+examples:
+  - q: "Ten values have Σx = 50 and Σx² = 290. Find the mean and standard deviation."
+    steps:
+      - "Mean = 50/10 = 5."
+      - "Variance = 290/10 − 5² = 29 − 25 = 4."
+    a: "Mean 5, standard deviation 2"
+  - q: "A school has 300 boys and 200 girls. A stratified sample of 50 is needed. How many girls?"
+    steps:
+      - "Girls are 200/500 = 2/5 of the population."
+      - "2/5 × 50 = 20."
+    a: "20 girls"
+questions:
+  - q: "What is a census?"
+    o: ["A random sample", "A survey of every member of the population", "A stratified sample", "A sample of 10%"]
+    a: 1
+    e: "A census measures the whole population."
+  - q: "What is an advantage of a census over a sample?"
+    o: ["It gives completely accurate results for the population", "It is quicker", "It is cheaper", "It is easier with large populations"]
+    a: 0
+    e: "But it can be time-consuming, expensive, and impossible if testing destroys items."
+  - q: "Which sampling method selects every 10th name from a list after a random start?"
+    o: ["Simple random", "Quota", "Systematic", "Opportunity"]
+    a: 2
+    e: "Systematic sampling uses a regular interval."
+  - q: "A population has 400 adults and 100 children. A stratified sample of 20 is taken. How many children?"
+    o: ["10", "5", "2", "4"]
+    a: 3
+    e: "100/500 × 20 = 4."
+  - q: "What is a disadvantage of opportunity sampling?"
+    o: ["It is likely to be unrepresentative (biased)", "It is expensive", "It needs a sampling frame", "It takes too long"]
+    a: 0
+    e: "It only includes people who happen to be available."
+  - q: "Which sampling method is non-random?"
+    o: ["Simple random", "Quota", "Systematic", "Stratified"]
+    a: 1
+    e: "In quota sampling, the interviewer chooses who to include."
+  - q: "Find the mean of 3, 7, 8, 10, 12."
+    o: ["8", "10", "7.5", "40"]
+    a: 0
+    e: "Sum = 40, n = 5, mean = 8."
+  - q: "Σx = 60, Σx² = 400, n = 10. What is the variance?"
+    o: ["40", "36", "4", "2"]
+    a: 2
+    e: "400/10 − 6² = 40 − 36 = 4."
+  - q: "The variance of a data set is 9. What is the standard deviation?"
+    o: ["81", "4.5", "9", "3"]
+    a: 3
+    e: "Standard deviation = √9 = 3."
+  - q: "Q₁ = 12, Q₃ = 20. Using 1.5 × IQR, what is the upper outlier limit?"
+    o: ["32", "28", "30", "24"]
+    a: 0
+    e: "IQR = 8. 20 + 1.5 × 8 = 32."
+  - q: "On a histogram, what does the area of each bar represent?"
+    o: ["Frequency density", "Frequency", "Class width", "Cumulative frequency"]
+    a: 1
+    e: "Area is proportional to frequency."
+  - q: "A class 10 ≤ x < 15 has frequency 20. What is its frequency density?"
+    o: ["20", "2", "4", "100"]
+    a: 2
+    e: "20 ÷ 5 = 4."
+  - q: "Data are coded using y = x − 50. The mean of y is 3. What is the mean of x?"
+    o: ["3", "47", "−47", "53"]
+    a: 3
+    e: "x̄ = ȳ + 50 = 53."
+  - q: "Data are coded using y = x/10. The standard deviation of y is 1.5. What is the standard deviation of x?"
+    o: ["15", "0.15", "1.5", "150"]
+    a: 0
+    e: "σₓ = 10 × σᵧ = 15. Adding constants doesn't affect spread, but scaling does."
+  - q: "What does a box plot NOT show?"
+    o: ["The median", "The mean", "The quartiles", "The range"]
+    a: 1
+    e: "Box plots show the five-number summary, not the mean."
+  - q: "A scatter diagram shows points close to a line sloping downwards. What type of correlation is this?"
+    o: ["Strong positive", "No correlation", "Strong negative", "Weak positive"]
+    a: 2
+    e: "Downward slope means negative correlation; close to a line means strong."
+  - q: "Why is extrapolation from a regression line unreliable?"
+    o: ["The line is always wrong", "Correlation is always weak", "It uses the mean", "The relationship may not continue outside the range of the data"]
+    a: 3
+    e: "We have no evidence about the relationship beyond the data collected."
+  - q: "Ice cream sales and drowning numbers are positively correlated. What is the most sensible conclusion?"
+    o: ["A third factor, such as hot weather, may affect both", "Ice cream causes drowning", "Drowning causes ice cream sales", "The data are wrong"]
+    a: 0
+    e: "Correlation does not imply causation."
+  - q: "Find the median of 4, 9, 2, 7, 5, 11."
+    o: ["7", "6", "5", "5.5"]
+    a: 1
+    e: "Ordered: 2, 4, 5, 7, 9, 11. Median = (5 + 7)/2 = 6."
+  - q: "A value is more than 2 standard deviations above the mean. What might it be considered?"
+    o: ["The median", "The mode", "An outlier", "The upper quartile"]
+    a: 2
+    e: "A common rule is that values beyond mean ± 2σ are outliers."
+  - q: "What is a sampling frame?"
+    o: ["The sample size", "A diagram", "The sampling method", "A list of all members of the population that can be sampled"]
+    a: 3
+    e: "Simple random and systematic sampling need a sampling frame."
+  - q: "Which measure of location is least affected by outliers?"
+    o: ["Median", "Mean", "Range", "Standard deviation"]
+    a: 0
+    e: "The median depends only on the middle values."

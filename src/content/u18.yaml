@@ -1,0 +1,129 @@
+id: "p12"
+order: 18
+year: 2
+section: "P"
+badge: "B·D"
+spec: "B, D"
+title: "Partial fractions and the general binomial expansion"
+desc: "Splitting rational expressions into partial fractions, and expanding (a + bx)ⁿ for any rational n with its validity."
+practicals: []
+summary:
+  - h: "Partial fractions"
+    p:
+      - "Split a fraction with a factorised denominator into simpler fractions."
+      - "Distinct linear factors: `(…)/[(x + a)(x + b)] = A/(x + a) + B/(x + b)`."
+      - "Repeated factor: `(…)/[(x + a)(x + b)²] = A/(x + a) + B/(x + b) + C/(x + b)²`."
+      - "Multiply through by the denominator, then **substitute** convenient values of x (or compare coefficients) to find A, B, C."
+      - "If the numerator's degree ≥ the denominator's, divide first (improper fraction)."
+  - h: "General binomial expansion"
+    p:
+      - "`(1 + x)ⁿ = 1 + nx + n(n − 1)x²/2! + n(n − 1)(n − 2)x³/3! + ...` for **any rational n**."
+      - "For negative or fractional n, the series is **infinite** and only **valid for |x| < 1**."
+      - "For (a + bx)ⁿ, take out aⁿ first: `aⁿ(1 + bx/a)ⁿ`, valid for **|bx/a| < 1**, i.e. |x| < |a/b|."
+      - "Partial fractions can be combined with binomial expansions to expand more complex expressions."
+pitfalls:
+  - "Always state the **range of validity** for negative or fractional n."
+  - "When taking out a factor, raise it to the power n: (4 + x)^(1/2) = 2(1 + x/4)^(1/2)."
+  - "Repeated factors need a term for **each** power of the repeated factor."
+examples:
+  - q: "Express (5x + 1)/[(x + 1)(x − 1)] in partial fractions."
+    steps:
+      - "5x + 1 = A(x − 1) + B(x + 1)."
+      - "x = 1: 6 = 2B, so B = 3."
+      - "x = −1: −4 = −2A, so A = 2."
+    a: "2/(x + 1) + 3/(x − 1)"
+  - q: "Expand (1 − 2x)⁻¹ up to x³ and state the validity."
+    steps:
+      - "n = −1, replace x with −2x."
+      - "1 + (−1)(−2x) + (−1)(−2)(−2x)²/2 + (−1)(−2)(−3)(−2x)³/6."
+      - "= 1 + 2x + 4x² + 8x³."
+    a: "1 + 2x + 4x² + 8x³ + ..., valid for |x| < ½"
+questions:
+  - q: "Express 1/[(x + 2)(x + 3)] in partial fractions."
+    o: ["1/(x + 3) − 1/(x + 2)", "1/(x + 2) − 1/(x + 3)", "1/(x + 2) + 1/(x + 3)", "2/(x + 2) − 3/(x + 3)"]
+    a: 1
+    e: "1 = A(x + 3) + B(x + 2). x = −2: A = 1. x = −3: B = −1."
+  - q: "What form of partial fractions is used for (3x + 2)/[(x − 1)(x + 2)²]?"
+    o: ["A/(x − 1) + B/(x + 2) + C/(x + 2)²", "A/(x − 1) + B/(x + 2)²", "A/(x − 1) + B/(x + 2)", "(Ax + B)/(x + 2)²"]
+    a: 0
+    e: "A repeated factor needs terms for each power."
+  - q: "Express (x + 7)/[(x + 1)(x − 2)] in partial fractions."
+    o: ["2/(x + 1) + 3/(x − 2)", "3/(x + 1) − 2/(x − 2)", "−2/(x + 1) + 3/(x − 2)", "2/(x + 1) − 3/(x − 2)"]
+    a: 2
+    e: "x + 7 = A(x − 2) + B(x + 1). x = 2: 9 = 3B, B = 3. x = −1: 6 = −3A, A = −2."
+  - q: "When must you divide before finding partial fractions?"
+    o: ["Always", "When the denominator has a repeated factor", "When the numerator is negative", "When the degree of the numerator is at least the degree of the denominator"]
+    a: 3
+    e: "Improper fractions need algebraic division first."
+  - q: "Expand (1 + x)⁻¹ up to x³."
+    o: ["1 − x + x² − x³", "1 + x + x² + x³", "1 − x − x² − x³", "1 + x − x² + x³"]
+    a: 0
+    e: "n = −1: 1 + (−1)x + (−1)(−2)x²/2 + (−1)(−2)(−3)x³/6."
+  - q: "For what values of x is the expansion of (1 + x)^(1/2) valid?"
+    o: ["All x", "|x| < 1", "x > 0", "|x| < 2"]
+    a: 1
+    e: "For non-positive-integer n, the expansion is valid for |x| < 1."
+  - q: "Expand (1 + x)^(1/2) up to x²."
+    o: ["1 + x/2 + x²/4", "1 + x/2 + x²/8", "1 + x/2 − x²/8", "1 − x/2 − x²/8"]
+    a: 2
+    e: "n(n − 1)/2 = (½)(−½)/2 = −1/8."
+  - q: "For what values of x is the expansion of (1 − 3x)⁻² valid?"
+    o: ["|x| < 3", "|x| < 1", "x < 1/3", "|x| < 1/3"]
+    a: 3
+    e: "|−3x| < 1, so |x| < 1/3."
+  - q: "Write (4 + x)^(1/2) in the form k(1 + x/4)^(1/2). What is k?"
+    o: ["2", "4", "1/2", "16"]
+    a: 0
+    e: "4^(1/2) = 2."
+  - q: "Expand (2 + x)⁻¹ up to x²."
+    o: ["½ + x/4 + x²/8", "½ − x/4 + x²/8", "2 − x + x²", "½ − x/2 + x²/2"]
+    a: 1
+    e: "½(1 + x/2)⁻¹ = ½(1 − x/2 + x²/4) = ½ − x/4 + x²/8."
+  - q: "What is the validity of the expansion of (2 + x)⁻¹?"
+    o: ["|x| < 1", "|x| < ½", "|x| < 2", "All x"]
+    a: 2
+    e: "|x/2| < 1, so |x| < 2."
+  - q: "What is the coefficient of x² in (1 − 2x)⁻¹?"
+    o: ["−4", "2", "−2", "4"]
+    a: 3
+    e: "(1 − 2x)⁻¹ = 1 + 2x + 4x² + ..."
+  - q: "Expand (1 + 4x)^(−1/2) up to x."
+    o: ["1 − 2x", "1 + 2x", "1 − x/2", "1 + 4x"]
+    a: 0
+    e: "1 + (−½)(4x) = 1 − 2x."
+  - q: "Why does the expansion of (1 + x)ⁿ terminate when n is a positive integer?"
+    o: ["Because |x| < 1", "Because the coefficients eventually include a factor (n − n) = 0", "Because x is small", "It doesn't terminate"]
+    a: 1
+    e: "From term n + 2 onwards, each coefficient contains a factor of zero."
+  - q: "Express (2x)/[(x − 1)(x + 1)] in partial fractions."
+    o: ["2/(x − 1) + 2/(x + 1)", "1/(x − 1) − 1/(x + 1)", "1/(x − 1) + 1/(x + 1)", "2/(x − 1) − 2/(x + 1)"]
+    a: 2
+    e: "2x = A(x + 1) + B(x − 1). x = 1: A = 1. x = −1: B = 1."
+  - q: "Use (1 + x)^(1/2) ≈ 1 + x/2 − x²/8 with x = 0.02 to estimate √1.02."
+    o: ["1.0201", "1.01", "1.02", "1.00995"]
+    a: 3
+    e: "1 + 0.01 − 0.00005 = 1.00995."
+  - q: "(3x + 4)/[x(x + 2)] = A/x + B/(x + 2). Find A."
+    o: ["2", "1", "4", "−1"]
+    a: 0
+    e: "3x + 4 = A(x + 2) + Bx. x = 0: 4 = 2A, so A = 2."
+  - q: "For the previous question, find B."
+    o: ["2", "1", "3", "−2"]
+    a: 1
+    e: "x = −2: −2 = −2B, so B = 1."
+  - q: "What is the coefficient of x² in (1 + x)^(−3)?"
+    o: ["−3", "3", "6", "−6"]
+    a: 2
+    e: "(−3)(−4)/2 = 6."
+  - q: "Expand (1 − x)^(−2) up to x²."
+    o: ["1 − 2x + 3x²", "1 + 2x − 3x²", "1 − 2x − 3x²", "1 + 2x + 3x²"]
+    a: 3
+    e: "1 + (−2)(−x) + (−2)(−3)(−x)²/2 = 1 + 2x + 3x²."
+  - q: "To expand (3x + 1)/[(1 + x)(1 − 2x)], what is the best first step?"
+    o: ["Split into partial fractions, then expand each term", "Multiply the denominators out", "Expand the numerator", "Divide by x"]
+    a: 0
+    e: "Each partial fraction can then be expanded as a binomial."
+  - q: "The expansion of (1 + ax)ⁿ begins 1 − 6x + 27x². Which pair gives this?"
+    o: ["n = 2, a = −3", "n = −2, a = 3", "n = −3, a = 2", "n = 3, a = −2"]
+    a: 1
+    e: "na = −6 and n(n − 1)a²/2 = 27. n = −2, a = 3: na = −6 ✓, (−2)(−3)(9)/2 = 27 ✓."

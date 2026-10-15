@@ -1,0 +1,137 @@
+id: "p7"
+order: 7
+year: 1
+section: "P"
+badge: "F"
+spec: "F"
+title: "Exponentials and logarithms"
+desc: "Exponential graphs and eˣ, gradient of eᵏˣ, laws of logarithms, ln x, solving exponential equations, and modelling with exponentials and log-linear graphs."
+practicals: []
+summary:
+  - h: "Exponential functions"
+    p:
+      - "y = aˣ (a > 0) passes through (0, 1) and has the x-axis as an asymptote."
+      - "**e ≈ 2.718** is the special base for which the gradient of eˣ equals eˣ."
+      - "`d/dx (eᵏˣ) = keᵏˣ`, so the rate of change is proportional to the value."
+  - h: "Logarithms"
+    p:
+      - "`logₐ b = c ⇔ aᶜ = b`"
+      - "`logₐ x + logₐ y = logₐ (xy)`"
+      - "`logₐ x − logₐ y = logₐ (x/y)`"
+      - "`k logₐ x = logₐ (xᵏ)`"
+      - "`logₐ a = 1` and `logₐ 1 = 0`."
+      - "**ln x** = logₑ x. ln and eˣ are **inverse functions**: e^(ln x) = x and ln(eˣ) = x."
+  - h: "Solving equations"
+    p:
+      - "To solve aˣ = b, take logs of both sides: x = log b / log a."
+      - "Equations like e²ˣ − 5eˣ + 6 = 0 are quadratics in eˣ: let u = eˣ."
+  - h: "Modelling and log graphs"
+    p:
+      - "Exponential growth and decay: e.g. N = N₀e^(kt) (k > 0 growth, k < 0 decay)."
+      - "If **y = axⁿ**, then **log y = log a + n log x**. Plotting log y against log x gives a straight line with gradient **n** and intercept **log a**."
+      - "If **y = kbˣ**, then **log y = log k + x log b**. Plotting log y against x gives gradient **log b** and intercept **log k**."
+      - "Consider limitations of models, e.g. exponential growth can't continue forever."
+pitfalls:
+  - "log(x + y) is **not** log x + log y."
+  - "ln of a negative number or zero is undefined. Check solutions."
+  - "Read which variables are on each axis of a log graph before finding a and n (or k and b)."
+examples:
+  - q: "Solve 3ˣ = 20, giving your answer to 3 s.f."
+    steps:
+      - "Take logs: x ln 3 = ln 20."
+      - "x = ln 20 / ln 3 = 2.9957... / 1.0986..."
+    a: "x ≈ 2.73"
+  - q: "Solve e²ˣ − 7eˣ + 12 = 0."
+    steps:
+      - "Let u = eˣ: u² − 7u + 12 = 0, so (u − 3)(u − 4) = 0."
+      - "eˣ = 3 or eˣ = 4."
+    a: "x = ln 3 or x = ln 4"
+questions:
+  - q: "Write log₂ 8 = 3 in index form."
+    o: ["8² = 3", "2³ = 8", "3² = 8", "8³ = 2"]
+    a: 1
+    e: "logₐ b = c means aᶜ = b."
+  - q: "Evaluate log₃ 81."
+    o: ["4", "27", "3", "9"]
+    a: 0
+    e: "3⁴ = 81."
+  - q: "Simplify log 5 + log 4."
+    o: ["log 9", "log 1.25", "log 20", "2 log 9"]
+    a: 2
+    e: "log x + log y = log(xy) = log 20."
+  - q: "Simplify 3 log 2 − log 4."
+    o: ["log 2/3", "log 4", "log 6", "log 2"]
+    a: 3
+    e: "3 log 2 = log 8. log 8 − log 4 = log 2."
+  - q: "What is ln e?"
+    o: ["1", "0", "e", "2.718"]
+    a: 0
+    e: "ln e = logₑ e = 1."
+  - q: "Simplify e^(ln 5)."
+    o: ["ln 5", "5", "e⁵", "1/5"]
+    a: 1
+    e: "eˣ and ln x are inverse functions."
+  - q: "Solve eˣ = 10."
+    o: ["x = 10/e", "x = log 10", "x = ln 10", "x = e¹⁰"]
+    a: 2
+    e: "Take ln of both sides."
+  - q: "Solve 5ˣ = 30 to 3 s.f."
+    o: ["6.00", "1.48", "0.473", "2.11"]
+    a: 3
+    e: "x = ln 30 / ln 5 = 3.401 / 1.609 ≈ 2.11."
+  - q: "What is the derivative of e^(3x)?"
+    o: ["3e^(3x)", "e^(3x)", "3x e^(3x−1)", "e^(3x)/3"]
+    a: 0
+    e: "d/dx (eᵏˣ) = keᵏˣ."
+  - q: "Where does y = 4eˣ cross the y-axis?"
+    o: ["(0, 1)", "(0, 4)", "(0, e)", "(0, 0)"]
+    a: 1
+    e: "At x = 0, y = 4e⁰ = 4."
+  - q: "What is the asymptote of y = eˣ?"
+    o: ["x = 0", "y = 1", "y = 0", "x = 1"]
+    a: 2
+    e: "As x → −∞, eˣ → 0 but never reaches it."
+  - q: "Solve ln x = 2."
+    o: ["x = 2/e", "x = ln 2", "x = 2e", "x = e²"]
+    a: 3
+    e: "x = e²."
+  - q: "Solve log₂(x + 1) = 5."
+    o: ["x = 31", "x = 32", "x = 9", "x = 4"]
+    a: 0
+    e: "x + 1 = 2⁵ = 32, so x = 31."
+  - q: "If y = axⁿ, which graph gives a straight line?"
+    o: ["y against x", "log y against log x", "log y against x", "y against log x"]
+    a: 1
+    e: "log y = log a + n log x has the form Y = mX + c."
+  - q: "For y = axⁿ, a graph of log y against log x has gradient 3 and intercept 0.6. What is a (base 10)?"
+    o: ["0.6", "3", "≈ 3.98", "≈ 1.82"]
+    a: 2
+    e: "log a = 0.6, so a = 10⁰·⁶ ≈ 3.98. And n = 3."
+  - q: "For y = kbˣ, what does the gradient of a graph of log y against x equal?"
+    o: ["log k", "k", "b", "log b"]
+    a: 3
+    e: "log y = log k + x log b."
+  - q: "A population is modelled by P = 200e^(0.05t). What is the initial population?"
+    o: ["200", "210", "0.05", "10"]
+    a: 0
+    e: "At t = 0, e⁰ = 1, so P = 200."
+  - q: "P = 200e^(0.05t). When does P reach 400? (3 s.f.)"
+    o: ["40.0", "13.9", "6.93", "20.0"]
+    a: 1
+    e: "e^(0.05t) = 2, so t = ln 2 / 0.05 ≈ 13.9."
+  - q: "Simplify 2 ln x + ln 3."
+    o: ["ln(6x)", "ln(2x + 3)", "ln(3x²)", "2 ln(3x)"]
+    a: 2
+    e: "2 ln x = ln x², then ln x² + ln 3 = ln 3x²."
+  - q: "Solve 2^(x+1) = 3ˣ to 3 s.f."
+    o: ["0.585", "1.71", "2.41", "1.71 × 10⁻¹"]
+    a: 1
+    e: "(x + 1) ln 2 = x ln 3, so x = ln 2 / (ln 3 − ln 2) ≈ 1.71."
+  - q: "Why might an exponential growth model become unrealistic over long times?"
+    o: ["e is irrational", "Real growth is limited by resources, so it can't continue forever", "Logarithms stop working", "Growth always speeds up"]
+    a: 1
+    e: "Models need limits, e.g. space or food for populations."
+  - q: "Solve e²ˣ = 9."
+    o: ["x = ln 3", "x = 4.5", "x = ln 9", "x = 3"]
+    a: 0
+    e: "2x = ln 9, so x = ½ ln 9 = ln 3."

@@ -1,0 +1,132 @@
+id: "s5"
+order: 29
+year: 2
+section: "S"
+badge: "M"
+spec: "M"
+title: "Conditional probability"
+desc: "Conditional probability notation and formula, using Venn diagrams, tree diagrams and two-way tables, testing independence, and modelling with probability."
+practicals: []
+summary:
+  - h: "Conditional probability"
+    p:
+      - "P(A | B) means 'the probability of A **given** that B has happened'."
+      - "`P(A | B) = P(A ∩ B) / P(B)`"
+      - "Rearranged: `P(A ∩ B) = P(A | B) × P(B)`."
+      - "From a two-way table, restrict to the row or column for B, then find the proportion that are also A."
+      - "From a Venn diagram, P(A | B) = (region in both A and B) ÷ (total of B)."
+  - h: "Tree diagrams"
+    p:
+      - "Second-stage branches are **conditional** probabilities, e.g. P(late | rain)."
+      - "To find P(first event | outcome), use P(A | B) = P(A ∩ B)/P(B), adding all paths that give B."
+  - h: "Independence"
+    p:
+      - "A and B are independent if `P(A | B) = P(A)`, or equivalently P(A ∩ B) = P(A) × P(B)."
+  - h: "Modelling"
+    p:
+      - "Probability models make assumptions, e.g. equally likely outcomes, independence. Discuss whether these are realistic."
+pitfalls:
+  - "P(A | B) is not the same as P(B | A)."
+  - "Divide by P(B), the event that is **given**, not P(A)."
+  - "In a two-way table, the 'given' restricts you to one row or column total."
+examples:
+  - q: "P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.1. Find P(A | B) and P(B | A)."
+    steps:
+      - "P(A | B) = 0.1/0.4 = 0.25."
+      - "P(B | A) = 0.1/0.5 = 0.2."
+    a: "0.25 and 0.2"
+  - q: "It rains on 30% of days. If it rains, P(late) = 0.4; if not, P(late) = 0.1. Given she was late, find P(rain)."
+    steps:
+      - "P(rain and late) = 0.3 × 0.4 = 0.12."
+      - "P(late) = 0.12 + 0.7 × 0.1 = 0.19."
+      - "P(rain | late) = 0.12/0.19."
+    a: "≈ 0.632"
+questions:
+  - q: "What does P(A | B) mean?"
+    o: ["P(A and B)", "The probability of A given that B has occurred", "The probability of B given A", "P(A or B)"]
+    a: 1
+    e: "The vertical line means 'given'."
+  - q: "What is the formula for P(A | B)?"
+    o: ["P(A ∩ B)/P(B)", "P(A ∩ B)/P(A)", "P(A) × P(B)", "P(A) + P(B)"]
+    a: 0
+    e: "Divide the joint probability by the probability of the given event."
+  - q: "P(A ∩ B) = 0.12, P(B) = 0.3. Find P(A | B)."
+    o: ["0.036", "0.42", "0.4", "0.18"]
+    a: 2
+    e: "0.12/0.3 = 0.4."
+  - q: "P(A | B) = 0.6 and P(B) = 0.5. Find P(A ∩ B)."
+    o: ["1.1", "0.1", "1.2", "0.3"]
+    a: 3
+    e: "P(A ∩ B) = P(A | B) × P(B) = 0.3."
+  - q: "Of 50 students, 20 play football. 8 of the footballers also play tennis. Find P(tennis | football)."
+    o: ["0.4", "0.16", "0.8", "0.2"]
+    a: 0
+    e: "8 out of the 20 footballers."
+  - q: "In the same group, 15 students play tennis in total. Find P(football | tennis)."
+    o: ["8/20", "8/15", "15/50", "8/50"]
+    a: 1
+    e: "8 out of the 15 tennis players."
+  - q: "Which condition shows A and B are independent?"
+    o: ["P(A | B) = P(B)", "P(A | B) = 0", "P(A | B) = P(A)", "P(A | B) = 1"]
+    a: 2
+    e: "Knowing B happened doesn't change the probability of A."
+  - q: "P(A) = 0.4, P(B) = 0.5, P(A ∩ B) = 0.2. Find P(A | B)."
+    o: ["0.2", "0.5", "0.8", "0.4"]
+    a: 3
+    e: "0.2/0.5 = 0.4, which equals P(A), so A and B are independent."
+  - q: "In a Venn diagram, A only = 0.2, A ∩ B = 0.15, B only = 0.35. Find P(A | B)."
+    o: ["0.3", "0.15", "0.43", "0.5"]
+    a: 0
+    e: "P(B) = 0.5. P(A | B) = 0.15/0.5 = 0.3."
+  - q: "Using the same Venn diagram, find P(B | A)."
+    o: ["0.15", "0.43", "0.35", "0.5"]
+    a: 1
+    e: "P(A) = 0.35. P(B | A) = 0.15/0.35 ≈ 0.43."
+  - q: "On a tree diagram, what do the second-stage branches usually show?"
+    o: ["Joint probabilities", "Unconditional probabilities", "Conditional probabilities given the first outcome", "Cumulative probabilities"]
+    a: 2
+    e: "E.g. P(late | rain)."
+  - q: "P(rain) = 0.3, P(late | rain) = 0.4, P(late | no rain) = 0.1. Find P(late)."
+    o: ["0.5", "0.12", "0.07", "0.19"]
+    a: 3
+    e: "0.3 × 0.4 + 0.7 × 0.1 = 0.12 + 0.07 = 0.19."
+  - q: "Using the previous question, find P(rain | late) to 3 d.p."
+    o: ["0.632", "0.12", "0.4", "0.368"]
+    a: 0
+    e: "0.12/0.19 ≈ 0.632."
+  - q: "Is P(A | B) always equal to P(B | A)?"
+    o: ["Yes, always", "No, only when P(A) = P(B) (or P(A ∩ B) = 0)", "Only for independent events", "Only for mutually exclusive events"]
+    a: 1
+    e: "They have different denominators: P(B) and P(A)."
+  - q: "A bag has 5 red and 3 blue counters. Two are drawn without replacement. Find P(second red | first red)."
+    o: ["5/8", "5/7", "4/7", "4/8"]
+    a: 2
+    e: "After a red is removed, 4 red remain out of 7."
+  - q: "P(A | B′) means:"
+    o: ["P(A and not B)", "P(not A given B)", "P(B given A)", "P(A given that B did not happen)"]
+    a: 3
+    e: "B′ is the complement of B."
+  - q: "P(A) = 0.6, P(B | A) = 0.5, P(B | A′) = 0.25. Find P(B)."
+    o: ["0.4", "0.75", "0.3", "0.1"]
+    a: 0
+    e: "0.6 × 0.5 + 0.4 × 0.25 = 0.3 + 0.1 = 0.4."
+  - q: "Using the previous question, find P(A | B)."
+    o: ["0.5", "0.75", "0.3", "0.6"]
+    a: 1
+    e: "P(A ∩ B) = 0.3. P(A | B) = 0.3/0.4 = 0.75."
+  - q: "P(A | B) = 0 for events with non-zero probabilities. What can you say?"
+    o: ["A and B are independent", "A always happens", "A and B are mutually exclusive", "B never happens"]
+    a: 2
+    e: "If B happens, A can't, so P(A ∩ B) = 0."
+  - q: "A test detects a disease 95% of the time when present. 2% have the disease. 5% of healthy people test positive. Find P(positive)."
+    o: ["0.95", "0.05", "0.019", "0.068"]
+    a: 3
+    e: "0.02 × 0.95 + 0.98 × 0.05 = 0.019 + 0.049 = 0.068."
+  - q: "Using the previous question, what is P(disease | positive) to 2 d.p.?"
+    o: ["0.28", "0.95", "0.02", "0.72"]
+    a: 0
+    e: "0.019/0.068 ≈ 0.28. Most positives are false positives when a disease is rare."
+  - q: "What is a common assumption in probability models that might not hold in practice?"
+    o: ["Probabilities add to 1", "Events are independent", "P(A) ≥ 0", "There are outcomes"]
+    a: 1
+    e: "Real events, like weather on consecutive days, are often linked."

@@ -1,0 +1,131 @@
+id: "p5"
+order: 5
+year: 1
+section: "P"
+badge: "D"
+spec: "D"
+title: "Binomial expansion"
+desc: "Pascal's triangle, the binomial expansion of (a + b)ⁿ for positive integer n, nCr notation, finding particular terms and using expansions for approximations."
+practicals: []
+summary:
+  - h: "Pascal's triangle and nCr"
+    p:
+      - "The coefficients in the expansion of (a + b)ⁿ are found in row n of **Pascal's triangle**: 1; 1 1; 1 2 1; 1 3 3 1; 1 4 6 4 1; ..."
+      - "`ⁿCᵣ = n! / [r!(n − r)!]`, also written (n r)."
+      - "`n! = n × (n − 1) × ... × 2 × 1`, and 0! = 1."
+  - h: "Binomial expansion"
+    p:
+      - "`(a + b)ⁿ = aⁿ + ⁿC₁aⁿ⁻¹b + ⁿC₂aⁿ⁻²b² + ... + bⁿ`"
+      - "The general term is **ⁿCᵣ aⁿ⁻ʳ bʳ**."
+      - "`(1 + x)ⁿ = 1 + nx + [n(n − 1)/2!]x² + [n(n − 1)(n − 2)/3!]x³ + ...`"
+      - "Put brackets around terms with coefficients or negative signs, e.g. (2 − 3x)⁵ uses a = 2 and b = (−3x)."
+  - h: "Approximations"
+    p:
+      - "Substitute a suitable small value of x into an expansion to estimate a number, e.g. (1.02)⁸ using (1 + x)⁸ with x = 0.02."
+      - "The approximation is better when x is small, because higher powers of x become negligible."
+pitfalls:
+  - "Raise the **whole** term to the power, including its coefficient: (3x)² = 9x², not 3x²."
+  - "Keep the **negative sign** inside the bracket for b."
+  - "The term in xʳ uses ⁿCᵣ, and the (r + 1)th term is the xʳ term."
+examples:
+  - q: "Find the first three terms of (2 + x)⁶ in ascending powers of x."
+    steps:
+      - "Term 1: 2⁶ = 64."
+      - "Term 2: ⁶C₁ × 2⁵ × x = 6 × 32x = 192x."
+      - "Term 3: ⁶C₂ × 2⁴ × x² = 15 × 16x² = 240x²."
+    a: "64 + 192x + 240x² + ..."
+  - q: "Find the coefficient of x³ in the expansion of (1 − 2x)⁷."
+    steps:
+      - "Term: ⁷C₃ × (−2x)³."
+      - "⁷C₃ = 35 and (−2)³ = −8."
+      - "35 × (−8) = −280."
+    a: "−280"
+questions:
+  - q: "What is ⁵C₂?"
+    o: ["20", "10", "5", "15"]
+    a: 1
+    e: "5! / (2! 3!) = 120 / (2 × 6) = 10."
+  - q: "What is row 4 of Pascal's triangle (for (a + b)⁴)?"
+    o: ["1 4 6 4 1", "1 3 3 1", "1 4 4 1", "1 5 10 10 5 1"]
+    a: 0
+    e: "Each number is the sum of the two above it."
+  - q: "Expand (1 + x)³."
+    o: ["1 + 3x + 3x²", "1 + x³", "1 + 3x + 3x² + x³", "1 + 3x + x²"]
+    a: 2
+    e: "Coefficients 1, 3, 3, 1."
+  - q: "What is the coefficient of x² in (1 + x)⁸?"
+    o: ["8", "56", "16", "28"]
+    a: 3
+    e: "⁸C₂ = 28."
+  - q: "What is the coefficient of x² in (1 + 3x)⁵?"
+    o: ["90", "30", "10", "45"]
+    a: 0
+    e: "⁵C₂ × 3² = 10 × 9 = 90."
+  - q: "What is the first term of (2 + x)⁵?"
+    o: ["2", "32", "10", "5"]
+    a: 1
+    e: "2⁵ = 32."
+  - q: "What is the coefficient of x in (3 − x)⁴?"
+    o: ["108", "12", "−108", "−27"]
+    a: 2
+    e: "⁴C₁ × 3³ × (−1) = 4 × 27 × (−1) = −108."
+  - q: "What is the coefficient of x³ in (1 + 2x)⁶?"
+    o: ["40", "120", "20", "160"]
+    a: 3
+    e: "⁶C₃ × 2³ = 20 × 8 = 160."
+  - q: "What is 0!?"
+    o: ["1", "0", "Undefined", "Infinity"]
+    a: 0
+    e: "0! is defined as 1, so formulas like ⁿC₀ = 1 work."
+  - q: "What is ⁷C₇?"
+    o: ["7", "1", "0", "5040"]
+    a: 1
+    e: "There is exactly one way to choose all 7."
+  - q: "The first three terms of (1 + x)ⁿ are 1 + 12x + 66x². What is n?"
+    o: ["66", "11", "12", "6"]
+    a: 2
+    e: "nx = 12x gives n = 12. Check: ¹²C₂ = 66."
+  - q: "Which is the general term of (a + b)ⁿ?"
+    o: ["n aⁿ bʳ", "ⁿCᵣ aʳ bʳ", "aⁿ⁻ʳ bⁿ", "ⁿCᵣ aⁿ⁻ʳ bʳ"]
+    a: 3
+    e: "The power of a decreases as the power of b increases."
+  - q: "Use (1 + x)¹⁰ ≈ 1 + 10x + 45x² to estimate 1.01¹⁰."
+    o: ["1.1045", "1.1", "1.0145", "1.45"]
+    a: 0
+    e: "x = 0.01: 1 + 0.1 + 0.0045 = 1.1045."
+  - q: "Why is an approximation using the first few terms better for small x?"
+    o: ["Larger x makes nCr smaller", "Higher powers of a small x are very small, so the ignored terms are negligible", "Small x gives exact answers", "It doesn't matter"]
+    a: 1
+    e: "E.g. 0.01³ = 0.000001, which contributes very little."
+  - q: "What is the constant term in (x + 2/x)⁴?"
+    o: ["16", "8", "24", "32"]
+    a: 2
+    e: "Term ⁴Cᵣ x⁴⁻ʳ (2/x)ʳ has power 4 − 2r = 0 when r = 2: ⁴C₂ × 4 = 24."
+  - q: "How many terms are in the expansion of (a + b)⁹?"
+    o: ["9", "8", "11", "10"]
+    a: 3
+    e: "There are n + 1 terms."
+  - q: "What is the coefficient of x² in (2 − x)⁵?"
+    o: ["80", "−80", "40", "10"]
+    a: 0
+    e: "⁵C₂ × 2³ × (−1)² = 10 × 8 × 1 = 80."
+  - q: "Evaluate ⁶C₃."
+    o: ["120", "20", "18", "36"]
+    a: 1
+    e: "720 / (6 × 6) = 20."
+  - q: "What is the coefficient of x in (1 − 4x)⁵?"
+    o: ["20", "−4", "−20", "5"]
+    a: 2
+    e: "⁵C₁ × (−4) = −20."
+  - q: "Which statement about ⁿCᵣ is true?"
+    o: ["ⁿCᵣ = ⁿCₙ", "ⁿCᵣ = n × r", "ⁿC₁ = 1", "ⁿCᵣ = ⁿCₙ₋ᵣ"]
+    a: 3
+    e: "Pascal's triangle is symmetric."
+  - q: "Expand (1 − x)⁴."
+    o: ["1 − 4x + 6x² − 4x³ + x⁴", "1 − 4x − 6x² − 4x³ − x⁴", "1 + 4x + 6x² + 4x³ + x⁴", "1 − 4x + 6x² − 4x³ − x⁴"]
+    a: 0
+    e: "Signs alternate because b = −x."
+  - q: "In the expansion of (1 + kx)⁶, the coefficient of x is 18. What is k?"
+    o: ["18", "3", "6", "1/3"]
+    a: 1
+    e: "6k = 18, so k = 3."

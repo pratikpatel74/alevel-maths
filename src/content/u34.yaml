@@ -1,0 +1,131 @@
+id: "m5"
+order: 34
+year: 2
+section: "M"
+badge: "R"
+spec: "R"
+title: "Friction, inclined planes and resolving forces"
+desc: "Resolving forces into components, equilibrium, the model of friction F ≤ μR, motion on rough and smooth inclined planes, and connected particles with friction."
+practicals: []
+summary:
+  - h: "Resolving forces"
+    p:
+      - "A force F at angle θ to the horizontal has components `F cos θ` (horizontal) and `F sin θ` (vertical)."
+      - "In **equilibrium**, the resultant force is zero, so components balance in **each** direction."
+      - "On an **inclined plane** at angle α, resolve **parallel** and **perpendicular** to the slope. Weight has components `mg sin α` down the slope and `mg cos α` into the slope."
+  - h: "Friction"
+    p:
+      - "Friction **opposes** motion or the tendency to move."
+      - "**Model**: `F ≤ μR`, where μ is the **coefficient of friction** and R is the normal reaction."
+      - "When the object is moving or on the point of moving (**limiting equilibrium**), `F = μR`."
+      - "Smooth surface: μ = 0."
+  - h: "Inclined planes"
+    p:
+      - "Perpendicular to the slope: `R = mg cos α` (plus or minus components of any other forces)."
+      - "Parallel: use `F = ma` along the slope, with friction acting up or down the slope opposite to the motion."
+      - "A particle on a rough slope is on the point of sliding when `mg sin α = μ mg cos α`, so `μ = tan α`."
+pitfalls:
+  - "R isn't always mg. Find it by resolving perpendicular to the surface, including other forces."
+  - "Friction acts **opposite** to the direction of motion (or of the tendency to move)."
+  - "Use `F = μR` only when moving or on the point of moving. Otherwise `F ≤ μR`."
+examples:
+  - q: "A 4 kg block rests on a rough horizontal surface (μ = 0.3). A horizontal force of 20 N is applied. Find the acceleration (g = 9.8)."
+    steps:
+      - "R = 4g = 39.2 N."
+      - "Maximum friction = 0.3 × 39.2 = 11.76 N. 20 > 11.76, so the block moves."
+      - "F = ma: 20 − 11.76 = 4a, so a = 2.06 m s⁻²."
+    a: "a ≈ 2.06 m s⁻²"
+  - q: "A 2 kg particle slides down a smooth slope at 30°. Find its acceleration (g = 9.8)."
+    steps:
+      - "Component of weight down the slope = 2g sin 30° = 9.8 N."
+      - "F = ma: 9.8 = 2a."
+    a: "a = 4.9 m s⁻²"
+questions:
+  - q: "A force of 50 N acts at 30° to the horizontal. What is its horizontal component?"
+    o: ["25 N", "43.3 N", "50 N", "28.9 N"]
+    a: 1
+    e: "50 cos 30° = 43.3 N."
+  - q: "A force of 50 N acts at 30° to the horizontal. What is its vertical component?"
+    o: ["25 N", "43.3 N", "57.7 N", "86.6 N"]
+    a: 0
+    e: "50 sin 30° = 25 N."
+  - q: "What is the model of friction?"
+    o: ["F = mg", "F = ma", "F ≤ μR", "F = μmg always"]
+    a: 2
+    e: "Friction can take any value up to the limiting value μR."
+  - q: "When does F = μR?"
+    o: ["Always", "Only when at rest", "Only on smooth surfaces", "When the object is moving or on the point of moving"]
+    a: 3
+    e: "This is limiting friction."
+  - q: "A 5 kg block is on a rough horizontal surface with μ = 0.4. What is the maximum friction? (g = 9.8)"
+    o: ["19.6 N", "2 N", "49 N", "12.25 N"]
+    a: 0
+    e: "R = 5 × 9.8 = 49 N. F = 0.4 × 49 = 19.6 N."
+  - q: "What is the component of weight acting down a slope at angle α?"
+    o: ["mg cos α", "mg sin α", "mg tan α", "mg"]
+    a: 1
+    e: "The component parallel to the slope is mg sin α."
+  - q: "What is the normal reaction on a particle of mass m resting on a slope at angle α (no other forces)?"
+    o: ["mg", "mg sin α", "mg cos α", "mg tan α"]
+    a: 2
+    e: "Resolving perpendicular to the slope: R = mg cos α."
+  - q: "A particle is on the point of sliding down a rough slope at angle α. What is μ?"
+    o: ["sin α", "cos α", "1/tan α", "tan α"]
+    a: 3
+    e: "mg sin α = μ mg cos α, so μ = tan α."
+  - q: "A 3 kg particle slides down a smooth slope inclined at 20°. What is its acceleration? (g = 9.8)"
+    o: ["3.35 m s⁻²", "9.21 m s⁻²", "9.8 m s⁻²", "1.12 m s⁻²"]
+    a: 0
+    e: "a = g sin 20° = 9.8 × 0.342 = 3.35 m s⁻²."
+  - q: "What does a smooth surface mean in modelling?"
+    o: ["μ = 1", "No friction (μ = 0)", "Very rough", "The object is light"]
+    a: 1
+    e: "A smooth surface exerts no friction."
+  - q: "In which direction does friction act on a block being pulled to the right?"
+    o: ["Right", "Up", "Left", "Down"]
+    a: 2
+    e: "Friction opposes the motion."
+  - q: "A 10 kg block is pulled by a force of 40 N at 30° above the horizontal on a rough surface. What is R? (g = 9.8)"
+    o: ["98 N", "118 N", "78 N", "64.4 N"]
+    a: 2
+    e: "Vertically: R + 40 sin 30° = 98, so R = 98 − 20 = 78 N."
+  - q: "In equilibrium, what is the resultant force?"
+    o: ["Zero", "Equal to the weight", "Equal to friction", "Positive"]
+    a: 0
+    e: "All forces balance in every direction."
+  - q: "A block on a rough horizontal surface (μ = 0.5, R = 20 N) is pushed by 6 N. What is the friction force?"
+    o: ["10 N", "6 N", "20 N", "0 N"]
+    a: 1
+    e: "Maximum friction is 10 N. The push is only 6 N, so friction is 6 N and the block stays still."
+  - q: "A 2 kg particle on a rough slope at 30° (μ = 0.2) slides down. What is the friction force? (g = 9.8)"
+    o: ["9.8 N", "1.96 N", "3.39 N", "16.97 N"]
+    a: 2
+    e: "R = 2g cos 30° = 16.97 N. F = 0.2 × 16.97 = 3.39 N."
+  - q: "Using the previous question, what is the acceleration down the slope?"
+    o: ["4.9 m s⁻²", "6.4 m s⁻²", "1.7 m s⁻²", "3.2 m s⁻²"]
+    a: 3
+    e: "2g sin 30° − 3.39 = 9.8 − 3.39 = 6.41. a = 6.41/2 = 3.2 m s⁻²."
+  - q: "Three forces act on a particle in equilibrium. What can be said about them?"
+    o: ["Their vector sum is zero", "They must be equal", "They act in the same direction", "They are all perpendicular"]
+    a: 0
+    e: "The resultant is zero, so they form a closed triangle."
+  - q: "What happens to R when a force pulls a block upwards at an angle?"
+    o: ["It increases", "It decreases", "It stays equal to mg", "It becomes zero"]
+    a: 1
+    e: "The upward component of the pull supports part of the weight."
+  - q: "A particle rests on a rough slope. Which way does friction act?"
+    o: ["Down the slope", "Perpendicular to the slope", "Up the slope", "There is no friction"]
+    a: 2
+    e: "The particle tends to slide down, so friction acts up the slope."
+  - q: "What is the coefficient of friction if a 4 kg block needs exactly 15.68 N to start moving on a horizontal surface? (g = 9.8)"
+    o: ["0.25", "0.5", "0.16", "0.4"]
+    a: 3
+    e: "μ = F/R = 15.68/39.2 = 0.4."
+  - q: "Which is a modelling assumption when using F = μR?"
+    o: ["μ is constant for the two surfaces in contact", "Friction is zero", "R always equals mg", "Friction increases with speed"]
+    a: 0
+    e: "The model treats μ as a constant for given surfaces."
+  - q: "A 6 kg particle hangs in equilibrium from two strings. What is the total vertical component of tension? (g = 9.8)"
+    o: ["6 N", "58.8 N", "29.4 N", "117.6 N"]
+    a: 1
+    e: "Vertical components must balance the weight: 6 × 9.8 = 58.8 N."

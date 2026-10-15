@@ -1,0 +1,132 @@
+id: "p9"
+order: 9
+year: 1
+section: "P"
+badge: "H"
+spec: "H"
+title: "Integration"
+desc: "Integration as the reverse of differentiation, integrating xⁿ, finding constants, definite integrals and areas between curves and the x-axis."
+practicals: []
+summary:
+  - h: "Indefinite integration"
+    p:
+      - "Integration is the **reverse of differentiation**."
+      - "`∫ xⁿ dx = xⁿ⁺¹/(n + 1) + c`, for n ≠ −1."
+      - "Always add **+ c** for indefinite integrals."
+      - "Rewrite roots and fractions as powers first, and expand brackets."
+      - "If you know a point on the curve, substitute it to find c."
+  - h: "Definite integrals"
+    p:
+      - "`∫ₐᵇ f(x) dx = F(b) − F(a)`, where F is the integral of f. No + c needed."
+      - "The **Fundamental Theorem of Calculus** links differentiation and integration."
+  - h: "Areas"
+    p:
+      - "The area between a curve and the **x-axis** from x = a to x = b is ∫ₐᵇ y dx."
+      - "Areas **below** the x-axis give **negative** integrals. Find each part separately and add the magnitudes."
+      - "**Area between two curves**: ∫ (upper − lower) dx between their intersection points."
+      - "For a line and a curve, you can also subtract the area of a triangle or trapezium."
+pitfalls:
+  - "Don't forget + c on indefinite integrals."
+  - "If the curve crosses the axis, split the integral at the root."
+  - "You can't integrate a product or quotient term by term: expand or simplify first."
+examples:
+  - q: "Find the area enclosed by y = x² − 4x and the x-axis."
+    steps:
+      - "Roots: x(x − 4) = 0, so x = 0 and x = 4."
+      - "∫₀⁴ (x² − 4x) dx = [x³/3 − 2x²]₀⁴ = 64/3 − 32 = −32/3."
+      - "The region is below the axis, so the area is the magnitude."
+    a: "32/3 square units"
+  - q: "dy/dx = 6x² − 2 and the curve passes through (1, 5). Find y."
+    steps:
+      - "y = 2x³ − 2x + c."
+      - "At (1, 5): 5 = 2 − 2 + c, so c = 5."
+    a: "y = 2x³ − 2x + 5"
+questions:
+  - q: "Find ∫ 6x² dx."
+    o: ["12x + c", "2x³ + c", "6x³ + c", "3x² + c"]
+    a: 1
+    e: "6 × x³/3 = 2x³, plus c."
+  - q: "Find ∫ (4x³ + 2x) dx."
+    o: ["x⁴ + x² + c", "12x² + 2 + c", "4x⁴ + 2x² + c", "x⁴ + 2x² + c"]
+    a: 0
+    e: "4x⁴/4 + 2x²/2 = x⁴ + x²."
+  - q: "Find ∫ x^(−2) dx."
+    o: ["−2x⁻³ + c", "x⁻¹ + c", "−x⁻¹ + c", "x⁻³/3 + c"]
+    a: 2
+    e: "x⁻¹/(−1) = −1/x."
+  - q: "Find ∫ √x dx."
+    o: ["½x^(−1/2) + c", "x^(3/2) + c", "(3/2)x^(3/2) + c", "(2/3)x^(3/2) + c"]
+    a: 3
+    e: "x^(1/2) integrates to x^(3/2) ÷ (3/2) = (2/3)x^(3/2)."
+  - q: "Evaluate ∫₀² 3x² dx."
+    o: ["8", "12", "6", "4"]
+    a: 0
+    e: "[x³]₀² = 8 − 0 = 8."
+  - q: "Evaluate ∫₁³ (2x + 1) dx."
+    o: ["8", "10", "12", "6"]
+    a: 1
+    e: "[x² + x]₁³ = (9 + 3) − (1 + 1) = 10."
+  - q: "Why is + c needed in indefinite integration?"
+    o: ["To make the answer positive", "Because c = 0 always", "Because constants differentiate to zero, so any constant could have been there", "To find the area"]
+    a: 2
+    e: "Many functions have the same derivative, differing by a constant."
+  - q: "dy/dx = 2x + 3 and the curve passes through (0, 4). Find y."
+    o: ["y = x² + 3x", "y = 2x² + 3x + 4", "y = x² + 4", "y = x² + 3x + 4"]
+    a: 3
+    e: "y = x² + 3x + c, and at x = 0, y = 4, so c = 4."
+  - q: "A definite integral of a curve gives a negative value. What does this mean?"
+    o: ["The region is below the x-axis", "The answer is wrong", "The curve has no area", "The curve is above the x-axis"]
+    a: 0
+    e: "Integrals count area below the axis as negative."
+  - q: "Find ∫ (x + 1)² dx."
+    o: ["(x + 1)³ + c", "x³/3 + x² + x + c", "x³/3 + x + c", "2(x + 1) + c"]
+    a: 1
+    e: "Expand: x² + 2x + 1, then integrate term by term."
+  - q: "Find the area under y = x² from x = 0 to x = 3."
+    o: ["27", "3", "9", "6"]
+    a: 2
+    e: "[x³/3]₀³ = 27/3 = 9."
+  - q: "Find ∫ (x³ + x)/x dx."
+    o: ["(x⁴/4 + x²/2)/(x²/2) + c", "x³ + c", "x² + 1 + c", "x³/3 + x + c"]
+    a: 3
+    e: "Simplify first: x² + 1, then integrate."
+  - q: "Evaluate ∫₁⁴ x^(−1/2) dx."
+    o: ["2", "4", "1", "3"]
+    a: 0
+    e: "[2x^(1/2)]₁⁴ = 4 − 2 = 2."
+  - q: "The area between y = 4 − x² and the x-axis is:"
+    o: ["16/3", "32/3", "8", "16"]
+    a: 1
+    e: "Roots ±2. ∫₋₂² (4 − x²) dx = [4x − x³/3] = (8 − 8/3) − (−8 + 8/3) = 32/3."
+  - q: "How do you find the area between two curves that cross at x = a and x = b?"
+    o: ["Add the integrals of each", "Multiply the integrals", "Integrate (upper curve − lower curve) from a to b", "Integrate the lower curve only"]
+    a: 2
+    e: "The difference in heights gives the height of each thin strip."
+  - q: "Find the area between y = x and y = x² from x = 0 to x = 1."
+    o: ["1/2", "1/3", "1", "1/6"]
+    a: 3
+    e: "∫₀¹ (x − x²) dx = ½ − ⅓ = 1/6."
+  - q: "Integration is the reverse of which process?"
+    o: ["Differentiation", "Expansion", "Factorisation", "Logarithms"]
+    a: 0
+    e: "This is the Fundamental Theorem of Calculus."
+  - q: "Find ∫ 5 dx."
+    o: ["5 + c", "5x + c", "0", "5x²/2 + c"]
+    a: 1
+    e: "5 = 5x⁰, which integrates to 5x."
+  - q: "y = x³ − x crosses the x-axis at −1, 0 and 1. What is the total area enclosed with the axis from x = −1 to x = 1?"
+    o: ["0", "1/4", "1/2", "1"]
+    a: 2
+    e: "Each part has area ¼ (one above, one below). The integral gives 0, but the total area is ½."
+  - q: "Evaluate ∫₂³ 6/x² dx."
+    o: ["−1", "6", "3", "1"]
+    a: 3
+    e: "[−6/x]₂³ = −2 − (−3) = 1."
+  - q: "f′(x) = 3x² − 4 and f(2) = 7. Find f(x)."
+    o: ["x³ − 4x + 7", "x³ − 4x", "3x³ − 4x + 7", "x³ − 4x + 15"]
+    a: 0
+    e: "f(x) = x³ − 4x + c. f(2) = 8 − 8 + c = 7, so c = 7."
+  - q: "Find ∫ (2/x³) dx."
+    o: ["−1/x⁴ + c", "−1/x² + c", "1/x² + c", "−6/x⁴ + c"]
+    a: 1
+    e: "2x⁻³ → 2x⁻²/(−2) = −x⁻²."

@@ -1,0 +1,135 @@
+id: "p15"
+order: 21
+year: 2
+section: "P"
+badge: "E"
+spec: "E"
+title: "Trigonometric identities"
+desc: "Compound angle and double angle formulae, the R cos(θ ± α) and R sin(θ ± α) forms, proving identities and solving equations."
+practicals: []
+summary:
+  - h: "Compound angle formulae"
+    p:
+      - "`sin(A ± B) = sin A cos B ± cos A sin B`"
+      - "`cos(A ± B) = cos A cos B ∓ sin A sin B`"
+      - "`tan(A ± B) = (tan A ± tan B)/(1 ∓ tan A tan B)`"
+  - h: "Double angle formulae"
+    p:
+      - "`sin 2A = 2 sin A cos A`"
+      - "`cos 2A = cos²A − sin²A = 2cos²A − 1 = 1 − 2sin²A`"
+      - "`tan 2A = 2tan A/(1 − tan²A)`"
+      - "Choose the cos 2A version that leaves the equation in a single trig function."
+  - h: "R cos(θ ± α) and R sin(θ ± α)"
+    p:
+      - "`a sin θ + b cos θ = R sin(θ + α)`, where `R = √(a² + b²)` and `tan α = b/a`."
+      - "Expand R sin(θ + α) = R sin θ cos α + R cos θ sin α, and compare coefficients: R cos α = a, R sin α = b."
+      - "The maximum value is **R** and the minimum is **−R**. Use this to find max/min and to solve equations."
+  - h: "Proving identities"
+    p:
+      - "Start from **one side** (usually the more complicated) and work towards the other."
+      - "Useful tools: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, double angle formulae, writing everything in terms of sin and cos."
+pitfalls:
+  - "The cos compound formula has the **opposite** sign: cos(A + B) has a minus."
+  - "Find α from tan α = b/a, but check signs from R cos α and R sin α."
+  - "When solving R sin(θ + α) = k, adjust the interval for θ + α first."
+examples:
+  - q: "Express 3 sin θ + 4 cos θ in the form R sin(θ + α), with 0 < α < 90°."
+    steps:
+      - "R = √(9 + 16) = 5."
+      - "R cos α = 3 and R sin α = 4, so tan α = 4/3."
+      - "α = 53.13°."
+    a: "5 sin(θ + 53.1°)"
+  - q: "Show that sin 75° = (√6 + √2)/4."
+    steps:
+      - "sin(45° + 30°) = sin 45° cos 30° + cos 45° sin 30°."
+      - "= (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4."
+    a: "As required. ∎"
+questions:
+  - q: "Expand sin(A + B)."
+    o: ["sin A sin B + cos A cos B", "sin A cos B + cos A sin B", "sin A cos B − cos A sin B", "cos A cos B − sin A sin B"]
+    a: 1
+    e: "This is the compound angle formula for sine."
+  - q: "Expand cos(A + B)."
+    o: ["cos A cos B − sin A sin B", "cos A cos B + sin A sin B", "sin A cos B + cos A sin B", "cos A sin B − sin A cos B"]
+    a: 0
+    e: "Note the minus sign for cos(A + B)."
+  - q: "What is sin 2A?"
+    o: ["2 sin A", "sin²A − cos²A", "2 sin A cos A", "sin A cos A"]
+    a: 2
+    e: "From sin(A + A)."
+  - q: "Which is NOT an expression for cos 2A?"
+    o: ["cos²A − sin²A", "2cos²A − 1", "1 − 2sin²A", "2 sin A cos A"]
+    a: 3
+    e: "2 sin A cos A is sin 2A."
+  - q: "Find the exact value of cos 15° using cos(45° − 30°)."
+    o: ["(√6 + √2)/4", "(√6 − √2)/4", "(√3 − 1)/2", "√2/4"]
+    a: 0
+    e: "cos 45° cos 30° + sin 45° sin 30° = (√6 + √2)/4."
+  - q: "Express 4 sin θ + 3 cos θ as R sin(θ + α). Find R."
+    o: ["7", "5", "1", "25"]
+    a: 1
+    e: "R = √(16 + 9) = 5."
+  - q: "For 4 sin θ + 3 cos θ = R sin(θ + α), find tan α."
+    o: ["4/3", "4/5", "3/4", "3/5"]
+    a: 2
+    e: "R cos α = 4 and R sin α = 3, so tan α = 3/4."
+  - q: "What is the maximum value of 5 sin(θ + 0.6)?"
+    o: ["1", "0.6", "5.6", "5"]
+    a: 3
+    e: "sin has maximum 1, so 5 sin(...) has maximum 5."
+  - q: "What is the minimum value of 2 + 3 cos(θ − α)?"
+    o: ["−1", "−3", "2", "5"]
+    a: 0
+    e: "cos has minimum −1, so 2 − 3 = −1."
+  - q: "Write cos 2θ in terms of sin θ only."
+    o: ["2sin²θ − 1", "1 − 2sin²θ", "sin²θ − 1", "1 − sin²θ"]
+    a: 1
+    e: "cos 2θ = 1 − 2sin²θ."
+  - q: "Solve sin 2x = sin x for 0 ≤ x ≤ 180°."
+    o: ["0°, 180° only", "60° only", "0°, 60°, 180°", "30°, 150°"]
+    a: 2
+    e: "2 sin x cos x − sin x = 0, so sin x(2cos x − 1) = 0. sin x = 0: 0°, 180°. cos x = ½: 60°."
+  - q: "Simplify 2 sin 3x cos 3x."
+    o: ["sin 3x", "cos 6x", "2 sin 6x", "sin 6x"]
+    a: 3
+    e: "2 sin A cos A = sin 2A with A = 3x."
+  - q: "Simplify 1 − 2sin²(2θ)."
+    o: ["cos 4θ", "cos 2θ", "sin 4θ", "cos²2θ"]
+    a: 0
+    e: "1 − 2sin²A = cos 2A with A = 2θ."
+  - q: "Find tan(A + B) when tan A = 1/2 and tan B = 1/3."
+    o: ["5/6", "1", "1/6", "5/7"]
+    a: 1
+    e: "(½ + ⅓)/(1 − ⅙) = (5/6)/(5/6) = 1."
+  - q: "When proving an identity, what is the usual strategy?"
+    o: ["Work on both sides at once and cross-multiply", "Substitute a value of θ", "Start from one side and manipulate it into the other side", "Square both sides"]
+    a: 2
+    e: "Substituting a value only checks one case; it isn't a proof."
+  - q: "Express cos θ − √3 sin θ as R cos(θ + α). Find R."
+    o: ["4", "√3", "1", "2"]
+    a: 3
+    e: "R = √(1 + 3) = 2."
+  - q: "For cos θ − √3 sin θ = R cos(θ + α), find α (0 < α < π/2)."
+    o: ["π/3", "π/6", "π/4", "2π/3"]
+    a: 0
+    e: "R cos α = 1, R sin α = √3, so tan α = √3, α = π/3."
+  - q: "Write sin²x in terms of cos 2x."
+    o: ["(1 + cos 2x)/2", "(1 − cos 2x)/2", "1 − cos 2x", "cos 2x − 1"]
+    a: 1
+    e: "From cos 2x = 1 − 2sin²x. This is useful for integrating sin²x."
+  - q: "Write cos²x in terms of cos 2x."
+    o: ["(1 − cos 2x)/2", "2cos 2x − 1", "(1 + cos 2x)/2", "cos 2x + 1"]
+    a: 2
+    e: "From cos 2x = 2cos²x − 1."
+  - q: "What is tan 2A?"
+    o: ["2 tan A", "tan²A − 1", "2tan A/(1 + tan²A)", "2tan A/(1 − tan²A)"]
+    a: 3
+    e: "From tan(A + A)."
+  - q: "Solve cos 2x = cos x for 0 ≤ x < 360°."
+    o: ["0°, 120°, 240°", "0° only", "60°, 300°", "120°, 240°"]
+    a: 0
+    e: "2cos²x − cos x − 1 = 0, so (2cos x + 1)(cos x − 1) = 0. cos x = 1: 0°. cos x = −½: 120°, 240°."
+  - q: "What is sin(A − B)?"
+    o: ["sin A cos B + cos A sin B", "sin A cos B − cos A sin B", "cos A cos B − sin A sin B", "sin A sin B − cos A cos B"]
+    a: 1
+    e: "Replace B with −B in the sin(A + B) formula."

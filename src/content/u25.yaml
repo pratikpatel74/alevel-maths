@@ -1,0 +1,137 @@
+id: "p19"
+order: 25
+year: 2
+section: "P"
+badge: "H"
+spec: "H"
+title: "Integration techniques"
+desc: "Integrating eˣ, 1/x and trig functions, reverse chain rule, integration by substitution, integration by parts, and integrating using partial fractions and identities."
+practicals: []
+summary:
+  - h: "Standard integrals"
+    p:
+      - "`∫ eᵏˣ dx = (1/k)eᵏˣ + c`"
+      - "`∫ 1/x dx = ln|x| + c`"
+      - "`∫ cos kx dx = (1/k) sin kx + c` and `∫ sin kx dx = −(1/k) cos kx + c`"
+      - "`∫ sec²kx dx = (1/k) tan kx + c`"
+      - "`∫ (ax + b)ⁿ dx = (ax + b)ⁿ⁺¹/[a(n + 1)] + c`"
+  - h: "Reverse chain rule"
+    p:
+      - "`∫ f′(x)/f(x) dx = ln|f(x)| + c`"
+      - "`∫ f′(x)[f(x)]ⁿ dx = [f(x)]ⁿ⁺¹/(n + 1) + c`"
+      - "Spot when the numerator is (a multiple of) the derivative of the denominator."
+  - h: "Substitution and parts"
+    p:
+      - "**Substitution**: let u = g(x), find du/dx, replace dx and all x terms. For definite integrals, **change the limits** too."
+      - "**Integration by parts**: `∫ u (dv/dx) dx = uv − ∫ v (du/dx) dx`."
+      - "Choose u to be the part that gets **simpler** when differentiated (e.g. a polynomial), except with ln x, where u = ln x."
+      - "Sometimes parts is used twice (e.g. x² eˣ)."
+  - h: "Using identities and partial fractions"
+    p:
+      - "Use partial fractions to split rational functions, then integrate each term to get logs."
+      - "Use trig identities: e.g. `sin²x = ½(1 − cos 2x)` and `cos²x = ½(1 + cos 2x)`. tan²x = sec²x − 1."
+pitfalls:
+  - "∫ 1/x dx = ln|x|. Use modulus when x could be negative."
+  - "Change the limits in a definite substitution, or substitute back before using the original limits."
+  - "In integration by parts, the derivative of u should be simpler than u."
+examples:
+  - q: "Find ∫ x eˣ dx."
+    steps:
+      - "u = x, dv/dx = eˣ, so du/dx = 1, v = eˣ."
+      - "∫ x eˣ dx = x eˣ − ∫ eˣ dx."
+    a: "x eˣ − eˣ + c"
+  - q: "Find ∫₀^(π/2) sin²x dx."
+    steps:
+      - "sin²x = ½(1 − cos 2x)."
+      - "∫ = [½x − ¼ sin 2x] from 0 to π/2."
+      - "= (π/4 − 0) − 0."
+    a: "π/4"
+questions:
+  - q: "Find ∫ e^(3x) dx."
+    o: ["3e^(3x) + c", "⅓e^(3x) + c", "e^(3x) + c", "e^(4x)/4 + c"]
+    a: 1
+    e: "∫ eᵏˣ dx = (1/k)eᵏˣ + c."
+  - q: "Find ∫ 5/x dx."
+    o: ["5 ln|x| + c", "5x⁻² + c", "ln|5x| + c", "−5/x² + c"]
+    a: 0
+    e: "∫ 1/x dx = ln|x|, multiplied by 5."
+  - q: "Find ∫ cos 2x dx."
+    o: ["2 sin 2x + c", "−½ sin 2x + c", "½ sin 2x + c", "sin 2x + c"]
+    a: 2
+    e: "∫ cos kx dx = (1/k) sin kx."
+  - q: "Find ∫ sin 3x dx."
+    o: ["⅓ cos 3x + c", "−3 cos 3x + c", "3 cos 3x + c", "−⅓ cos 3x + c"]
+    a: 3
+    e: "∫ sin kx dx = −(1/k) cos kx."
+  - q: "Find ∫ 2x/(x² + 1) dx."
+    o: ["ln(x² + 1) + c", "2 ln(x² + 1) + c", "x² ln x + c", "1/(x² + 1) + c"]
+    a: 0
+    e: "The numerator is the derivative of the denominator."
+  - q: "Find ∫ (2x + 1)⁵ dx."
+    o: ["(2x + 1)⁶/6 + c", "(2x + 1)⁶/12 + c", "10(2x + 1)⁴ + c", "(2x + 1)⁶ + c"]
+    a: 1
+    e: "(2x + 1)⁶/(2 × 6)."
+  - q: "Find ∫ sec²x dx."
+    o: ["sec x tan x + c", "sec³x/3 + c", "tan x + c", "−cot x + c"]
+    a: 2
+    e: "d/dx (tan x) = sec²x."
+  - q: "Find ∫ x eˣ dx."
+    o: ["x eˣ + c", "x² eˣ/2 + c", "eˣ + c", "x eˣ − eˣ + c"]
+    a: 3
+    e: "By parts with u = x."
+  - q: "For ∫ x ln x dx by parts, which should be u?"
+    o: ["u = ln x", "u = x", "u = x ln x", "Either"]
+    a: 0
+    e: "ln x is hard to integrate but easy to differentiate."
+  - q: "Find ∫ x ln x dx."
+    o: ["x² ln x + c", "½x² ln x − ¼x² + c", "ln x/x + c", "½x² ln x + c"]
+    a: 1
+    e: "u = ln x, v = x²/2: ½x² ln x − ∫ ½x dx = ½x² ln x − ¼x² + c."
+  - q: "Evaluate ∫₁^e 1/x dx."
+    o: ["e", "0", "1", "e − 1"]
+    a: 2
+    e: "[ln x]₁^e = 1 − 0 = 1."
+  - q: "Which identity helps to integrate cos²x?"
+    o: ["cos²x = 1 − sin x", "cos²x = 2cos x", "cos²x = sec²x − 1", "cos²x = ½(1 + cos 2x)"]
+    a: 3
+    e: "This turns cos²x into terms that integrate directly."
+  - q: "Find ∫ tan²x dx."
+    o: ["tan x − x + c", "tan³x/3 + c", "sec²x + c", "tan x + x + c"]
+    a: 0
+    e: "tan²x = sec²x − 1."
+  - q: "Using u = x² + 1, find ∫ 2x (x² + 1)³ dx."
+    o: ["(x² + 1)⁴ + c", "(x² + 1)⁴/4 + c", "2(x² + 1)⁴ + c", "x²(x² + 1)⁴ + c"]
+    a: 1
+    e: "du = 2x dx, so ∫ u³ du = u⁴/4."
+  - q: "Find ∫ 1/(2x + 3) dx."
+    o: ["ln|2x + 3| + c", "2 ln|2x + 3| + c", "½ ln|2x + 3| + c", "−1/(2x + 3)² + c"]
+    a: 2
+    e: "∫ 1/(ax + b) dx = (1/a) ln|ax + b|."
+  - q: "Express and integrate 1/[(x + 1)(x + 2)]."
+    o: ["ln|x + 1| + ln|x + 2| + c", "ln|(x + 1)(x + 2)| + c", "1/(x + 1) − 1/(x + 2) + c", "ln|(x + 1)/(x + 2)| + c"]
+    a: 3
+    e: "1/(x + 1) − 1/(x + 2), so ln|x + 1| − ln|x + 2|."
+  - q: "Evaluate ∫₀^(π/2) cos x dx."
+    o: ["1", "0", "−1", "π/2"]
+    a: 0
+    e: "[sin x]₀^(π/2) = 1 − 0."
+  - q: "In a definite integral by substitution, what must you do with the limits?"
+    o: ["Leave them unchanged", "Change them to the corresponding values of u", "Double them", "Remove them"]
+    a: 1
+    e: "Or substitute back to x before using the original limits."
+  - q: "Find ∫ cos x/sin x dx."
+    o: ["−ln|sin x| + c", "ln|cos x| + c", "ln|sin x| + c", "tan x + c"]
+    a: 2
+    e: "The numerator is the derivative of the denominator."
+  - q: "Evaluate ∫₀^(π/2) sin²x dx."
+    o: ["π/2", "1", "½", "π/4"]
+    a: 3
+    e: "[½x − ¼ sin 2x]₀^(π/2) = π/4."
+  - q: "How many times is integration by parts needed for ∫ x² eˣ dx?"
+    o: ["Twice", "Once", "Three times", "It can't be done"]
+    a: 0
+    e: "Each application reduces the power of x by 1."
+  - q: "Find ∫ e^(2x) + 1/x dx."
+    o: ["2e^(2x) + ln x + c", "½e^(2x) + ln|x| + c", "e^(2x) − 1/x² + c", "½e^(2x) − 1/x² + c"]
+    a: 1
+    e: "Integrate each term separately."

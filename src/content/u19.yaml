@@ -1,0 +1,132 @@
+id: "p13"
+order: 19
+year: 2
+section: "P"
+badge: "D"
+spec: "D"
+title: "Sequences and series"
+desc: "nth terms and recurrence relations, increasing, decreasing and periodic sequences, sigma notation, arithmetic and geometric sequences and series, and sum to infinity."
+practicals: []
+summary:
+  - h: "Sequences"
+    p:
+      - "A sequence can be defined by an **nth term** formula, e.g. uₙ = 3n + 1, or a **recurrence relation**, e.g. uₙ₊₁ = 2uₙ − 1, u₁ = 3."
+      - "**Increasing**: uₙ₊₁ > uₙ for all n. **Decreasing**: uₙ₊₁ < uₙ. **Periodic**: terms repeat with period k (uₙ₊ₖ = uₙ)."
+      - "**Sigma notation**: Σ (r = 1 to n) of f(r) means add f(1) + f(2) + ... + f(n)."
+  - h: "Arithmetic sequences and series"
+    p:
+      - "Constant **common difference d**."
+      - "`uₙ = a + (n − 1)d`"
+      - "`Sₙ = n/2 [2a + (n − 1)d] = n/2 (a + l)`, where l is the last term."
+      - "Sum of the first n integers: n(n + 1)/2."
+  - h: "Geometric sequences and series"
+    p:
+      - "Constant **common ratio r**."
+      - "`uₙ = arⁿ⁻¹`"
+      - "`Sₙ = a(1 − rⁿ)/(1 − r)` (or a(rⁿ − 1)/(r − 1))"
+      - "A geometric series **converges** if **|r| < 1**. Then `S∞ = a/(1 − r)`."
+      - "To find n in a geometric problem, you will usually need **logarithms**."
+pitfalls:
+  - "The nth term uses **(n − 1)**, not n."
+  - "S∞ only exists for |r| < 1."
+  - "When solving rⁿ > k with logs and r < 1, log r is negative, so the inequality **reverses**."
+examples:
+  - q: "An arithmetic series has first term 5 and common difference 3. Find the sum of the first 20 terms."
+    steps:
+      - "S₂₀ = 20/2 [2(5) + 19(3)]."
+      - "= 10 [10 + 57] = 670."
+    a: "670"
+  - q: "A geometric series has a = 12 and r = 0.75. Find the sum to infinity."
+    steps:
+      - "|r| < 1, so it converges."
+      - "S∞ = 12/(1 − 0.75) = 12/0.25."
+    a: "48"
+questions:
+  - q: "Find the 10th term of the arithmetic sequence 4, 7, 10, ..."
+    o: ["30", "31", "34", "28"]
+    a: 1
+    e: "u₁₀ = 4 + 9 × 3 = 31."
+  - q: "Find the sum of the first 10 terms of 4, 7, 10, ..."
+    o: ["175", "155", "310", "185"]
+    a: 0
+    e: "S₁₀ = 5[8 + 27] = 175."
+  - q: "Find the common ratio of 81, 27, 9, ..."
+    o: ["3", "−3", "1/3", "54"]
+    a: 2
+    e: "27/81 = 1/3."
+  - q: "Find the 6th term of the geometric sequence 2, 6, 18, ..."
+    o: ["162", "54", "1458", "486"]
+    a: 3
+    e: "u₆ = 2 × 3⁵ = 486."
+  - q: "Find the sum of the first 5 terms of 3, 6, 12, ..."
+    o: ["93", "48", "96", "45"]
+    a: 0
+    e: "S₅ = 3(2⁵ − 1)/(2 − 1) = 3 × 31 = 93."
+  - q: "For which values of r does a geometric series have a sum to infinity?"
+    o: ["r > 1", "|r| < 1", "r > 0", "All r"]
+    a: 1
+    e: "The terms must get smaller for the series to converge."
+  - q: "Find S∞ for 8 + 4 + 2 + 1 + ..."
+    o: ["15", "∞", "16", "32"]
+    a: 2
+    e: "a = 8, r = ½: S∞ = 8/(1 − ½) = 16."
+  - q: "uₙ₊₁ = 2uₙ − 1, u₁ = 3. Find u₃."
+    o: ["5", "17", "11", "9"]
+    a: 3
+    e: "u₂ = 5, u₃ = 9."
+  - q: "Evaluate Σ (r = 1 to 4) of r²."
+    o: ["30", "16", "10", "100"]
+    a: 0
+    e: "1 + 4 + 9 + 16 = 30."
+  - q: "What is the sum of the integers from 1 to 100?"
+    o: ["10 000", "5050", "5000", "10 100"]
+    a: 1
+    e: "n(n + 1)/2 = 100 × 101/2 = 5050."
+  - q: "uₙ₊₁ = 1/uₙ with u₁ = 2. Describe the sequence."
+    o: ["Increasing", "Decreasing", "Periodic with period 2", "Arithmetic"]
+    a: 2
+    e: "2, ½, 2, ½, ... repeats every 2 terms."
+  - q: "An arithmetic sequence has u₃ = 11 and u₇ = 23. Find d."
+    o: ["12", "4", "6", "3"]
+    a: 3
+    e: "4d = 23 − 11 = 12, so d = 3."
+  - q: "A geometric series has a = 5 and S∞ = 20. Find r."
+    o: ["3/4", "1/4", "4", "−3/4"]
+    a: 0
+    e: "20 = 5/(1 − r), so 1 − r = 1/4, r = 3/4."
+  - q: "How many terms of 2 + 4 + 8 + ... are needed for the sum to exceed 1000?"
+    o: ["10", "9", "8", "11"]
+    a: 1
+    e: "Sₙ = 2(2ⁿ − 1) > 1000, so 2ⁿ > 501. 2⁹ = 512, so n = 9."
+  - q: "Which formula gives the sum of an arithmetic series with first term a and last term l?"
+    o: ["n(a + l)", "a(1 − rⁿ)/(1 − r)", "n/2 (a + l)", "a + (n − 1)d"]
+    a: 2
+    e: "The average of the first and last term, times the number of terms."
+  - q: "Is the sequence uₙ = 5 − 2n increasing or decreasing?"
+    o: ["Increasing", "Periodic", "Neither", "Decreasing"]
+    a: 3
+    e: "Each term is 2 less than the one before."
+  - q: "A ball bounces to 80% of its previous height, starting from 5 m. What is the total distance travelled downwards?"
+    o: ["25 m", "20 m", "4 m", "45 m"]
+    a: 0
+    e: "Downward drops: 5 + 4 + 3.2 + ... = 5/(1 − 0.8) = 25 m."
+  - q: "Evaluate Σ (r = 1 to 20) of (3r + 2)."
+    o: ["660", "670", "630", "640"]
+    a: 1
+    e: "Arithmetic: first term 5, last term 62, n = 20. S = 10(5 + 62) = 670."
+  - q: "A salary starts at £20 000 and rises by 3% each year. What is the salary in year 5?"
+    o: ["£23 000", "£23 185.48", "£22 510.18", "£24 000"]
+    a: 2
+    e: "u₅ = 20 000 × 1.03⁴ = £22 510.18."
+  - q: "Solve 0.9ⁿ < 0.1 for the smallest integer n."
+    o: ["n = 21", "n = 10", "n = 9", "n = 22"]
+    a: 3
+    e: "n > ln 0.1 / ln 0.9 = 21.85 (inequality reverses since ln 0.9 < 0). So n = 22."
+  - q: "What is the nth term of an arithmetic sequence?"
+    o: ["a + (n − 1)d", "a + nd", "arⁿ⁻¹", "n/2(2a + (n − 1)d)"]
+    a: 0
+    e: "Start at a and add d, (n − 1) times."
+  - q: "A geometric series has r = −½ and a = 6. Find S∞."
+    o: ["12", "4", "3", "−12"]
+    a: 1
+    e: "6/(1 − (−½)) = 6/1.5 = 4."

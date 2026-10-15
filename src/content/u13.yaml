@@ -1,0 +1,133 @@
+id: "s3"
+order: 13
+year: 1
+section: "S"
+badge: "N"
+spec: "N"
+title: "The binomial distribution"
+desc: "Discrete random variables, conditions for a binomial model, calculating binomial probabilities, cumulative probabilities, and the mean and variance."
+practicals: []
+summary:
+  - h: "Discrete random variables"
+    p:
+      - "A **discrete random variable** X takes separate values, each with a probability. The probabilities sum to 1."
+      - "A probability distribution can be shown as a table or a function, e.g. P(X = x) = kx."
+  - h: "Binomial model"
+    p:
+      - "X ~ B(n, p) when there are: a **fixed number** of trials n; each trial has **two outcomes** (success/failure); a **constant probability** p of success; and trials are **independent**."
+      - "`P(X = r) = ⁿCᵣ pʳ (1 − p)ⁿ⁻ʳ`"
+      - "Use your calculator's **binomial pdf** for P(X = r) and **binomial cdf** for P(X ≤ r)."
+  - h: "Cumulative probabilities"
+    p:
+      - "`P(X < r) = P(X ≤ r − 1)`"
+      - "`P(X ≥ r) = 1 − P(X ≤ r − 1)`"
+      - "`P(a ≤ X ≤ b) = P(X ≤ b) − P(X ≤ a − 1)`"
+  - h: "Mean and variance"
+    p:
+      - "`E(X) = np`"
+      - "`Var(X) = np(1 − p)` (Year 2 also uses this)."
+      - "Criticise models: e.g. trials may not be independent, or p may not be constant."
+pitfalls:
+  - "P(X ≥ 4) = 1 − P(X ≤ **3**), not 1 − P(X ≤ 4)."
+  - "Check 'more than' (>) vs 'at least' (≥) carefully."
+  - "State the distribution with its parameters, e.g. X ~ B(20, 0.3), before calculating."
+examples:
+  - q: "X ~ B(10, 0.3). Find P(X = 3) to 4 d.p."
+    steps:
+      - "P(X = 3) = ¹⁰C₃ × 0.3³ × 0.7⁷."
+      - "= 120 × 0.027 × 0.0823543..."
+    a: "0.2668"
+  - q: "X ~ B(10, 0.3). Find P(X ≥ 4)."
+    steps:
+      - "P(X ≥ 4) = 1 − P(X ≤ 3)."
+      - "P(X ≤ 3) = 0.6496 (calculator)."
+    a: "0.3504"
+questions:
+  - q: "Which is NOT a condition for a binomial distribution?"
+    o: ["A fixed number of trials", "The outcomes must be equally likely", "Independent trials", "A constant probability of success"]
+    a: 1
+    e: "p doesn't have to be 0.5; it just has to stay the same."
+  - q: "X ~ B(5, 0.5). What is P(X = 2)?"
+    o: ["0.3125", "0.5", "0.25", "0.1563"]
+    a: 0
+    e: "⁵C₂ × 0.5² × 0.5³ = 10 × 1/32 = 0.3125."
+  - q: "X ~ B(8, 0.2). What is P(X = 0) to 4 d.p.?"
+    o: ["0.2", "0", "0.1678", "0.8322"]
+    a: 2
+    e: "0.8⁸ = 0.1678."
+  - q: "X ~ B(8, 0.2). What is P(X ≥ 1) to 4 d.p.?"
+    o: ["0.2", "0.1678", "0.9", "0.8322"]
+    a: 3
+    e: "1 − P(X = 0) = 1 − 0.1678 = 0.8322."
+  - q: "X ~ B(20, 0.25). What is E(X)?"
+    o: ["5", "20", "0.25", "3.75"]
+    a: 0
+    e: "E(X) = np = 20 × 0.25 = 5."
+  - q: "X ~ B(20, 0.25). What is Var(X)?"
+    o: ["5", "3.75", "1.94", "15"]
+    a: 1
+    e: "np(1 − p) = 20 × 0.25 × 0.75 = 3.75."
+  - q: "How is P(X ≥ 6) written using a cumulative probability?"
+    o: ["1 − P(X ≤ 6)", "P(X ≤ 6)", "1 − P(X ≤ 5)", "P(X ≤ 5)"]
+    a: 2
+    e: "X ≥ 6 is the complement of X ≤ 5."
+  - q: "How is P(X < 4) written as a cumulative probability?"
+    o: ["P(X ≤ 4)", "1 − P(X ≤ 4)", "1 − P(X ≤ 3)", "P(X ≤ 3)"]
+    a: 3
+    e: "For whole numbers, X < 4 means X ≤ 3."
+  - q: "X ~ B(10, 0.3). Find P(X ≤ 2) to 4 d.p."
+    o: ["0.3828", "0.2335", "0.6172", "0.1493"]
+    a: 0
+    e: "Using the binomial cdf: 0.3828."
+  - q: "X ~ B(10, 0.4). How do you find P(2 ≤ X ≤ 4)?"
+    o: ["P(X ≤ 4) − P(X ≤ 2)", "P(X ≤ 4) − P(X ≤ 1)", "P(X ≤ 4) + P(X ≤ 2)", "1 − P(X ≤ 4)"]
+    a: 1
+    e: "Subtract everything up to 1 from everything up to 4. The value is 0.5867."
+  - q: "X ~ B(12, 0.1). Find P(X ≤ 1) to 3 d.p."
+    o: ["0.282", "0.377", "0.659", "0.341"]
+    a: 2
+    e: "P(0) + P(1) = 0.9¹² + 12 × 0.1 × 0.9¹¹ ≈ 0.282 + 0.377 = 0.659."
+  - q: "Why might the number of girls in families of 4 not be well modelled by B(4, 0.5)?"
+    o: ["n is too small", "There are more than two outcomes", "The trials are not fixed", "The probability of a girl may not be exactly 0.5, or births may not be independent"]
+    a: 3
+    e: "Model assumptions should always be checked."
+  - q: "What is ⁿCᵣ pʳ (1 − p)ⁿ⁻ʳ?"
+    o: ["P(X = r) for X ~ B(n, p)", "E(X)", "Var(X)", "P(X ≤ r)"]
+    a: 0
+    e: "This is the binomial probability formula."
+  - q: "A dice is rolled 12 times and X is the number of sixes. Which model is suitable?"
+    o: ["B(6, 1/12)", "B(12, 1/6)", "B(12, 1/2)", "B(1/6, 12)"]
+    a: 1
+    e: "12 independent trials, p = 1/6 of a six each time."
+  - q: "X ~ B(n, 0.4) and E(X) = 8. What is n?"
+    o: ["8", "3.2", "20", "32"]
+    a: 2
+    e: "np = 8, so n = 8 ÷ 0.4 = 20."
+  - q: "For a discrete random variable, what must the probabilities sum to?"
+    o: ["0", "The mean", "n", "1"]
+    a: 3
+    e: "All possible outcomes together have probability 1."
+  - q: "P(X = x) = kx for x = 1, 2, 3, 4. Find k."
+    o: ["1/10", "1/4", "1/24", "10"]
+    a: 0
+    e: "k(1 + 2 + 3 + 4) = 10k = 1."
+  - q: "X ~ B(10, 0.3). Find P(X = 3) to 4 d.p."
+    o: ["0.3", "0.2668", "0.6496", "0.0090"]
+    a: 1
+    e: "¹⁰C₃ × 0.3³ × 0.7⁷ = 0.2668."
+  - q: "X ~ B(10, 0.3). P(X ≤ 3) = 0.6496. What is P(X ≥ 4)?"
+    o: ["0.6496", "0.2668", "0.3504", "0.0504"]
+    a: 2
+    e: "1 − 0.6496 = 0.3504."
+  - q: "What does p represent in B(n, p)?"
+    o: ["The number of trials", "The number of successes", "The variance", "The probability of success on each trial"]
+    a: 3
+    e: "n is the number of trials and p the probability of success."
+  - q: "X ~ B(6, 0.5). Which value of X is most likely?"
+    o: ["3", "0", "6", "1"]
+    a: 0
+    e: "The distribution is symmetric about np = 3."
+  - q: "A multiple-choice test has 10 questions with 4 options each. A student guesses all. What is the expected number correct?"
+    o: ["4", "2.5", "10", "0.25"]
+    a: 1
+    e: "E(X) = 10 × 0.25 = 2.5."

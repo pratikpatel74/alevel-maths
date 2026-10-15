@@ -1,0 +1,40 @@
+meta:
+  subject: Maths
+  code: '7357'
+  title: AQA Maths Study Hub
+  prefix: maths_
+  rpBlurb: ''
+  rpIntro: ''
+  secColors:
+    P: '1'
+    S: '5'
+    M: '6'
+  banner:
+    h: How to use this hub
+    p: 'Read the summary and try the worked examples with a pen and paper before checking
+      the steps. Then take the quiz: every explanation shows the working.'
+plan:
+- code: P
+  name: Pure mathematics
+  year: 1
+  units: 10
+- code: S
+  name: Statistics
+  year: 1
+  units: 4
+- code: M
+  name: Mechanics
+  year: 1
+  units: 2
+- code: P
+  name: Pure mathematics
+  year: 2
+  units: 12
+- code: S
+  name: Statistics
+  year: 2
+  units: 3
+- code: M
+  name: Mechanics
+  year: 2
+  units: 4

@@ -1,0 +1,134 @@
+id: "p21"
+order: 27
+year: 2
+section: "P"
+badge: "I"
+spec: "I"
+title: "Numerical methods"
+desc: "Locating roots by change of sign, fixed-point iteration with staircase and cobweb diagrams, the Newton–Raphson method, and the trapezium rule."
+practicals: []
+summary:
+  - h: "Locating roots"
+    p:
+      - "If f(x) is **continuous** on [a, b] and f(a) and f(b) have **opposite signs**, there is a root between a and b."
+      - "Change of sign can fail if the function is discontinuous (e.g. an asymptote) or if there are two roots close together."
+  - h: "Iteration"
+    p:
+      - "Rearrange f(x) = 0 into **x = g(x)**, then use `xₙ₊₁ = g(xₙ)`."
+      - "**Staircase** diagrams (converging from one side) and **cobweb** diagrams (alternating sides) show convergence."
+      - "Iteration converges if |g′(x)| < 1 near the root. Different rearrangements can converge or diverge."
+  - h: "Newton–Raphson"
+    p:
+      - "`xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)`"
+      - "Uses the tangent at xₙ to estimate where the curve meets the x-axis."
+      - "It **fails** if f′(xₙ) = 0 (stationary point) and can be unreliable if the starting value is near a turning point."
+  - h: "Trapezium rule"
+    p:
+      - "`∫ₐᵇ y dx ≈ (h/2)[y₀ + 2(y₁ + y₂ + ... + yₙ₋₁) + yₙ]`, where `h = (b − a)/n`."
+      - "**Overestimates** for convex curves (curving up) and **underestimates** for concave curves."
+      - "Increasing the number of strips improves accuracy."
+pitfalls:
+  - "To show a root to a given accuracy, test the **bounds** (e.g. 1.235 and 1.245) for a sign change."
+  - "In the trapezium rule, n strips need n + 1 ordinates."
+  - "Use radians in calculus-based numerical methods with trig functions."
+examples:
+  - q: "Use Newton–Raphson with x₀ = 2 to find x₁ for f(x) = x² − 5."
+    steps:
+      - "f(2) = −1 and f′(x) = 2x, so f′(2) = 4."
+      - "x₁ = 2 − (−1)/4 = 2.25."
+    a: "x₁ = 2.25"
+  - q: "Use the trapezium rule with 2 strips to estimate ∫₀² x² dx."
+    steps:
+      - "h = 1. Ordinates: y₀ = 0, y₁ = 1, y₂ = 4."
+      - "≈ ½[0 + 2(1) + 4] = 3."
+      - "The exact value is 8/3, so it's an overestimate (the curve is convex)."
+    a: "3"
+questions:
+  - q: "f(1) = −2 and f(2) = 3, and f is continuous. What can you conclude?"
+    o: ["There is no root", "There is a root between 1 and 2", "The root is 1.5", "f has a turning point"]
+    a: 1
+    e: "A sign change for a continuous function means a root lies in the interval."
+  - q: "Why might the change of sign method fail for f(x) = 1/(x − 3) between 2 and 4?"
+    o: ["The function has a discontinuity (asymptote) at x = 3", "f(2) = f(4)", "There are two roots", "It is continuous"]
+    a: 0
+    e: "The sign changes but there's no root, only an asymptote."
+  - q: "What is the Newton–Raphson formula?"
+    o: ["xₙ₊₁ = f(xₙ)/f′(xₙ)", "xₙ₊₁ = xₙ + f(xₙ)/f′(xₙ)", "xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)", "xₙ₊₁ = g(xₙ)"]
+    a: 2
+    e: "Subtract f over f′ from the current estimate."
+  - q: "When does Newton–Raphson fail?"
+    o: ["When f(xₙ) = 0", "When x₀ is negative", "When f is continuous", "When f′(xₙ) = 0"]
+    a: 3
+    e: "You'd divide by zero: the tangent is horizontal and never meets the x-axis."
+  - q: "f(x) = x³ − 2x − 5, x₀ = 2. Find x₁ using Newton–Raphson."
+    o: ["2.1", "2.2", "1.9", "2.05"]
+    a: 0
+    e: "f(2) = −1, f′(x) = 3x² − 2 = 10. x₁ = 2 + 0.1 = 2.1."
+  - q: "xₙ₊₁ = √(xₙ + 3), x₀ = 2. Find x₁ to 3 d.p."
+    o: ["2.000", "2.236", "2.302", "5.000"]
+    a: 1
+    e: "√5 = 2.236."
+  - q: "What does a cobweb diagram show?"
+    o: ["Divergence only", "Convergence from one side", "Iterations that alternate either side of the root", "A trapezium rule estimate"]
+    a: 2
+    e: "Staircase diagrams approach from one side; cobwebs spiral in."
+  - q: "When does fixed-point iteration xₙ₊₁ = g(xₙ) converge near a root?"
+    o: ["When g′(x) > 1", "Always", "Never", "When |g′(x)| < 1 near the root"]
+    a: 3
+    e: "If the gradient of g is too steep, the iterates move away."
+  - q: "Using the trapezium rule with 4 strips on [0, 2], what is h?"
+    o: ["0.5", "2", "4", "0.25"]
+    a: 0
+    e: "h = (2 − 0)/4 = 0.5."
+  - q: "The trapezium rule is used on a convex curve. Is the estimate an over- or underestimate?"
+    o: ["Underestimate", "Overestimate", "Exact", "Cannot tell"]
+    a: 1
+    e: "The chords lie above a convex curve."
+  - q: "How can the trapezium rule's accuracy be improved?"
+    o: ["Use fewer strips", "Use degrees", "Use more strips (smaller h)", "Subtract h"]
+    a: 2
+    e: "Thinner trapezia fit the curve more closely."
+  - q: "To show a root is 1.24 to 2 d.p., which values do you test?"
+    o: ["1.23 and 1.25", "1.2 and 1.3", "1.24 only", "1.235 and 1.245"]
+    a: 3
+    e: "A sign change between these bounds shows the root rounds to 1.24."
+  - q: "Using the trapezium rule with ordinates y₀ = 1, y₁ = 2, y₂ = 5 and h = 1, estimate the integral."
+    o: ["5", "8", "10", "4"]
+    a: 0
+    e: "½[1 + 2(2) + 5] = ½ × 10 = 5."
+  - q: "x³ − x − 1 = 0 is rearranged as x = ∛(x + 1). With x₀ = 1, find x₁ to 3 d.p."
+    o: ["1.000", "1.260", "1.325", "2.000"]
+    a: 1
+    e: "∛2 = 1.260."
+  - q: "Newton–Raphson uses which geometric idea?"
+    o: ["The area under the curve", "A chord between two points", "The tangent at the current point meeting the x-axis", "Reflection in y = x"]
+    a: 2
+    e: "The tangent's x-intercept gives the next estimate."
+  - q: "f(x) = x² − 2, x₀ = 1. Find x₁ using Newton–Raphson."
+    o: ["1", "2", "1.414", "1.5"]
+    a: 3
+    e: "f(1) = −1, f′(1) = 2, x₁ = 1 + 0.5 = 1.5."
+  - q: "Why might change of sign fail to detect roots?"
+    o: ["If two roots are close together, there may be no sign change over the interval", "Because f is continuous", "Because roots are integers", "It never fails"]
+    a: 0
+    e: "E.g. a curve dipping below the axis and back within the interval."
+  - q: "Estimate ∫₀¹ eˣ dx using the trapezium rule with 1 strip."
+    o: ["1.718", "1.859", "2.718", "1"]
+    a: 1
+    e: "½(e⁰ + e¹) = ½(1 + 2.718) = 1.859 (exact value 1.718)."
+  - q: "How many ordinates are needed for the trapezium rule with 6 strips?"
+    o: ["6", "5", "7", "12"]
+    a: 2
+    e: "n strips need n + 1 ordinates."
+  - q: "An iteration gives x₁ = 1.5, x₂ = 1.8, x₃ = 2.5, x₄ = 4.1. What is happening?"
+    o: ["It is converging", "It is periodic", "It has found the root", "It is diverging"]
+    a: 3
+    e: "The values are moving further apart."
+  - q: "A curve is concave on [a, b]. The trapezium rule gives:"
+    o: ["An underestimate", "An overestimate", "The exact value", "A negative value"]
+    a: 0
+    e: "The chords lie below a concave curve."
+  - q: "f(x) = eˣ − 3, x₀ = 1. Find x₁ using Newton–Raphson to 3 d.p."
+    o: ["1.000", "1.104", "1.099", "0.896"]
+    a: 1
+    e: "f(1) = e − 3 = −0.2817, f′(1) = e = 2.7183. x₁ = 1 + 0.1036 = 1.104."

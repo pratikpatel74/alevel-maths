@@ -1,0 +1,137 @@
+id: "m1"
+order: 15
+year: 1
+section: "M"
+badge: "P·Q"
+spec: "P, Q"
+title: "Units and kinematics"
+desc: "SI units, modelling assumptions, displacement, velocity and acceleration, motion graphs, the constant acceleration (suvat) equations, and vertical motion under gravity."
+practicals: []
+summary:
+  - h: "Quantities and modelling"
+    p:
+      - "SI units: metre (m), second (s), kilogram (kg). Derived: velocity m s⁻¹, acceleration m s⁻², force newton (N = kg m s⁻²)."
+      - "**Scalars**: distance, speed, time, mass. **Vectors**: displacement, velocity, acceleration, force."
+      - "Modelling assumptions: **particle** (no size, no rotation), **smooth** (no friction), **light** (no mass), **inextensible** string, **no air resistance**."
+  - h: "Motion graphs"
+    p:
+      - "**Displacement–time**: gradient = **velocity**."
+      - "**Velocity–time**: gradient = **acceleration**. **Area under** the graph = **displacement**."
+  - h: "Constant acceleration (suvat)"
+    p:
+      - "s = displacement, u = initial velocity, v = final velocity, a = acceleration, t = time."
+      - "`v = u + at`"
+      - "`s = ½(u + v)t`"
+      - "`s = ut + ½at²`"
+      - "`s = vt − ½at²`"
+      - "`v² = u² + 2as`"
+      - "Pick the equation with the four quantities you need (three known, one unknown)."
+  - h: "Vertical motion"
+    p:
+      - "Objects moving freely under gravity have acceleration **g = 9.8 m s⁻²** downwards (unless told otherwise)."
+      - "Choose a positive direction (e.g. up) and keep signs consistent: if up is positive, a = −9.8."
+      - "At the **highest point**, the velocity is **zero**."
+pitfalls:
+  - "Convert units first: km h⁻¹ to m s⁻¹ (divide by 3.6)."
+  - "Be consistent with **signs** in vertical motion."
+  - "suvat only works for **constant** acceleration."
+examples:
+  - q: "A car accelerates uniformly from 5 m s⁻¹ to 25 m s⁻¹ in 8 s. Find the acceleration and the distance travelled."
+    steps:
+      - "a = (v − u)/t = (25 − 5)/8 = 2.5 m s⁻²."
+      - "s = ½(u + v)t = ½(5 + 25)(8) = 120 m."
+    a: "2.5 m s⁻², 120 m"
+  - q: "A ball is thrown vertically upwards at 14 m s⁻¹. Find its maximum height (g = 9.8 m s⁻²)."
+    steps:
+      - "Up positive: u = 14, v = 0, a = −9.8."
+      - "v² = u² + 2as: 0 = 196 − 19.6s."
+    a: "s = 10 m"
+questions:
+  - q: "What is the SI unit of acceleration?"
+    o: ["m s⁻¹", "m s⁻²", "N", "kg m s⁻¹"]
+    a: 1
+    e: "Acceleration is change in velocity (m s⁻¹) per second."
+  - q: "What does modelling an object as a particle mean?"
+    o: ["Its size can be ignored, and it doesn't rotate", "It has no mass", "It moves at constant speed", "It has no weight"]
+    a: 0
+    e: "All its mass is treated as concentrated at a single point."
+  - q: "On a velocity–time graph, what does the area under the graph represent?"
+    o: ["Acceleration", "Speed", "Displacement", "Time"]
+    a: 2
+    e: "Velocity × time gives displacement."
+  - q: "On a displacement–time graph, what does the gradient represent?"
+    o: ["Acceleration", "Distance", "Force", "Velocity"]
+    a: 3
+    e: "Rate of change of displacement is velocity."
+  - q: "u = 3 m s⁻¹, a = 2 m s⁻², t = 5 s. Find v."
+    o: ["13 m s⁻¹", "10 m s⁻¹", "8 m s⁻¹", "25 m s⁻¹"]
+    a: 0
+    e: "v = u + at = 3 + 10 = 13 m s⁻¹."
+  - q: "u = 0, a = 4 m s⁻², t = 3 s. Find s."
+    o: ["12 m", "18 m", "36 m", "6 m"]
+    a: 1
+    e: "s = ut + ½at² = 0 + ½ × 4 × 9 = 18 m."
+  - q: "u = 10 m s⁻¹, v = 0, s = 25 m. Find a."
+    o: ["−4 m s⁻²", "4 m s⁻²", "−2 m s⁻²", "2 m s⁻²"]
+    a: 2
+    e: "v² = u² + 2as: 0 = 100 + 50a, so a = −2 m s⁻²."
+  - q: "Convert 72 km h⁻¹ into m s⁻¹."
+    o: ["72 m s⁻¹", "7.2 m s⁻¹", "259 m s⁻¹", "20 m s⁻¹"]
+    a: 3
+    e: "72 ÷ 3.6 = 20 m s⁻¹."
+  - q: "A stone is dropped from rest and falls for 2 s. How far does it fall? (g = 9.8)"
+    o: ["19.6 m", "9.8 m", "39.2 m", "4.9 m"]
+    a: 0
+    e: "s = ½ × 9.8 × 2² = 19.6 m."
+  - q: "What is the velocity of a ball at the highest point of its vertical motion?"
+    o: ["9.8 m s⁻¹", "0", "Maximum", "Equal to the starting speed"]
+    a: 1
+    e: "It momentarily stops before falling back."
+  - q: "A ball is thrown up at 19.6 m s⁻¹. How long does it take to reach its highest point?"
+    o: ["1 s", "4 s", "2 s", "19.6 s"]
+    a: 2
+    e: "v = u + at: 0 = 19.6 − 9.8t, so t = 2 s."
+  - q: "Which suvat equation doesn't involve t?"
+    o: ["v = u + at", "s = ut + ½at²", "s = ½(u + v)t", "v² = u² + 2as"]
+    a: 3
+    e: "Use v² = u² + 2as when time isn't given or needed."
+  - q: "Which suvat equation doesn't involve a?"
+    o: ["s = ½(u + v)t", "v = u + at", "v² = u² + 2as", "s = vt − ½at²"]
+    a: 0
+    e: "s = ½(u + v)t uses average velocity."
+  - q: "A train decelerates from 30 m s⁻¹ to rest over 450 m. Find the deceleration."
+    o: ["2 m s⁻²", "1 m s⁻²", "0.5 m s⁻²", "15 m s⁻²"]
+    a: 1
+    e: "0 = 900 + 2a(450), so a = −1 m s⁻², a deceleration of 1 m s⁻²."
+  - q: "What does 'smooth' mean in a mechanics model?"
+    o: ["No air resistance", "Constant speed", "No friction", "No mass"]
+    a: 2
+    e: "A smooth surface exerts no frictional force."
+  - q: "What does 'light' mean for a string or rod?"
+    o: ["It is inextensible", "It is smooth", "It is short", "Its mass can be ignored"]
+    a: 3
+    e: "Tension is then the same throughout a light string."
+  - q: "A v–t graph is a straight line from (0, 4) to (6, 16). What is the acceleration?"
+    o: ["2 m s⁻²", "4 m s⁻²", "12 m s⁻²", "2.67 m s⁻²"]
+    a: 0
+    e: "Gradient = (16 − 4) ÷ 6 = 2 m s⁻²."
+  - q: "Using the same graph, from (0, 4) to (6, 16), what is the displacement?"
+    o: ["96 m", "60 m", "120 m", "72 m"]
+    a: 1
+    e: "Area of trapezium = ½(4 + 16) × 6 = 60 m."
+  - q: "Which quantity is a scalar?"
+    o: ["Velocity", "Displacement", "Speed", "Acceleration"]
+    a: 2
+    e: "Speed has magnitude only."
+  - q: "A ball is thrown up at 7 m s⁻¹ from a cliff 14 m high. Taking up as positive, which values are correct for when it hits the sea?"
+    o: ["s = 14, a = 9.8", "s = 14, a = −9.8", "s = −14, a = 9.8", "s = −14, a = −9.8"]
+    a: 3
+    e: "The sea is 14 m below the start (s = −14), and gravity acts downwards (a = −9.8)."
+  - q: "Why can't suvat be used when a car's acceleration varies?"
+    o: ["The suvat equations assume constant acceleration", "It needs radians", "It only works vertically", "It only works for particles at rest"]
+    a: 0
+    e: "Variable acceleration needs calculus (Year 2)."
+  - q: "A cyclist travels at a constant 8 m s⁻¹ for 15 s. How far does she travel?"
+    o: ["23 m", "120 m", "60 m", "1.9 m"]
+    a: 1
+    e: "Constant velocity: s = vt = 120 m."

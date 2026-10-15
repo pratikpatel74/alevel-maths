@@ -1,0 +1,137 @@
+id: "p11"
+order: 17
+year: 2
+section: "P"
+badge: "A·B"
+spec: "A, B"
+title: "Proof by contradiction and functions"
+desc: "Proof by contradiction, domain and range, composite and inverse functions, modulus functions and combined transformations."
+practicals: []
+summary:
+  - h: "Proof by contradiction"
+    p:
+      - "Assume the **opposite** of what you want to prove, then show this leads to a **contradiction**."
+      - "Classic proofs: √2 is irrational; there are infinitely many primes."
+      - "Structure: 'Assume ... Then ... This contradicts ... So the original statement is true.'"
+  - h: "Functions"
+    p:
+      - "A **function** maps each input to exactly **one** output. **One-to-one** functions have an inverse; many-to-one functions don't (unless the domain is restricted)."
+      - "**Domain**: the set of allowed inputs. **Range**: the set of outputs."
+      - "**Composite**: fg(x) means apply **g first**, then f: fg(x) = f(g(x))."
+      - "**Inverse** f⁻¹(x): swap x and y, then rearrange. The graph of f⁻¹ is the **reflection of f in y = x**. Domain of f⁻¹ = range of f."
+  - h: "Modulus"
+    p:
+      - "|x| is the **absolute value** of x: always ≥ 0."
+      - "**y = |f(x)|**: reflect the parts **below the x-axis** upwards."
+      - "**y = f(|x|)**: take the part for x ≥ 0 and **reflect it in the y-axis**."
+      - "Solve |f(x)| = g(x) by considering f(x) = g(x) and −f(x) = g(x), and **check** solutions (often with a sketch)."
+  - h: "Combined transformations"
+    p:
+      - "Apply transformations one at a time. Inside the bracket (x) changes happen in reverse order to how they appear; outside changes act on y."
+      - "E.g. y = 2f(x − 3) + 1: translate right 3, stretch vertically by 2, then translate up 1."
+pitfalls:
+  - "fg(x) means **g first**. Order matters."
+  - "When solving modulus equations, always check solutions in the original equation."
+  - "The domain of f⁻¹ is the **range** of f."
+examples:
+  - q: "Prove by contradiction that √2 is irrational."
+    steps:
+      - "Assume √2 = a/b, where a and b are integers with no common factors."
+      - "Then 2 = a²/b², so a² = 2b². So a² is even, so a is even: a = 2k."
+      - "Then 4k² = 2b², so b² = 2k², so b is even."
+      - "a and b are both even, contradicting 'no common factors'."
+    a: "So √2 is irrational. ∎"
+  - q: "f(x) = 3x − 1 and g(x) = x². Find fg(2) and f⁻¹(x)."
+    steps:
+      - "g(2) = 4, so fg(2) = f(4) = 11."
+      - "y = 3x − 1, so x = (y + 1)/3."
+    a: "fg(2) = 11, f⁻¹(x) = (x + 1)/3"
+questions:
+  - q: "In a proof by contradiction, what is the first step?"
+    o: ["Check a few examples", "Assume the opposite of what you want to prove", "Find a counter-example", "Use exhaustion"]
+    a: 1
+    e: "Then show the assumption leads to something impossible."
+  - q: "f(x) = 2x + 1, g(x) = x². What is fg(3)?"
+    o: ["19", "49", "10", "13"]
+    a: 0
+    e: "g(3) = 9, then f(9) = 19."
+  - q: "f(x) = 2x + 1, g(x) = x². What is gf(3)?"
+    o: ["19", "13", "49", "36"]
+    a: 2
+    e: "f(3) = 7, then g(7) = 49."
+  - q: "Find the inverse of f(x) = (x − 5)/2."
+    o: ["f⁻¹(x) = 2x − 5", "f⁻¹(x) = (x + 5)/2", "f⁻¹(x) = 2/(x − 5)", "f⁻¹(x) = 2x + 5"]
+    a: 3
+    e: "y = (x − 5)/2, so x = 2y + 5."
+  - q: "How is the graph of y = f⁻¹(x) related to y = f(x)?"
+    o: ["Reflection in y = x", "Reflection in the x-axis", "Reflection in the y-axis", "Rotation by 90°"]
+    a: 0
+    e: "Inputs and outputs swap, so x and y swap."
+  - q: "f(x) = x² for x ∈ ℝ. Why doesn't f have an inverse?"
+    o: ["It has no range", "It is many-to-one (e.g. f(2) = f(−2))", "It isn't continuous", "x² can't be rearranged"]
+    a: 1
+    e: "An inverse needs a one-to-one function. Restricting the domain to x ≥ 0 fixes this."
+  - q: "f(x) = eˣ. What is the range of f?"
+    o: ["f(x) ∈ ℝ", "f(x) ≥ 0", "f(x) > 0", "f(x) ≥ 1"]
+    a: 2
+    e: "eˣ is always positive but never reaches 0."
+  - q: "f(x) = ln x, x > 0. What is f⁻¹(x)?"
+    o: ["1/ln x", "−ln x", "ln(1/x)", "eˣ"]
+    a: 3
+    e: "ln and exp are inverse functions."
+  - q: "Evaluate |−7| + |3|."
+    o: ["10", "−4", "4", "−10"]
+    a: 0
+    e: "|−7| = 7 and |3| = 3."
+  - q: "How is y = |f(x)| obtained from y = f(x)?"
+    o: ["Reflect the part for x < 0 in the y-axis", "Reflect any part below the x-axis in the x-axis", "Reflect the whole graph in y = x", "Translate up"]
+    a: 1
+    e: "Negative y-values become positive."
+  - q: "How is y = f(|x|) obtained from y = f(x)?"
+    o: ["Reflect parts below the x-axis", "Reflect in y = x", "Keep the graph for x ≥ 0 and reflect it in the y-axis", "Translate left"]
+    a: 2
+    e: "f(|x|) is symmetric about the y-axis."
+  - q: "Solve |2x − 3| = 5."
+    o: ["x = 4 only", "x = −1 only", "x = 1 or x = −4", "x = 4 or x = −1"]
+    a: 3
+    e: "2x − 3 = 5 gives x = 4. 2x − 3 = −5 gives x = −1."
+  - q: "Solve |x − 1| < 3."
+    o: ["−2 < x < 4", "x < 4", "x < −2 or x > 4", "−4 < x < 2"]
+    a: 0
+    e: "−3 < x − 1 < 3, so −2 < x < 4."
+  - q: "What is the domain of f⁻¹ if the range of f is f(x) ≥ 2?"
+    o: ["x ≤ 2", "x ≥ 2", "x ∈ ℝ", "x > 0"]
+    a: 1
+    e: "The domain of the inverse is the range of the original."
+  - q: "y = f(x) has a maximum at (2, 3). Where is the maximum of y = 2f(x + 1)?"
+    o: ["(3, 6)", "(1, 3)", "(1, 6)", "(2, 6)"]
+    a: 2
+    e: "Translate left 1: (1, 3). Then stretch vertically by 2: (1, 6)."
+  - q: "What is ff(x) if f(x) = 1/x (x ≠ 0)?"
+    o: ["1/x²", "x²", "1", "x"]
+    a: 3
+    e: "f(f(x)) = 1/(1/x) = x. This function is self-inverse."
+  - q: "f(x) = x + 4 and g(x) = 3x. Solve fg(x) = gf(x)."
+    o: ["No solutions", "x = 0", "x = 4", "All x"]
+    a: 0
+    e: "fg(x) = 3x + 4, gf(x) = 3x + 12. These are never equal."
+  - q: "Proof that there are infinitely many primes begins by assuming:"
+    o: ["There are infinitely many primes", "There is a largest prime (finitely many primes)", "All numbers are prime", "2 is the only even prime"]
+    a: 1
+    e: "Then multiply all primes and add 1 to reach a contradiction."
+  - q: "f(x) = √(x − 2). What is the domain of f?"
+    o: ["x > 2", "x ∈ ℝ", "x ≥ 2", "x ≥ 0"]
+    a: 2
+    e: "You can't take the square root of a negative number."
+  - q: "The function f(x) = 2x + 3 has domain 0 ≤ x ≤ 5. What is its range?"
+    o: ["0 ≤ f(x) ≤ 5", "f(x) ≥ 3", "2 ≤ f(x) ≤ 13", "3 ≤ f(x) ≤ 13"]
+    a: 3
+    e: "f(0) = 3 and f(5) = 13, and f is increasing."
+  - q: "Solve |x| = 2x − 3."
+    o: ["x = 3", "x = 1", "x = 3 or x = 1", "No solution"]
+    a: 0
+    e: "x = 2x − 3 gives x = 3 ✓. −x = 2x − 3 gives x = 1, but then |1| = 1 and 2(1) − 3 = −1 ✗."
+  - q: "Which transformation maps y = f(x) to y = f(x − 2) + 5?"
+    o: ["Translation by (−2, 5)", "Translation by (2, 5)", "Translation by (2, −5)", "Stretch"]
+    a: 1
+    e: "f(x − 2) moves right 2, + 5 moves up 5."

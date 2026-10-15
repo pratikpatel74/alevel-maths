@@ -1,0 +1,143 @@
+id: "p2"
+order: 2
+year: 1
+section: "P"
+badge: "B"
+spec: "B"
+title: "Quadratics, simultaneous equations and inequalities"
+desc: "Solving quadratics, completing the square, the discriminant, simultaneous equations (linear and quadratic) and linear and quadratic inequalities."
+practicals: []
+summary:
+  - h: "Solving quadratics"
+    p:
+      - "Solve ax² + bx + c = 0 by **factorising**, **completing the square** or the **quadratic formula**."
+      - "`x = [−b ± √(b² − 4ac)] / 2a`"
+      - "**Completing the square**: x² + bx + c = (x + b/2)² − (b/2)² + c."
+      - "The completed square form a(x + p)² + q gives the **turning point** (−p, q)."
+  - h: "The discriminant"
+    p:
+      - "`Discriminant = b² − 4ac`"
+      - "**b² − 4ac > 0**: two distinct real roots. **= 0**: one repeated root (the graph touches the x-axis). **< 0**: no real roots."
+      - "Use this to find unknown constants, e.g. 'the equation has equal roots'."
+  - h: "Simultaneous equations"
+    p:
+      - "**Linear**: use elimination or substitution."
+      - "**One linear, one quadratic**: rearrange the linear equation and **substitute** into the quadratic. Solve, then find the other variable."
+      - "The solutions are the **intersection points** of the graphs. The discriminant of the resulting quadratic tells you whether a line crosses, touches (tangent) or misses a curve."
+  - h: "Inequalities"
+    p:
+      - "**Linear**: solve like an equation, but **reverse the sign** when multiplying or dividing by a negative number."
+      - "**Quadratic**: find the **critical values** (roots), sketch the graph, then read off the required region."
+      - "For a positive quadratic, `> 0` gives **x < smaller root or x > larger root**. `< 0` gives **between the roots**."
+      - "Set notation: e.g. {x : x < 2} ∪ {x : x > 5} or {x : 2 < x < 5}."
+pitfalls:
+  - "Don't divide both sides of an equation by x: you lose the solution x = 0."
+  - "For quadratic inequalities, **sketch** the graph rather than guessing which region."
+  - "When using the discriminant to find a constant, solve the **inequality** carefully (it may itself be quadratic)."
+examples:
+  - q: "Find the values of k for which x² + kx + 9 = 0 has equal roots."
+    steps:
+      - "Equal roots means b² − 4ac = 0."
+      - "k² − 4(1)(9) = 0, so k² = 36."
+    a: "k = 6 or k = −6"
+  - q: "Solve the simultaneous equations y = x + 1 and x² + y² = 13."
+    steps:
+      - "Substitute: x² + (x + 1)² = 13."
+      - "2x² + 2x + 1 = 13, so 2x² + 2x − 12 = 0, so x² + x − 6 = 0."
+      - "(x + 3)(x − 2) = 0, so x = −3 or x = 2."
+      - "y = x + 1 gives y = −2 or y = 3."
+    a: "(−3, −2) and (2, 3)"
+  - q: "Solve x² − 5x + 4 < 0."
+    steps:
+      - "Critical values: (x − 1)(x − 4) = 0, so x = 1 or x = 4."
+      - "The graph is a positive (U-shaped) parabola, below the axis between its roots."
+    a: "1 < x < 4"
+questions:
+  - q: "Solve x² − 7x + 12 = 0."
+    o: ["x = −3 or x = −4", "x = 3 or x = 4", "x = 2 or x = 6", "x = 1 or x = 12"]
+    a: 1
+    e: "(x − 3)(x − 4) = 0."
+  - q: "Write x² + 6x + 5 in completed square form."
+    o: ["(x + 3)² − 4", "(x + 3)² + 5", "(x + 6)² − 31", "(x + 3)² − 14"]
+    a: 0
+    e: "(x + 3)² = x² + 6x + 9, so x² + 6x + 5 = (x + 3)² − 4."
+  - q: "What are the coordinates of the turning point of y = (x − 2)² + 7?"
+    o: ["(−2, 7)", "(2, −7)", "(2, 7)", "(7, 2)"]
+    a: 2
+    e: "In a(x + p)² + q, the turning point is (−p, q). Here p = −2, so (2, 7)."
+  - q: "What is the discriminant of 2x² + 3x − 5?"
+    o: ["−31", "1", "9", "49"]
+    a: 3
+    e: "b² − 4ac = 9 − 4(2)(−5) = 9 + 40 = 49."
+  - q: "The discriminant of a quadratic is negative. What does this tell you?"
+    o: ["There are no real roots", "There are two distinct real roots", "There is one repeated root", "The graph crosses the x-axis twice"]
+    a: 0
+    e: "b² − 4ac < 0 means the square root has no real value."
+  - q: "Use the quadratic formula to solve x² + 2x − 1 = 0."
+    o: ["x = 1 ± √2", "x = −1 ± √2", "x = −2 ± √2", "x = −1 ± 2√2"]
+    a: 1
+    e: "x = [−2 ± √(4 + 4)]/2 = [−2 ± 2√2]/2 = −1 ± √2."
+  - q: "For which value of k does x² + 4x + k = 0 have exactly one (repeated) root?"
+    o: ["k = 2", "k = −4", "k = 4", "k = 16"]
+    a: 2
+    e: "16 − 4k = 0, so k = 4."
+  - q: "x² + kx + 4 = 0 has two distinct real roots. What is the range of k?"
+    o: ["−4 < k < 4", "k > 4 only", "k = ±4", "k < −4 or k > 4"]
+    a: 3
+    e: "k² − 16 > 0, so k² > 16, giving k < −4 or k > 4."
+  - q: "Solve 3x − 5 > 7."
+    o: ["x > 4", "x < 4", "x > 2/3", "x > 12"]
+    a: 0
+    e: "3x > 12, so x > 4."
+  - q: "Solve −2x ≤ 8."
+    o: ["x ≤ −4", "x ≥ −4", "x ≥ 4", "x ≤ 4"]
+    a: 1
+    e: "Dividing by −2 reverses the inequality: x ≥ −4."
+  - q: "Solve x² − 9 > 0."
+    o: ["−3 < x < 3", "x > 3 only", "x < −3 or x > 3", "x > 9"]
+    a: 2
+    e: "Roots ±3. A U-shaped graph is above the axis outside the roots."
+  - q: "Solve x² + x − 6 ≤ 0."
+    o: ["x ≤ −3 or x ≥ 2", "−2 ≤ x ≤ 3", "x ≥ 2", "−3 ≤ x ≤ 2"]
+    a: 3
+    e: "(x + 3)(x − 2) ≤ 0 between the roots: −3 ≤ x ≤ 2."
+  - q: "Solve: x + y = 7 and x − y = 1."
+    o: ["x = 4, y = 3", "x = 3, y = 4", "x = 5, y = 2", "x = 6, y = 1"]
+    a: 0
+    e: "Adding gives 2x = 8, so x = 4, then y = 3."
+  - q: "Solve: y = 2x and x² + y = 8."
+    o: ["x = 2 only", "x = 2 or x = −4", "x = −2 or x = 4", "x = 4 only"]
+    a: 1
+    e: "x² + 2x − 8 = 0, so (x + 4)(x − 2) = 0."
+  - q: "The line y = 2x + c is a tangent to y = x² + 1. What is c?"
+    o: ["c = 1", "c = 2", "c = 0", "c = −1"]
+    a: 2
+    e: "x² − 2x + (1 − c) = 0 must have equal roots: 4 − 4(1 − c) = 0, so c = 0."
+  - q: "What do the solutions of a pair of simultaneous equations represent graphically?"
+    o: ["The gradients", "The y-intercepts", "The turning points", "The points where the graphs intersect"]
+    a: 3
+    e: "Each solution is a point on both graphs."
+  - q: "What is the minimum value of y = x² − 8x + 20?"
+    o: ["4", "20", "−4", "8"]
+    a: 0
+    e: "y = (x − 4)² + 4, so the minimum is 4 (at x = 4)."
+  - q: "Solve 2x² = 8x."
+    o: ["x = 4 only", "x = 0 or x = 4", "x = 0 only", "x = ±2"]
+    a: 1
+    e: "2x² − 8x = 0, so 2x(x − 4) = 0. Don't divide by x, or you lose x = 0."
+  - q: "How many times does y = x² − 6x + 9 meet the x-axis?"
+    o: ["Twice", "Never", "Once (it touches the axis)", "Three times"]
+    a: 2
+    e: "Discriminant = 36 − 36 = 0, so one repeated root: (x − 3)²."
+  - q: "Write {x : x < 1} ∪ {x : x > 5} in words."
+    o: ["x is between 1 and 5", "x is greater than 1 and less than 5", "x equals 1 or 5", "x is less than 1 or greater than 5"]
+    a: 3
+    e: "∪ means 'or' (union of the two sets)."
+  - q: "Write 2x² − 12x + 3 in the form a(x + p)² + q."
+    o: ["2(x − 3)² − 15", "2(x − 3)² + 3", "2(x − 6)² − 69", "2(x + 3)² − 15"]
+    a: 0
+    e: "2(x² − 6x) + 3 = 2[(x − 3)² − 9] + 3 = 2(x − 3)² − 15."
+  - q: "Solve x² − 4x − 1 = 0, giving answers to 2 decimal places."
+    o: ["x = 3.73 or x = 0.27", "x = 4.24 or x = −0.24", "x = 2.24 or x = −2.24", "x = 4.45 or x = −0.45"]
+    a: 1
+    e: "x = [4 ± √20]/2 = 2 ± √5 ≈ 4.24 or −0.24."

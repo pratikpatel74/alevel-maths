@@ -1,0 +1,133 @@
+id: "s4"
+order: 14
+year: 1
+section: "S"
+badge: "O"
+spec: "O"
+title: "Hypothesis testing (binomial)"
+desc: "Null and alternative hypotheses, significance levels, one- and two-tailed tests, test statistics, p-values, critical regions and actual significance levels."
+practicals: []
+summary:
+  - h: "Language of hypothesis testing"
+    p:
+      - "A **hypothesis test** uses a sample to decide whether there is evidence to reject a claim about a population parameter, here p."
+      - "**Null hypothesis H₀**: the assumed value, e.g. H₀: p = 0.3."
+      - "**Alternative hypothesis H₁**: what you suspect: p > 0.3 or p < 0.3 (**one-tailed**), or p ≠ 0.3 (**two-tailed**)."
+      - "**Significance level**: the probability threshold for rejecting H₀, e.g. 5%."
+      - "**Test statistic**: the observed value from the sample, e.g. X = 10."
+  - h: "Carrying out a test"
+    p:
+      - "Assume H₀ is true, so X ~ B(n, p)."
+      - "**p-value method**: find the probability of getting a result **at least as extreme** as the observed value. If it is **less than** the significance level, **reject H₀**."
+      - "For a **two-tailed** test, compare each tail with **half** the significance level."
+      - "Write a **conclusion in context**, using non-assertive language: 'There is sufficient evidence to suggest that...'"
+  - h: "Critical regions"
+    p:
+      - "The **critical region** is the set of values that would lead to rejecting H₀."
+      - "The **critical value** is the first value in the critical region."
+      - "The **actual significance level** is the probability of being in the critical region when H₀ is true. It is usually a bit less than the stated level."
+pitfalls:
+  - "Hypotheses are about the **population parameter p**, not the sample."
+  - "Compare P(X ≥ observed) for an upper test, or P(X ≤ observed) for a lower test, not P(X = observed)."
+  - "Never say 'H₀ is true' or 'proved'. Say there is or isn't sufficient evidence."
+examples:
+  - q: "Past records say 30% of customers buy a dessert. In a sample of 20, 10 buy one. Test at the 5% level whether the proportion has increased."
+    steps:
+      - "H₀: p = 0.3. H₁: p > 0.3. Under H₀, X ~ B(20, 0.3)."
+      - "P(X ≥ 10) = 1 − P(X ≤ 9) = 0.0480."
+      - "0.0480 < 0.05, so reject H₀."
+    a: "There is sufficient evidence at the 5% level to suggest that the proportion buying a dessert has increased."
+  - q: "X ~ B(20, 0.4). Find the critical region for a lower-tailed test at the 5% level."
+    steps:
+      - "P(X ≤ 3) = 0.0160 and P(X ≤ 4) = 0.0510."
+      - "0.0510 > 0.05, so 4 isn't in the critical region."
+    a: "Critical region X ≤ 3 (actual significance level 1.6%)."
+questions:
+  - q: "What does the null hypothesis H₀ state?"
+    o: ["The value you suspect is true", "The assumed value of the parameter, which is tested", "That the result is significant", "The sample proportion"]
+    a: 1
+    e: "H₀ is assumed true unless there is enough evidence against it."
+  - q: "A coin is suspected to be biased towards heads. Which hypotheses are correct?"
+    o: ["H₀: p = 0.5, H₁: p > 0.5", "H₀: p > 0.5, H₁: p = 0.5", "H₀: p = 0.5, H₁: p ≠ 0.5", "H₀: p = 0.5, H₁: p < 0.5"]
+    a: 0
+    e: "The suspicion is specifically 'more heads', so a one-tailed upper test."
+  - q: "A test is set up to check whether a dice is biased (in either direction) for sixes. What type of test is this?"
+    o: ["One-tailed, upper", "One-tailed, lower", "Two-tailed", "Not a hypothesis test"]
+    a: 2
+    e: "H₁: p ≠ 1/6, so two-tailed."
+  - q: "In a two-tailed test at the 5% level, what probability is each tail compared with?"
+    o: ["5%", "10%", "1%", "2.5%"]
+    a: 3
+    e: "The significance level is split between the two tails."
+  - q: "H₀: p = 0.3, H₁: p > 0.3, n = 20, observed X = 10. P(X ≥ 10) = 0.048. Conclusion at 5%?"
+    o: ["Reject H₀: evidence that p > 0.3", "Accept H₁ as proved", "Do not reject H₀", "The test is invalid"]
+    a: 0
+    e: "0.048 < 0.05, so there is sufficient evidence to reject H₀."
+  - q: "H₀: p = 0.5, H₁: p > 0.5, n = 15, X = 12. P(X ≥ 12) = 0.0176. Conclusion at 1%?"
+    o: ["Reject H₀", "Do not reject H₀: insufficient evidence at the 1% level", "Accept that p > 0.5", "Prove p = 0.5"]
+    a: 1
+    e: "0.0176 > 0.01, so there is not enough evidence at the 1% level."
+  - q: "What is a critical region?"
+    o: ["The values of p", "The observed value", "The set of values of the test statistic that would lead to rejecting H₀", "The significance level"]
+    a: 2
+    e: "If the observed value is in the critical region, reject H₀."
+  - q: "X ~ B(20, 0.3). P(X ≥ 9) = 0.1133, P(X ≥ 10) = 0.0480. What is the upper critical region at 5%?"
+    o: ["X ≥ 9", "X ≥ 11", "X ≤ 10", "X ≥ 10"]
+    a: 3
+    e: "The smallest value where the tail probability is below 0.05 is 10."
+  - q: "For the critical region X ≥ 10 under B(20, 0.3), what is the actual significance level?"
+    o: ["4.8%", "5%", "11.3%", "10%"]
+    a: 0
+    e: "The actual significance level is P(X ≥ 10) = 0.048."
+  - q: "X ~ B(20, 0.4). P(X ≤ 3) = 0.0160, P(X ≤ 4) = 0.0510. What is the lower critical region at 5%?"
+    o: ["X ≤ 4", "X ≤ 3", "X ≤ 5", "X ≥ 3"]
+    a: 1
+    e: "P(X ≤ 4) exceeds 0.05, so the region is X ≤ 3."
+  - q: "What is the test statistic in a binomial hypothesis test?"
+    o: ["The significance level", "The value of p", "The observed number of successes in the sample", "The critical value"]
+    a: 2
+    e: "E.g. X = 10 successes in the sample."
+  - q: "Which conclusion is correctly worded?"
+    o: ["H₀ is false", "This proves the coin is biased", "H₀ is true", "There is sufficient evidence at the 5% level to suggest the coin is biased"]
+    a: 3
+    e: "Use non-assertive language and put the conclusion in context."
+  - q: "Why is the actual significance level often less than the stated level?"
+    o: ["Because the binomial distribution is discrete, so tail probabilities jump in steps", "Because of rounding errors", "Because n is too small", "It's always equal"]
+    a: 0
+    e: "There's usually no value that gives exactly 5%."
+  - q: "In a hypothesis test, what is p?"
+    o: ["The sample proportion", "The population parameter (probability of success)", "The p-value", "The critical value"]
+    a: 1
+    e: "Hypotheses are always about the population parameter."
+  - q: "A p-value is 0.03 in a one-tailed test at 5%. What do you do?"
+    o: ["Do not reject H₀", "Accept H₀", "Reject H₀", "Repeat the test"]
+    a: 2
+    e: "0.03 < 0.05, so the result is significant."
+  - q: "In an upper-tailed test with X = 7 observed, which probability do you calculate?"
+    o: ["P(X = 7)", "P(X ≤ 7)", "P(X < 7)", "P(X ≥ 7)"]
+    a: 3
+    e: "The probability of a result at least as extreme as the one observed."
+  - q: "A new drug is claimed to have a higher cure rate than 0.6. Which is H₁?"
+    o: ["p > 0.6", "p < 0.6", "p = 0.6", "p ≠ 0.6"]
+    a: 0
+    e: "The claim is that the rate has increased."
+  - q: "What does a 5% significance level mean?"
+    o: ["There's a 5% chance H₁ is true", "There's a 5% probability of rejecting H₀ when it is actually true", "95% of samples are significant", "The sample is 5% of the population"]
+    a: 1
+    e: "It's the threshold probability for deciding a result is unusual under H₀."
+  - q: "H₀: p = 0.4, H₁: p < 0.4, n = 20, X = 3 observed. P(X ≤ 3) = 0.016. Conclusion at 5%?"
+    o: ["Do not reject H₀", "Accept H₀", "Reject H₀: evidence that p < 0.4", "Inconclusive"]
+    a: 2
+    e: "0.016 < 0.05, so reject H₀."
+  - q: "Why do we assume H₀ is true when calculating probabilities?"
+    o: ["Because it is always correct", "Because H₁ can't be tested", "To make the test two-tailed", "To see how unlikely the observed result would be if H₀ were true"]
+    a: 3
+    e: "If the result would be very unlikely under H₀, that is evidence against it."
+  - q: "What happens to the critical region if the significance level is reduced from 5% to 1%?"
+    o: ["It gets smaller (more extreme values only)", "It gets bigger", "It stays the same", "It disappears"]
+    a: 0
+    e: "Stronger evidence is needed, so fewer values are in the critical region."
+  - q: "Under H₀, X ~ B(20, 0.3). The critical region is X ≥ 10. Observed X = 9. Conclusion?"
+    o: ["Reject H₀", "Do not reject H₀: 9 is not in the critical region", "Accept H₁", "Change to a two-tailed test"]
+    a: 1
+    e: "The observed value must be in the critical region to reject H₀."

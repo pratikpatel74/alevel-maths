@@ -1,0 +1,137 @@
+id: "p14"
+order: 20
+year: 2
+section: "P"
+badge: "E"
+spec: "E"
+title: "Radians and trigonometric functions"
+desc: "Radian measure, arc length and sector area, small-angle approximations, sec, cosec and cot, and inverse trig functions."
+practicals: []
+summary:
+  - h: "Radians"
+    p:
+      - "**π radians = 180°**. To convert degrees to radians, multiply by π/180."
+      - "Key values: 30° = π/6, 45° = π/4, 60° = π/3, 90° = π/2, 360° = 2π."
+      - "**Arc length**: `s = rθ`. **Sector area**: `A = ½r²θ` (θ in radians)."
+      - "**Segment area** = sector − triangle = ½r²(θ − sin θ)."
+  - h: "Small-angle approximations (θ in radians)"
+    p:
+      - "`sin θ ≈ θ`"
+      - "`cos θ ≈ 1 − θ²/2`"
+      - "`tan θ ≈ θ`"
+  - h: "Reciprocal functions"
+    p:
+      - "`sec θ = 1/cos θ`, `cosec θ = 1/sin θ`, `cot θ = 1/tan θ = cos θ/sin θ`."
+      - "Identities: `1 + tan²θ = sec²θ` and `1 + cot²θ = cosec²θ`."
+      - "Graphs of sec and cosec have asymptotes where cos or sin is zero, and range |y| ≥ 1."
+  - h: "Inverse trig functions"
+    p:
+      - "**arcsin x**: domain −1 ≤ x ≤ 1, range −π/2 ≤ y ≤ π/2."
+      - "**arccos x**: domain −1 ≤ x ≤ 1, range 0 ≤ y ≤ π."
+      - "**arctan x**: domain all real x, range −π/2 < y < π/2."
+      - "Their graphs are reflections of the restricted sin, cos and tan graphs in y = x."
+pitfalls:
+  - "Use **radians** in s = rθ, A = ½r²θ, small-angle approximations and calculus."
+  - "sec is 1/cos (not 1/sin). Remember: the third letter matches: **s**e**c** → **c**os, **c**o**s**ec → **s**in."
+  - "Check your calculator mode before every trig calculation."
+examples:
+  - q: "A sector has radius 6 cm and angle 1.2 radians. Find the arc length and area."
+    steps:
+      - "s = rθ = 6 × 1.2 = 7.2 cm."
+      - "A = ½r²θ = ½ × 36 × 1.2 = 21.6 cm²."
+    a: "7.2 cm and 21.6 cm²"
+  - q: "Use small-angle approximations to simplify (1 − cos 2θ)/(θ sin θ)."
+    steps:
+      - "cos 2θ ≈ 1 − (2θ)²/2 = 1 − 2θ²."
+      - "1 − cos 2θ ≈ 2θ²."
+      - "θ sin θ ≈ θ²."
+    a: "≈ 2"
+questions:
+  - q: "Convert 120° to radians."
+    o: ["π/3", "2π/3", "3π/2", "4π/3"]
+    a: 1
+    e: "120 × π/180 = 2π/3."
+  - q: "Convert 5π/6 radians to degrees."
+    o: ["150°", "120°", "300°", "135°"]
+    a: 0
+    e: "5π/6 × 180/π = 150°."
+  - q: "Find the arc length of a sector with radius 10 cm and angle 0.5 radians."
+    o: ["50 cm", "25 cm", "5 cm", "20 cm"]
+    a: 2
+    e: "s = rθ = 10 × 0.5 = 5 cm."
+  - q: "Find the area of a sector with radius 4 cm and angle π/4."
+    o: ["π cm²", "4π cm²", "8π cm²", "2π cm²"]
+    a: 3
+    e: "A = ½ × 16 × π/4 = 2π cm²."
+  - q: "What is the small-angle approximation for cos θ?"
+    o: ["1 − θ²/2", "θ", "1", "1 − θ"]
+    a: 0
+    e: "cos θ ≈ 1 − θ²/2 for small θ in radians."
+  - q: "Use small angles to approximate sin 0.1."
+    o: ["0.01", "0.1", "0.995", "1"]
+    a: 1
+    e: "sin θ ≈ θ = 0.1."
+  - q: "What is sec θ?"
+    o: ["1/sin θ", "1/tan θ", "1/cos θ", "sin θ/cos θ"]
+    a: 2
+    e: "sec θ = 1/cos θ."
+  - q: "Which identity is correct?"
+    o: ["1 + sec²θ = tan²θ", "sin²θ + sec²θ = 1", "1 + cosec²θ = cot²θ", "1 + tan²θ = sec²θ"]
+    a: 3
+    e: "Divide sin²θ + cos²θ = 1 by cos²θ."
+  - q: "What is the exact value of cosec(π/6)?"
+    o: ["2", "1/2", "2/√3", "√3"]
+    a: 0
+    e: "sin(π/6) = ½, so cosec = 2."
+  - q: "What is the range of y = sec x?"
+    o: ["−1 ≤ y ≤ 1", "y ≤ −1 or y ≥ 1", "y > 0", "All real y"]
+    a: 1
+    e: "Since |cos x| ≤ 1, |sec x| ≥ 1."
+  - q: "What is the range of arccos x?"
+    o: ["−π/2 ≤ y ≤ π/2", "−π ≤ y ≤ π", "0 ≤ y ≤ π", "0 ≤ y ≤ 2π"]
+    a: 2
+    e: "The cos function is restricted to 0 to π so it's one-to-one."
+  - q: "Evaluate arcsin(½) in radians."
+    o: ["π/3", "π/4", "5π/6", "π/6"]
+    a: 3
+    e: "sin(π/6) = ½."
+  - q: "What is the domain of arctan x?"
+    o: ["All real x", "−1 ≤ x ≤ 1", "x ≥ 0", "−π/2 < x < π/2"]
+    a: 0
+    e: "tan takes every real value, so arctan is defined for all real x."
+  - q: "Solve sec x = 2 for 0 ≤ x < 2π."
+    o: ["π/6, 11π/6", "π/3, 5π/3", "π/3, 2π/3", "π/6, 5π/6"]
+    a: 1
+    e: "cos x = ½, so x = π/3 or 2π − π/3 = 5π/3."
+  - q: "Simplify 1 + cot²θ."
+    o: ["sec²θ", "tan²θ", "cosec²θ", "1"]
+    a: 2
+    e: "Divide sin²θ + cos²θ = 1 by sin²θ."
+  - q: "Find the area of the segment cut off by a chord in a circle of radius 2, angle π/2."
+    o: ["π", "π − 1", "2", "π − 2"]
+    a: 3
+    e: "½r²(θ − sin θ) = 2(π/2 − 1) = π − 2."
+  - q: "Using small-angle approximations, simplify (sin 3θ)/(2θ)."
+    o: ["3/2", "3θ/2", "2/3", "1"]
+    a: 0
+    e: "sin 3θ ≈ 3θ, so 3θ/2θ = 3/2."
+  - q: "Why must θ be in radians for small-angle approximations?"
+    o: ["Degrees are too large", "The approximations come from the radian definition of the functions (e.g. sin θ ≈ θ only for radians)", "Calculators require it", "They don't need radians"]
+    a: 1
+    e: "In degrees, sin 1° ≈ 0.0175, not 1."
+  - q: "What is the exact value of cot(π/4)?"
+    o: ["0", "√2", "1", "√3"]
+    a: 2
+    e: "tan(π/4) = 1, so cot = 1."
+  - q: "Solve cosec x = −2 for 0 ≤ x < 2π."
+    o: ["π/6, 5π/6", "7π/6, 5π/3", "4π/3, 5π/3", "7π/6, 11π/6"]
+    a: 3
+    e: "sin x = −½, so x = π + π/6 = 7π/6 or 2π − π/6 = 11π/6."
+  - q: "A sector has area 12 cm² and radius 4 cm. Find the angle."
+    o: ["1.5 radians", "3 radians", "0.75 radians", "6 radians"]
+    a: 0
+    e: "12 = ½ × 16 × θ, so θ = 1.5."
+  - q: "Solve tan²x = 3 for 0 ≤ x < π."
+    o: ["π/3 only", "π/3 and 2π/3", "π/6 and 5π/6", "π/4 and 3π/4"]
+    a: 1
+    e: "tan x = ±√3: x = π/3 or 2π/3 in [0, π)."

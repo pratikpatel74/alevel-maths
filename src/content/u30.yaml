@@ -1,0 +1,131 @@
+id: "s6"
+order: 30
+year: 2
+section: "S"
+badge: "N"
+spec: "N"
+title: "The normal distribution"
+desc: "Properties of the normal distribution, finding probabilities, the standard normal Z, inverse normal, finding unknown μ or σ, and the normal approximation to the binomial."
+practicals: []
+summary:
+  - h: "Properties"
+    p:
+      - "X ~ N(μ, σ²) is a **continuous** distribution: bell-shaped, **symmetric** about the mean μ, with mean = median = mode."
+      - "About **68%** of values lie within 1σ of μ, **95%** within 2σ, and **99.7%** within 3σ."
+      - "Points of inflection are at μ ± σ."
+      - "For continuous distributions, P(X = a) = 0, so P(X < a) = P(X ≤ a)."
+  - h: "Calculating probabilities"
+    p:
+      - "Use your calculator's **normal cdf** with lower bound, upper bound, μ and σ (not σ²)."
+      - "**Standard normal**: Z ~ N(0, 1). `Z = (X − μ)/σ`."
+      - "**Inverse normal**: find the value with a given probability below it."
+      - "To find an unknown μ or σ: write the probability using Z, find the z-value with inverse normal, then solve `(x − μ)/σ = z`."
+  - h: "Normal approximation to the binomial"
+    p:
+      - "If X ~ B(n, p) with **n large** and **p close to 0.5**, then X ≈ N(np, np(1 − p))."
+      - "Use a **continuity correction**: P(X ≤ 45) becomes P(Y < 45.5); P(X < 45) becomes P(Y < 44.5)."
+      - "Judge whether a normal model is suitable from the shape of the data, e.g. a histogram that is roughly symmetric and bell-shaped."
+pitfalls:
+  - "Enter **σ**, not σ², into your calculator."
+  - "Use a continuity correction when approximating a **discrete** distribution with the normal."
+  - "Sketch the curve and shade the region to check your answer is sensible."
+examples:
+  - q: "X ~ N(50, 4²). Find P(45 < X < 55)."
+    steps:
+      - "Normal cdf with lower 45, upper 55, μ = 50, σ = 4."
+    a: "0.7887"
+  - q: "X ~ N(μ, 3²) and P(X < 20) = 0.8. Find μ."
+    steps:
+      - "P(Z < (20 − μ)/3) = 0.8."
+      - "Inverse normal: z = 0.8416."
+      - "(20 − μ)/3 = 0.8416, so μ = 20 − 2.525."
+    a: "μ ≈ 17.48"
+questions:
+  - q: "Which is a property of the normal distribution?"
+    o: ["It is skewed", "It is symmetric about the mean", "The mean is larger than the median", "It is discrete"]
+    a: 1
+    e: "Mean = median = mode, and the curve is bell-shaped."
+  - q: "Approximately what percentage of a normal distribution lies within 2 standard deviations of the mean?"
+    o: ["95%", "68%", "99.7%", "50%"]
+    a: 0
+    e: "The 68–95–99.7 rule."
+  - q: "X ~ N(50, 4²). Find P(X < 55) to 4 d.p."
+    o: ["0.1056", "0.7887", "0.8944", "0.9772"]
+    a: 2
+    e: "Using the normal cdf: 0.8944."
+  - q: "X ~ N(50, 16). Find P(X > 58) to 4 d.p."
+    o: ["0.9772", "0.1587", "0.0456", "0.0228"]
+    a: 3
+    e: "58 is 2σ above the mean (σ = 4). P = 0.0228."
+  - q: "X ~ N(50, 16). What value of σ should you enter into your calculator?"
+    o: ["4", "16", "256", "8"]
+    a: 0
+    e: "The second parameter is the variance σ² = 16, so σ = 4."
+  - q: "For a continuous distribution, what is P(X = 30)?"
+    o: ["It depends on μ", "0", "1", "0.5"]
+    a: 1
+    e: "A single point has zero width, so zero probability."
+  - q: "What is the standard normal distribution?"
+    o: ["N(1, 0)", "N(0, 0)", "N(0, 1)", "N(1, 1)"]
+    a: 2
+    e: "Z ~ N(0, 1), with mean 0 and standard deviation 1."
+  - q: "X ~ N(100, 15²). Find the z-value for x = 130."
+    o: ["1", "30", "0.5", "2"]
+    a: 3
+    e: "z = (130 − 100)/15 = 2."
+  - q: "Find P(Z < 1.5) to 4 d.p."
+    o: ["0.9332", "0.0668", "0.8664", "0.5"]
+    a: 0
+    e: "From the standard normal cdf."
+  - q: "Find a such that P(Z < a) = 0.95."
+    o: ["1.96", "1.6449", "1.2816", "0.95"]
+    a: 1
+    e: "Inverse normal of 0.95 gives 1.6449."
+  - q: "Find a such that P(−a < Z < a) = 0.95."
+    o: ["1.6449", "2.5758", "1.96", "1.2816"]
+    a: 2
+    e: "Each tail is 0.025, so P(Z < a) = 0.975, giving a = 1.96."
+  - q: "X ~ N(μ, 3²) and P(X < 20) = 0.8. Find μ to 2 d.p."
+    o: ["22.52", "20.84", "17.60", "17.48"]
+    a: 3
+    e: "(20 − μ)/3 = 0.8416, so μ = 20 − 2.52 = 17.48."
+  - q: "X ~ N(30, σ²) and P(X > 36) = 0.1. Find σ to 3 s.f."
+    o: ["4.68", "6.00", "2.34", "7.69"]
+    a: 0
+    e: "(36 − 30)/σ = 1.2816, so σ = 6/1.2816 ≈ 4.68."
+  - q: "When can B(n, p) be approximated by a normal distribution?"
+    o: ["When n is small", "When n is large and p is close to 0.5", "When p is close to 0 or 1", "Always"]
+    a: 1
+    e: "Then the binomial is roughly symmetric and bell-shaped."
+  - q: "X ~ B(100, 0.4). Which normal distribution approximates it?"
+    o: ["N(40, 40)", "N(100, 0.4)", "N(40, 24)", "N(40, 0.24)"]
+    a: 2
+    e: "μ = np = 40, σ² = np(1 − p) = 24."
+  - q: "Using a continuity correction, P(X ≤ 45) for binomial X becomes what for normal Y?"
+    o: ["P(Y < 44.5)", "P(Y < 45)", "P(Y > 45.5)", "P(Y < 45.5)"]
+    a: 3
+    e: "X ≤ 45 includes 45, so extend half a unit to 45.5."
+  - q: "Using a continuity correction, P(X > 20) for binomial X becomes:"
+    o: ["P(Y > 20.5)", "P(Y > 19.5)", "P(Y > 20)", "P(Y < 20.5)"]
+    a: 0
+    e: "X > 20 means X ≥ 21, which starts at 20.5."
+  - q: "Why is a continuity correction needed?"
+    o: ["Because the normal is skewed", "Because a discrete distribution is being approximated by a continuous one", "To make the mean larger", "Because σ is unknown"]
+    a: 1
+    e: "Each whole number is represented by an interval of width 1."
+  - q: "X ~ N(50, 4²). Find P(45 < X < 55) to 4 d.p."
+    o: ["0.8944", "0.6827", "0.7887", "0.9545"]
+    a: 2
+    e: "Normal cdf between 45 and 55: 0.7887."
+  - q: "Where are the points of inflection on a normal curve?"
+    o: ["At μ", "At μ ± 2σ", "At μ ± 3σ", "At μ ± σ"]
+    a: 3
+    e: "The curve changes from concave to convex one standard deviation from the mean."
+  - q: "Find P(Z > −0.8) to 4 d.p."
+    o: ["0.7881", "0.2119", "0.5", "0.8"]
+    a: 0
+    e: "By symmetry, P(Z > −0.8) = P(Z < 0.8) = 0.7881."
+  - q: "A data set has a histogram that is strongly skewed to the right. Is a normal model suitable?"
+    o: ["Yes, always", "No, because the normal distribution is symmetric", "Yes, if the mean is positive", "Only for large samples"]
+    a: 1
+    e: "A normal model needs a roughly symmetric, bell-shaped distribution."

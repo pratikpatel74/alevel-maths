@@ -1,0 +1,132 @@
+id: "m2"
+order: 16
+year: 1
+section: "M"
+badge: "R"
+spec: "R"
+title: "Forces and Newton's laws"
+desc: "Types of force, force diagrams, resultant forces and equilibrium, Newton's three laws, F = ma, connected particles, lifts and pulleys."
+practicals: []
+summary:
+  - h: "Forces"
+    p:
+      - "**Weight** W = mg acts downwards. **Normal reaction** R acts perpendicular to a surface. **Tension** acts along a string, away from the object. **Thrust** pushes along a rod. **Friction** opposes motion."
+      - "Draw a clear **force diagram** with all forces labelled."
+      - "The **resultant force** is the vector sum of all forces. If it is zero, the object is in **equilibrium** (at rest or constant velocity)."
+  - h: "Newton's laws"
+    p:
+      - "**First law**: an object stays at rest or moves with constant velocity unless acted on by a resultant force."
+      - "**Second law**: `F = ma`, where F is the **resultant** force in newtons."
+      - "**Third law**: for every action there is an equal and opposite reaction (on a different object)."
+      - "Resolve forces in the direction of motion and use F = ma. Perpendicular to the motion, forces balance."
+  - h: "Connected particles"
+    p:
+      - "For two particles joined by a light inextensible string, both have the **same acceleration** and the **tension is the same** throughout."
+      - "Write F = ma for **each particle** separately, or for the **whole system** (tension is then internal and cancels)."
+      - "**Smooth pulleys**: tension is the same on both sides."
+      - "**Lifts**: for a person of mass m in a lift accelerating upwards at a, R − mg = ma."
+pitfalls:
+  - "Use the **resultant** force in F = ma, not just one force."
+  - "Mass in kg, weight in newtons: W = mg."
+  - "Newton's third law pairs act on **different** objects, so they don't cancel on a single force diagram."
+examples:
+  - q: "A 5 kg box is pulled along a smooth floor by a horizontal force of 20 N. Find its acceleration."
+    steps:
+      - "Resultant force = 20 N (smooth, so no friction)."
+      - "F = ma: 20 = 5a."
+    a: "a = 4 m s⁻²"
+  - q: "Particles of mass 3 kg and 2 kg hang either side of a smooth pulley. Find the acceleration and tension (g = 9.8)."
+    steps:
+      - "Whole system: (3 − 2)g = (3 + 2)a, so 9.8 = 5a, a = 1.96 m s⁻²."
+      - "For the 2 kg particle (moving up): T − 2g = 2a."
+      - "T = 2(9.8) + 2(1.96) = 19.6 + 3.92 = 23.52."
+    a: "a = 1.96 m s⁻², T = 23.5 N (3 s.f.)"
+questions:
+  - q: "What is the weight of a 6 kg mass? (g = 9.8)"
+    o: ["6 N", "58.8 N", "0.61 N", "15.8 N"]
+    a: 1
+    e: "W = mg = 6 × 9.8 = 58.8 N."
+  - q: "What does Newton's first law state?"
+    o: ["An object stays at rest or moves with constant velocity unless acted on by a resultant force", "F = ma", "Every action has an equal and opposite reaction", "Weight = mg"]
+    a: 0
+    e: "No resultant force means no change in velocity."
+  - q: "A 2 kg object has a resultant force of 10 N. What is its acceleration?"
+    o: ["20 m s⁻²", "0.2 m s⁻²", "5 m s⁻²", "12 m s⁻²"]
+    a: 2
+    e: "a = F/m = 10/2 = 5 m s⁻²."
+  - q: "An object moves at constant velocity. What is the resultant force?"
+    o: ["Equal to its weight", "Positive", "Equal to friction", "Zero"]
+    a: 3
+    e: "Constant velocity means zero acceleration, so the resultant force is zero."
+  - q: "Forces of 12 N (right) and 5 N (left) act on a 3.5 kg particle. Find its acceleration."
+    o: ["2 m s⁻² to the right", "4.9 m s⁻² to the right", "2 m s⁻² to the left", "3.4 m s⁻² to the right"]
+    a: 0
+    e: "Resultant = 7 N right. a = 7/3.5 = 2 m s⁻²."
+  - q: "What is the normal reaction on a 4 kg box resting on a horizontal floor? (g = 9.8)"
+    o: ["4 N", "39.2 N", "0 N", "9.8 N"]
+    a: 1
+    e: "Vertical equilibrium: R = mg = 39.2 N."
+  - q: "Two particles connected by a light inextensible string. Which statement is true?"
+    o: ["They have different accelerations", "The tension is different at each end", "They have the same acceleration and the tension is the same throughout", "The string has weight"]
+    a: 2
+    e: "Inextensible means equal accelerations; light means equal tension."
+  - q: "A car of mass 1200 kg accelerates at 1.5 m s⁻². The resistance is 400 N. Find the driving force."
+    o: ["1800 N", "1400 N", "400 N", "2200 N"]
+    a: 3
+    e: "F − 400 = 1200 × 1.5 = 1800, so F = 2200 N."
+  - q: "A 60 kg person stands in a lift accelerating upwards at 2 m s⁻². What is the normal reaction? (g = 9.8)"
+    o: ["708 N", "588 N", "468 N", "120 N"]
+    a: 0
+    e: "R − 60g = 60 × 2, so R = 588 + 120 = 708 N."
+  - q: "The same 60 kg person is in a lift accelerating downwards at 2 m s⁻². What is the normal reaction?"
+    o: ["708 N", "468 N", "588 N", "120 N"]
+    a: 1
+    e: "60g − R = 60 × 2, so R = 588 − 120 = 468 N."
+  - q: "What does Newton's third law say about the Earth pulling a ball down?"
+    o: ["Nothing pulls back", "The ball's weight cancels it", "The ball pulls the Earth up with an equal force", "The normal reaction is the pair"]
+    a: 2
+    e: "Third-law pairs act on different bodies: the ball on the Earth, the Earth on the ball."
+  - q: "What is the SI unit of force?"
+    o: ["kg", "J", "W", "N"]
+    a: 3
+    e: "1 N = 1 kg m s⁻²."
+  - q: "Particles of 5 kg and 3 kg hang over a smooth pulley. Find the acceleration. (g = 9.8)"
+    o: ["2.45 m s⁻²", "4.9 m s⁻²", "1.96 m s⁻²", "9.8 m s⁻²"]
+    a: 0
+    e: "(5 − 3)g = 8a, so a = 19.6/8 = 2.45 m s⁻²."
+  - q: "For the 5 kg and 3 kg pulley system with a = 2.45 m s⁻², what is the tension?"
+    o: ["29.4 N", "36.75 N", "49 N", "7.35 N"]
+    a: 1
+    e: "For the 3 kg particle: T − 3g = 3a, so T = 29.4 + 7.35 = 36.75 N."
+  - q: "A car (1000 kg) tows a trailer (500 kg) with a light rigid towbar. Driving force 3000 N, no resistance. Find the acceleration."
+    o: ["3 m s⁻²", "6 m s⁻²", "2 m s⁻²", "1 m s⁻²"]
+    a: 2
+    e: "Whole system: 3000 = 1500a, so a = 2 m s⁻²."
+  - q: "Using the previous question, what is the tension in the towbar?"
+    o: ["3000 N", "2000 N", "1500 N", "1000 N"]
+    a: 3
+    e: "Trailer only: T = 500 × 2 = 1000 N."
+  - q: "What happens to the tension calculations if a string is modelled as light?"
+    o: ["Tension is the same throughout the string", "Tension is zero", "Tension equals weight", "The string can stretch"]
+    a: 0
+    e: "A light string has no mass, so no force is needed to accelerate it."
+  - q: "A box is in equilibrium. Which is true?"
+    o: ["It must be at rest", "The resultant force is zero", "Only gravity acts", "It accelerates"]
+    a: 1
+    e: "Equilibrium means the forces balance; it may be at rest or at constant velocity."
+  - q: "A force of 30 N acts on a 10 kg mass on a rough surface. Friction is 10 N. Find the acceleration."
+    o: ["3 m s⁻²", "4 m s⁻²", "2 m s⁻²", "1 m s⁻²"]
+    a: 2
+    e: "Resultant = 20 N, a = 20/10 = 2 m s⁻²."
+  - q: "A particle accelerates from rest at 3 m s⁻² for 4 s due to a 15 N resultant force. What is its mass?"
+    o: ["45 kg", "3 kg", "12 kg", "5 kg"]
+    a: 3
+    e: "m = F/a = 15/3 = 5 kg."
+  - q: "On a force diagram, in which direction does the normal reaction act?"
+    o: ["Perpendicular to the surface, away from it", "Vertically down", "Along the surface", "In the direction of motion"]
+    a: 0
+    e: "The surface pushes back on the object at right angles to the surface."
+  - q: "What does 'inextensible' mean for a string?"
+    o: ["It has no mass", "It doesn't stretch, so connected objects have the same acceleration", "It is smooth", "It can't break"]
+    a: 1
+    e: "If the string can't stretch, both ends move together."

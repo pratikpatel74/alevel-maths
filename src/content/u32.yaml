@@ -1,0 +1,131 @@
+id: "m3"
+order: 32
+year: 2
+section: "M"
+badge: "Q"
+spec: "Q"
+title: "Projectiles"
+desc: "Modelling projectile motion by resolving velocity, time of flight, maximum height, range, and the equation of the trajectory."
+practicals: []
+summary:
+  - h: "Modelling assumptions"
+    p:
+      - "The projectile is a **particle**, there is **no air resistance**, and the only force is **gravity** (acceleration g downwards)."
+      - "Horizontal and vertical motion are treated **separately**, linked by **time**."
+  - h: "Resolving the initial velocity"
+    p:
+      - "A projectile launched at speed U at angle θ above the horizontal has components: horizontal `U cos θ`, vertical `U sin θ`."
+      - "**Horizontal**: constant velocity, so `x = (U cos θ)t`."
+      - "**Vertical**: constant acceleration −g, so use suvat: `y = (U sin θ)t − ½gt²` and `v_y = U sin θ − gt`."
+  - h: "Key results"
+    p:
+      - "**Maximum height**: vertical velocity is zero. `0 = (U sin θ)² − 2gH`, so `H = U² sin²θ / 2g`."
+      - "**Time of flight** (landing at the same level): y = 0, so `T = 2U sin θ / g`."
+      - "**Range**: `R = (U cos θ) × T = U² sin 2θ / g`. Maximum range at θ = 45°."
+      - "**Trajectory equation**: eliminate t to get `y = x tan θ − gx² / (2U² cos²θ)`."
+      - "Speed at any time: `√(v_x² + v_y²)`. Direction: `tan α = v_y / v_x`."
+pitfalls:
+  - "Horizontal acceleration is **zero**. Only the vertical motion uses g."
+  - "Take **upwards as positive** and use a = −g, or be consistent with your chosen direction."
+  - "Range and time-of-flight formulas only apply when landing at the **same height**. Otherwise use suvat directly."
+examples:
+  - q: "A ball is kicked from the ground at 20 m s⁻¹ at 30° above the horizontal. Find the time of flight and the range (g = 9.8)."
+    steps:
+      - "Vertical component: 20 sin 30° = 10 m s⁻¹. Horizontal: 20 cos 30° = 17.32 m s⁻¹."
+      - "Vertically, y = 0: 0 = 10t − 4.9t², so t = 10/4.9 = 2.04 s."
+      - "Range = 17.32 × 2.041 = 35.3 m."
+    a: "Time ≈ 2.04 s, range ≈ 35.3 m"
+  - q: "A stone is thrown horizontally at 15 m s⁻¹ from the top of a 20 m cliff. How far from the base does it land? (g = 9.8)"
+    steps:
+      - "Vertically: initial vertical velocity 0. 20 = ½(9.8)t², so t² = 4.08, t = 2.02 s."
+      - "Horizontally: x = 15 × 2.02 = 30.3 m."
+    a: "About 30.3 m from the base"
+questions:
+  - q: "In projectile motion (no air resistance), what is the horizontal acceleration?"
+    o: ["g", "0", "−g", "Depends on the angle"]
+    a: 1
+    e: "No horizontal force acts, so horizontal velocity is constant."
+  - q: "A projectile is launched at 30 m s⁻¹ at 60° above the horizontal. What is the horizontal component of velocity?"
+    o: ["15 m s⁻¹", "26.0 m s⁻¹", "30 m s⁻¹", "17.3 m s⁻¹"]
+    a: 0
+    e: "30 cos 60° = 15 m s⁻¹."
+  - q: "A projectile is launched at 30 m s⁻¹ at 60° above the horizontal. What is the vertical component?"
+    o: ["15 m s⁻¹", "17.3 m s⁻¹", "26.0 m s⁻¹", "30 m s⁻¹"]
+    a: 2
+    e: "30 sin 60° = 25.98 ≈ 26.0 m s⁻¹."
+  - q: "At the maximum height of a projectile, what is true?"
+    o: ["Speed is zero", "Horizontal velocity is zero", "Acceleration is zero", "Vertical velocity is zero"]
+    a: 3
+    e: "It is still moving horizontally, but momentarily has no vertical velocity."
+  - q: "A ball is projected with vertical component 14.7 m s⁻¹. How long does it take to reach maximum height? (g = 9.8)"
+    o: ["1.5 s", "3.0 s", "0.67 s", "14.7 s"]
+    a: 0
+    e: "v = u + at: 0 = 14.7 − 9.8t, so t = 1.5 s."
+  - q: "Using the same vertical component of 14.7 m s⁻¹, what is the maximum height? (g = 9.8)"
+    o: ["22.05 m", "11.0 m", "7.35 m", "14.7 m"]
+    a: 1
+    e: "v² = u² + 2as: 0 = 14.7² − 19.6H, so H = 216.09/19.6 = 11.0 m."
+  - q: "What is the formula for the time of flight of a projectile landing at its launch height?"
+    o: ["U sin θ / g", "U cos θ / g", "2U sin θ / g", "U² sin 2θ / g"]
+    a: 2
+    e: "Solve 0 = (U sin θ)t − ½gt² for the non-zero t."
+  - q: "At what angle of projection is the range greatest (same launch and landing height)?"
+    o: ["30°", "60°", "90°", "45°"]
+    a: 3
+    e: "R = U² sin 2θ / g is greatest when sin 2θ = 1, so θ = 45°."
+  - q: "A stone is thrown horizontally from a cliff. What is its initial vertical velocity?"
+    o: ["0", "g", "The throw speed", "It depends on the cliff height"]
+    a: 0
+    e: "Thrown horizontally means all initial velocity is horizontal."
+  - q: "A ball falls 44.1 m from rest. How long does it take? (g = 9.8)"
+    o: ["9.0 s", "3.0 s", "4.5 s", "2.1 s"]
+    a: 1
+    e: "44.1 = 4.9t², t² = 9, t = 3 s."
+  - q: "A ball is thrown horizontally at 12 m s⁻¹ and lands after 2.5 s. How far does it travel horizontally?"
+    o: ["4.8 m", "14.5 m", "30 m", "60 m"]
+    a: 2
+    e: "x = 12 × 2.5 = 30 m."
+  - q: "Which is a modelling assumption for projectiles?"
+    o: ["The projectile spins", "Air resistance is large", "g changes with height", "The projectile is a particle with no air resistance"]
+    a: 3
+    e: "These simplify the model so only gravity acts."
+  - q: "After 2 s, a projectile has v_x = 8 m s⁻¹ and v_y = −6 m s⁻¹. What is its speed?"
+    o: ["10 m s⁻¹", "14 m s⁻¹", "2 m s⁻¹", "48 m s⁻¹"]
+    a: 0
+    e: "√(8² + 6²) = 10 m s⁻¹."
+  - q: "With v_x = 8 m s⁻¹ and v_y = −6 m s⁻¹, what angle does the velocity make with the horizontal?"
+    o: ["53.1° above", "36.9° below", "36.9° above", "53.1° below"]
+    a: 1
+    e: "tan α = 6/8, α = 36.9°. v_y is negative, so it's moving below the horizontal."
+  - q: "What is the range of a projectile launched at 20 m s⁻¹ at 45° (g = 9.8)?"
+    o: ["20.4 m", "28.9 m", "40.8 m", "81.6 m"]
+    a: 2
+    e: "R = U² sin 90° / g = 400/9.8 = 40.8 m."
+  - q: "Which equation gives the vertical displacement of a projectile at time t?"
+    o: ["y = (U cos θ)t", "y = U sin θ − gt", "y = ½gt²", "y = (U sin θ)t − ½gt²"]
+    a: 3
+    e: "Constant acceleration −g with initial vertical velocity U sin θ."
+  - q: "Doubling the launch speed of a projectile (same angle) multiplies the range by:"
+    o: ["4", "2", "√2", "8"]
+    a: 0
+    e: "R ∝ U², so doubling U gives 4 times the range."
+  - q: "Two balls are released at the same time from the same height: one dropped, one thrown horizontally. Which lands first?"
+    o: ["The dropped ball", "They land at the same time", "The thrown ball", "It depends on the throw speed"]
+    a: 1
+    e: "Vertical motion is identical (both start with zero vertical velocity)."
+  - q: "What is the trajectory of a projectile (no air resistance)?"
+    o: ["A straight line", "A circle", "A parabola", "A hyperbola"]
+    a: 2
+    e: "y is a quadratic function of x."
+  - q: "A projectile is launched at 25 m s⁻¹ at 30°. What is its time of flight to the same level? (g = 9.8)"
+    o: ["1.28 s", "4.42 s", "5.10 s", "2.55 s"]
+    a: 3
+    e: "T = 2 × 25 sin 30° / 9.8 = 25/9.8 = 2.55 s."
+  - q: "How does air resistance affect the real range compared with the model?"
+    o: ["The real range is shorter", "The real range is longer", "No difference", "It doubles"]
+    a: 0
+    e: "Air resistance slows the projectile, reducing its range."
+  - q: "A ball is projected at 10 m s⁻¹ at 30° from a height of 2 m. When it lands on the ground, what is its vertical displacement?"
+    o: ["+2 m", "−2 m", "0 m", "10 m"]
+    a: 1
+    e: "Taking up as positive from the launch point, the ground is 2 m below: s = −2 m."
