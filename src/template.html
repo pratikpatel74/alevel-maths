@@ -235,7 +235,7 @@ function toggleTheme() {
 
 function topbar(extra) {
   return `<header class="topbar"><a class="brand" href="#hub"><span>AQA ${DATA.meta.code}</span><b>${DATA.meta.subject} Study Hub</b></a>
-  <div class="top-right">${extra || ''}<button class="icon-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Switch light or dark theme">${isDark() ? ICON_SUN : ICON_MOON}</button></div></header>`;
+  <div class="top-right">${extra || '<a class="pill-btn" href="https://alevel-study-hubs.netlify.app/">← All subjects</a>'}<button class="icon-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Switch light or dark theme">${isDark() ? ICON_SUN : ICON_MOON}</button></div></header>`;
 }
 const footer = () => `<footer class="footer wrap">Original notes written against the AQA A-level ${DATA.meta.subject} specification (${DATA.meta.code}). Check facts against your own textbook and teacher.</footer>`;
 
@@ -269,7 +269,7 @@ function renderHub() {
   $('#app').innerHTML = topbar() + `
   <section class="hero wrap"><div class="eyebrow">AQA A-level ${DATA.meta.subject} · ${DATA.meta.code}</div>
     <h1>${DATA.meta.subject}<br><em>Study Hub</em></h1>
-    <p class="hero-sub">Topic summaries, required practicals and quizzes for every section of the specification. Each quiz draws 10 questions from a pool of 22.</p>
+    <p class="hero-sub">${DATA.meta.heroSub || 'Topic summaries, required practicals and quizzes for every section of the specification. Each quiz draws 10 questions from a pool of 22.'}</p>
     <div class="stats"><div class="stat"><div class="stat-num">${units.length}</div><div class="stat-label">Topics</div></div><div class="stat"><div class="stat-num">${qCount}</div><div class="stat-label">Questions</div></div>${DATA.practicals.length ? `<div class="stat"><div class="stat-num">${DATA.practicals.length}</div><div class="stat-label">Practicals</div></div>` : `<div class="stat"><div class="stat-num">${units.reduce((a, u) => a + (u.examples || []).length, 0)}</div><div class="stat-label">Worked examples</div></div>`}</div>
   </section>
   <main class="main wrap">
