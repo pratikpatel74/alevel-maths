@@ -9,6 +9,8 @@ desc: "Using calculus for displacement, velocity and acceleration as functions o
 practicals: []
 summary:
   - h: "Calculus in kinematics"
+    fig: kinematics-calculus
+    cap: "When acceleration isn't constant, suvat doesn't apply. Differentiate to go from displacement to velocity to acceleration; integrate (adding a constant, found from initial conditions) to go back."
     p:
       - "When acceleration is **not constant**, suvat can't be used. Use calculus."
       - "**Differentiate** to go down: `v = ds/dt`, `a = dv/dt = d²s/dt²`."

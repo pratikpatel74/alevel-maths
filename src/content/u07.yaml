@@ -14,6 +14,8 @@ summary:
       - "**e ≈ 2.718** is the special base for which the gradient of eˣ equals eˣ."
       - "`d/dx (eᵏˣ) = keᵏˣ`, so the rate of change is proportional to the value."
   - h: "Logarithms"
+    fig: exp-log-graphs
+    cap: "y = ln x is the inverse of y = eˣ, so its graph is the reflection in y = x. eˣ is always positive and passes through (0, 1); ln x is only defined for x > 0 and passes through (1, 0)."
     p:
       - "`logₐ b = c ⇔ aᶜ = b`"
       - "`logₐ x + logₐ y = logₐ (xy)`"

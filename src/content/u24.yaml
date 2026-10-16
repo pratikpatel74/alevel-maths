@@ -22,6 +22,8 @@ summary:
       - "Link rates using the chain rule, e.g. `dV/dt = dV/dr × dr/dt`."
       - "Form differential equations from statements like 'the rate of change of P is proportional to P': dP/dt = kP."
   - h: "Second derivatives, concavity and inflection"
+    fig: concavity
+    cap: "y = x³ − 3x. Where f″(x) < 0 the curve is concave (gold) and where f″(x) > 0 it is convex (accent). At the point of inflection f″(x) = 0 and changes sign. Here f″(x) = 6x, so the inflection is at x = 0."
     p:
       - "**Convex** (curving upwards, like ∪): f″(x) > 0. **Concave** (like ∩): f″(x) < 0."
       - "A **point of inflection** is where the curve changes from convex to concave (or vice versa): f″(x) = 0 **and changes sign**."

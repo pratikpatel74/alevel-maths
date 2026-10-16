@@ -9,6 +9,8 @@ desc: "The product moment correlation coefficient, testing for correlation, the 
 practicals: []
 summary:
   - h: "Correlation"
+    fig: correlation
+    cap: "The product moment correlation coefficient r measures how close the points are to a straight line: near +1 or −1 is strong linear correlation, near 0 is none. Test H₀: ρ = 0 against the critical value for your sample size."
     p:
       - "The **product moment correlation coefficient (PMCC)**, r, measures the strength of **linear** correlation: −1 ≤ r ≤ 1."
       - "r close to 1: strong positive. Close to −1: strong negative. Close to 0: little or no linear correlation."

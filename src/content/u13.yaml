@@ -13,6 +13,8 @@ summary:
       - "A **discrete random variable** X takes separate values, each with a probability. The probabilities sum to 1."
       - "A probability distribution can be shown as a table or a function, e.g. P(X = x) = kx."
   - h: "Binomial model"
+    fig: binomial
+    cap: "X ~ B(10, 0.3): 10 independent trials, each with P(success) = 0.3. The most likely value is 3, which is also the mean np. P(X = 3) = 10C3 × 0.3³ × 0.7⁷ = 0.2668."
     p:
       - "X ~ B(n, p) when there are: a **fixed number** of trials n; each trial has **two outcomes** (success/failure); a **constant probability** p of success; and trials are **independent**."
       - "`P(X = r) = ⁿCᵣ pʳ (1 − p)ⁿ⁻ʳ`"

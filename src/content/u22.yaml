@@ -9,6 +9,8 @@ desc: "Defining curves parametrically, converting between parametric and Cartesi
 practicals: []
 summary:
   - h: "Parametric equations"
+    fig: parametric
+    cap: "Each value of the parameter t gives one point (t², 2t). Eliminating t (t = y ÷ 2, so x = y² ÷ 4) gives the Cartesian equation y² = 4x."
     p:
       - "Both x and y are given in terms of a third variable, the **parameter** (often t or θ): x = f(t), y = g(t)."
       - "Each value of t gives a point (x, y) on the curve. The **domain** of t controls which part of the curve is drawn."

@@ -20,6 +20,8 @@ summary:
       - "**Composite**: fg(x) means apply **g first**, then f: fg(x) = f(g(x))."
       - "**Inverse** f⁻¹(x): swap x and y, then rearrange. The graph of f⁻¹ is the **reflection of f in y = x**. Domain of f⁻¹ = range of f."
   - h: "Modulus"
+    fig: modulus
+    cap: "To sketch y = |f(x)|, draw y = f(x) and reflect any part below the x-axis up into it. Here the V has its vertex at (2, 0). To solve |2x − 4| = k, find where a horizontal line meets both arms."
     p:
       - "|x| is the **absolute value** of x: always ≥ 0."
       - "**y = |f(x)|**: reflect the parts **below the x-axis** upwards."

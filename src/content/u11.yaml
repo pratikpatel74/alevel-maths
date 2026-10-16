@@ -25,6 +25,8 @@ summary:
       - "**Coding**: if y = (x − a)/b, then ȳ = (x̄ − a)/b and σᵧ = σₓ/b."
       - "**Outliers**: often defined as more than 1.5 × IQR beyond the quartiles, or more than 2 standard deviations from the mean."
   - h: "Diagrams"
+    fig: box-plot
+    cap: "A box plot shows the median, the quartiles and the spread. Here IQR = 24, so any value above 58 + 1.5 × 24 = 94 is an outlier; the whisker stops at the largest value that isn't one."
     p:
       - "**Histograms**: frequency density = frequency ÷ class width. **Area** represents frequency."
       - "**Box plots** show min, Q₁, median, Q₃, max (and outliers)."

@@ -20,6 +20,8 @@ summary:
       - "`tan 2A = 2tan A/(1 − tan²A)`"
       - "Choose the cos 2A version that leaves the equation in a single trig function."
   - h: "R cos(θ ± α) and R sin(θ ± α)"
+    fig: r-alpha
+    cap: "Expanding R sin(θ + α) = R sin θ cos α + R cos θ sin α and matching with 4 sin θ + 3 cos θ gives R cos α = 4 and R sin α = 3. These are the sides of a right-angled triangle, so R = 5 and tan α = 3 ÷ 4."
     p:
       - "`a sin θ + b cos θ = R sin(θ + α)`, where `R = √(a² + b²)` and `tan α = b/a`."
       - "Expand R sin(θ + α) = R sin θ cos α + R cos θ sin α, and compare coefficients: R cos α = a, R sin α = b."

@@ -9,6 +9,8 @@ desc: "3D vectors using i, j, k, magnitude, distance between points, position ve
 practicals: []
 summary:
   - h: "3D vectors"
+    fig: vectors-3d
+    cap: "A point in 3D is reached by moving along x, then y, then z. Its position vector is 3i + 4j + 2k and its distance from the origin is √(3² + 4² + 2²) = √29."
     p:
       - "In 3D, vectors are written **ai + bj + ck** or as a column (a, b, c). k is the unit vector in the z-direction."
       - "Add, subtract and multiply by scalars component by component, as in 2D."

@@ -9,6 +9,8 @@ desc: "Integration as the limit of a sum, areas between curves, areas under para
 practicals: []
 summary:
   - h: "Integration as the limit of a sum"
+    fig: limit-of-sum
+    cap: "The area under a curve is approximated by thin rectangles of width δx and height y. As δx → 0 the total Σ y δx becomes the exact area, written ∫ y dx from a to b."
     p:
       - "The area under a curve is the limit of the sum of thin rectangles: `∫ₐᵇ y dx = lim (δx→0) Σ y δx`."
   - h: "Areas"

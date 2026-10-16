@@ -16,6 +16,8 @@ summary:
       - "From a two-way table, restrict to the row or column for B, then find the proportion that are also A."
       - "From a Venn diagram, P(A | B) = (region in both A and B) ÷ (total of B)."
   - h: "Tree diagrams"
+    fig: tree-diagram
+    cap: "R = it rains (0.3), L = late. The second branches are conditional probabilities, e.g. P(L | R) = 0.9. Multiply along branches, add the outcomes you want: P(L) = 0.55. Then P(R | L) = P(R ∩ L) ÷ P(L)."
     p:
       - "Second-stage branches are **conditional** probabilities, e.g. P(late | rain)."
       - "To find P(first event | outcome), use P(A | B) = P(A ∩ B)/P(B), adding all paths that give B."

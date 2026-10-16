@@ -9,6 +9,8 @@ desc: "Radian measure, arc length and sector area, small-angle approximations, s
 practicals: []
 summary:
   - h: "Radians"
+    fig: radians
+    cap: "One radian is the angle where the arc length equals the radius. With θ in radians, arc length s = rθ and sector area = ½r²θ. Convert using π radians = 180°."
     p:
       - "**π radians = 180°**. To convert degrees to radians, multiply by π/180."
       - "Key values: 30° = π/6, 45° = π/4, 60° = π/3, 90° = π/2, 360° = 2π."

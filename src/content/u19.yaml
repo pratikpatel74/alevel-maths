@@ -20,6 +20,8 @@ summary:
       - "`Sₙ = n/2 [2a + (n − 1)d] = n/2 (a + l)`, where l is the last term."
       - "Sum of the first n integers: n(n + 1)/2."
   - h: "Geometric sequences and series"
+    fig: geometric-series
+    cap: "With a = 1 and r = ½, each term halves, so the partial sums Sₙ get ever closer to 2 without reaching it. A geometric series converges only when |r| < 1, and then S∞ = a ÷ (1 − r)."
     p:
       - "Constant **common ratio r**."
       - "`uₙ = arⁿ⁻¹`"

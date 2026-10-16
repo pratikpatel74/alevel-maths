@@ -20,6 +20,8 @@ summary:
       - "Direction: the angle with the positive x-axis is found using tan θ = b/a (draw a sketch to check the quadrant)."
       - "A **unit vector** has magnitude 1: unit vector in the direction of **a** is **a**/|**a**|."
   - h: "Position vectors and geometry"
+    fig: vectors
+    cap: "With position vectors a and b, the vector from A to B is b − a (go back along a, then along b). The midpoint M of AB has position vector a + ½(b − a) = ½(a + b)."
     p:
       - "The **position vector** of A is **OA** = **a**."
       - "`AB = OB − OA = b − a`"

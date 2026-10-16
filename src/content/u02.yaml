@@ -15,6 +15,8 @@ summary:
       - "**Completing the square**: x² + bx + c = (x + b/2)² − (b/2)² + c."
       - "The completed square form a(x + p)² + q gives the **turning point** (−p, q)."
   - h: "The discriminant"
+    fig: discriminant
+    cap: "The discriminant b² − 4ac tells you how many times the graph of y = ax² + bx + c meets the x-axis: twice (positive), touching once (zero) or not at all (negative)."
     p:
       - "`Discriminant = b² − 4ac`"
       - "**b² − 4ac > 0**: two distinct real roots. **= 0**: one repeated root (the graph touches the x-axis). **< 0**: no real roots."

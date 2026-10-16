@@ -19,6 +19,8 @@ summary:
       - "**Independent**: one event doesn't affect the other. `P(A ∩ B) = P(A) × P(B)`."
       - "To **test** for independence, check whether P(A) × P(B) equals P(A ∩ B)."
   - h: "Diagrams"
+    fig: venn
+    cap: "The overlap is P(A ∩ B) = 0.2. P(A) = 0.5 and P(B) = 0.45, and P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.75. All four regions add up to 1. Since 0.5 × 0.45 ≠ 0.2, A and B aren't independent."
     p:
       - "**Venn diagrams** show overlapping events. Fill in the intersection first, then work outwards. All regions add to 1."
       - "**Tree diagrams**: multiply along branches for 'and', add the end results for 'or'."
