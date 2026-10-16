@@ -1,10 +1,37 @@
-import yaml, json, glob, sys, collections, re
+# Shared build script: identical in alevel-biology, alevel-chemistry and alevel-maths.
+# Subject-specific text lives in content/site.yaml. Diagrams live in diagrams/<name>.svg
+# and are attached to a summary section with `fig: <name>` and `cap: "<caption>"`.
+import yaml, json, glob, sys, collections, re, os, html
+
+TEMPLATE_VERSION = 2
 
 SITE = yaml.safe_load(open("content/site.yaml"))
 PLAN = SITE["plan"]
 
+def load_svg(name, cap):
+    path = f"diagrams/{name}.svg"
+    if not os.path.exists(path): return None, f"missing {path}"
+    svg = open(path).read()
+    svg = re.sub(r"<\?xml[^>]*\?>", "", svg).strip()
+    # drop metadata some file-transfer tools inject (e.g. C2PA provenance)
+    svg = re.sub(r"<metadata>.*?</metadata>", "", svg, flags=re.S)
+    svg = re.sub(r'\s+xmlns:(?!xlink)\w+="[^"]*"', "", svg)
+    for bad in ("<script", "<style", "<foreignObject", "<image"):
+        if bad in svg: return None, f"{path} contains {bad}"
+    if not svg.startswith("<svg") or "viewBox" not in svg: return None, f"{path} needs an <svg> root with a viewBox"
+    if not cap: return None, f"{name}: figure needs a cap (caption)"
+    # Prefix ids so two figures on one page can't clash
+    pre = "f-" + re.sub(r"[^a-z0-9]", "", name.lower()) + "-"
+    svg = re.sub(r'id="([^"]+)"', lambda m: f'id="{pre}{m.group(1)}"', svg)
+    svg = re.sub(r'url\(#([^)]+)\)', lambda m: f'url(#{pre}{m.group(1)})', svg)
+    svg = re.sub(r'href="#([^"]+)"', lambda m: f'href="#{pre}{m.group(1)}"', svg)
+    label = html.escape(re.sub(r"\*\*|`", "", cap), quote=True)
+    svg = svg.replace("<svg", f'<svg role="img" aria-label="{label}"', 1)
+    return svg, None
+
 errors = []
 units = []
+figs_used = set()
 for f in sorted(glob.glob("content/u*.yaml")):
     u = yaml.safe_load(open(f))
     units.append(u)
@@ -25,8 +52,16 @@ for f in sorted(glob.glob("content/u*.yaml")):
         errors.append(f"{u['id']}: answer positions skewed {dict(pos)}")
     for k in ("id", "section", "spec", "title", "desc", "summary"):
         if k not in u: errors.append(f"{u.get('id')}: missing {k}")
+    for s in u.get("summary", []):
+        if "fig" in s:
+            svg, err = load_svg(s["fig"], s.get("cap", ""))
+            if err: errors.append(f"{u['id']}: {err}")
+            else:
+                s["svg"] = svg; figs_used.add(s["fig"])
 
 units.sort(key=lambda u: u["order"])
+unused = sorted(set(os.path.splitext(os.path.basename(f))[0] for f in glob.glob("diagrams/*.svg")) - figs_used)
+if unused: print("Note: diagrams not used by any topic:", ", ".join(unused))
 pr = yaml.safe_load(open("content/practicals.yaml"))
 ids = {u["id"] for u in units}
 for p in pr:
@@ -47,6 +82,6 @@ data = {
 tpl = open("template.html").read().replace("__TITLE__", SITE["meta"]["title"])
 js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 open("../index.html", "w").write(tpl.replace("__DATA__", js))
-print(f"OK: {len(units)} units, {sum(len(u['questions']) for u in units)} questions, {len(pr)} practicals")
+print(f"OK (template v{TEMPLATE_VERSION}): {len(units)} units, {sum(len(u['questions']) for u in units)} questions, {len(pr)} practicals, {len(figs_used)} diagrams")
 for u in units:
     print(f"  {u['id']:5} {dict(sorted(collections.Counter(q['a'] for q in u['questions']).items()))}")

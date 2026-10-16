@@ -20,6 +20,8 @@ summary:
       - "When the object is moving or on the point of moving (**limiting equilibrium**), `F = μR`."
       - "Smooth surface: μ = 0."
   - h: "Inclined planes"
+    fig: inclined-plane
+    cap: "Resolve parallel and perpendicular to the slope. Perpendicular: R = mg cos θ. Parallel: the weight component mg sin θ acts down the slope; friction acts up the slope if the particle would slide down. Limiting friction: F = μR."
     p:
       - "Perpendicular to the slope: `R = mg cos α` (plus or minus components of any other forces)."
       - "Parallel: use `F = ma` along the slope, with friction acting up or down the slope opposite to the motion."

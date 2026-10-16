@@ -14,6 +14,8 @@ summary:
       - "**Scalars**: distance, speed, time, mass. **Vectors**: displacement, velocity, acceleration, force."
       - "Modelling assumptions: **particle** (no size, no rotation), **smooth** (no friction), **light** (no mass), **inextensible** string, **no air resistance**."
   - h: "Motion graphs"
+    fig: vt-graph
+    cap: "On a velocity–time graph, the gradient is the acceleration and the area under the graph is the displacement. Here: ½ × 2.5 × 10 + 4.5 × 10 + ½ × 3 × 10 = 12.5 + 45 + 15 = 72.5 m."
     p:
       - "**Displacement–time**: gradient = **velocity**."
       - "**Velocity–time**: gradient = **acceleration**. **Area under** the graph = **displacement**."

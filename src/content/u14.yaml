@@ -22,6 +22,8 @@ summary:
       - "For a **two-tailed** test, compare each tail with **half** the significance level."
       - "Write a **conclusion in context**, using non-assertive language: 'There is sufficient evidence to suggest that...'"
   - h: "Critical regions"
+    fig: critical-region
+    cap: "X ~ B(20, 0.5), testing H₁: p < 0.5 at the 5% level. P(X ≤ 5) = 0.0207 is below 0.05 but P(X ≤ 6) = 0.0577 isn't, so the critical region is X ≤ 5. The actual significance level is 2.07%."
     p:
       - "The **critical region** is the set of values that would lead to rejecting H₀."
       - "The **critical value** is the first value in the critical region."

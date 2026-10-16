@@ -13,6 +13,8 @@ summary:
       - "The projectile is a **particle**, there is **no air resistance**, and the only force is **gravity** (acceleration g downwards)."
       - "Horizontal and vertical motion are treated **separately**, linked by **time**."
   - h: "Resolving the initial velocity"
+    fig: projectile
+    cap: "Split U into U cos θ (horizontal, constant: no acceleration) and U sin θ (vertical, acceleration g downwards). At maximum height the vertical velocity is 0; at the end of the range the vertical displacement is 0."
     p:
       - "A projectile launched at speed U at angle θ above the horizontal has components: horizontal `U cos θ`, vertical `U sin θ`."
       - "**Horizontal**: constant velocity, so `x = (U cos θ)t`."

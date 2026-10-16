@@ -134,6 +134,26 @@ a { color:inherit; }
 .sum-sec li { position:relative; padding-left:18px; font-size:0.93rem; line-height:1.65; max-width:68ch; }
 .sum-sec li::before { content:''; position:absolute; left:2px; top:0.68em; width:6px; height:6px; border-radius:2px; background:var(--acc); opacity:0.7; }
 .sum-sec li strong, .rp li strong { font-weight:700; color:var(--text); }
+/* Diagrams: inline SVG from src/diagrams, themed by these classes */
+.fig { margin:18px 0 6px; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 16px 12px; max-width:640px; }
+.fig svg { display:block; width:100%; height:auto; color:var(--text); font-family:var(--font); overflow:visible; }
+@media (max-width:540px) { .fig { padding:12px 8px 10px; margin-left:-8px; margin-right:-8px; } }
+.fig figcaption { color:var(--muted); font-size:0.82rem; line-height:1.55; margin-top:10px; max-width:62ch; }
+.fig text { fill:currentColor; font-size:15px; font-weight:500; }
+.fig .tm { fill:var(--muted); font-size:13px; }
+.fig .ta { fill:var(--acc); font-weight:700; }
+.fig .tg { fill:var(--gold); font-weight:700; }
+.fig .ln { fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.fig .lm { fill:none; stroke:var(--muted); stroke-width:1.3; stroke-dasharray:5 5; }
+.fig .bx { fill:var(--surface); stroke:var(--border-hi); stroke-width:1.5; }
+.fig .ac { fill:none; stroke:var(--acc); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+.fig .gl { fill:none; stroke:var(--gold); stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+.fig .at { fill:color-mix(in srgb, var(--acc) 16%, transparent); stroke:var(--acc); stroke-width:1.6; }
+.fig .gt { fill:color-mix(in srgb, var(--gold) 16%, transparent); stroke:var(--gold); stroke-width:1.6; }
+.fig .gap { fill:none; stroke:var(--card); stroke-width:9; }
+.fig .thick { stroke-width:4.5; }
+.fig .nt { fill:color-mix(in srgb, var(--text) 12%, transparent); stroke:var(--muted); stroke-width:1.2; }
+.fig .af { fill:var(--acc); } .fig .gf { fill:var(--gold); } .fig .cf { fill:currentColor; } .fig .mf { fill:var(--muted); }
 .ex { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--acc); border-radius:12px; padding:18px 20px; margin-bottom:18px; min-width:0; }
 .ex-tag { font-size:0.66rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--acc); margin-bottom:8px; }
 .ex-q { font-weight:600; font-size:0.95rem; margin-bottom:10px; line-height:1.55; }
@@ -292,7 +312,7 @@ function setYear(y) { store.set('year', y); renderHub(); }
 function renderSummary(u) {
   const cls = secClass(u);
   const exs = (u.examples || []).map((x, i) => `<section class="ex"><div class="ex-tag">Worked example ${i + 1}</div><p class="ex-q">${fmt(x.q)}</p><ol>${x.steps.map(st => `<li>${fmt(st)}</li>`).join('')}</ol><p class="ex-a"><b>Answer:</b> ${fmt(x.a)}</p></section>`).join('');
-  const secs = u.summary.map((s, i) => `<section class="sum-sec"><h2><span class="n">${String(i + 1).padStart(2, '0')}</span>${fmt(s.h)}</h2><ul>${s.p.map(p => `<li>${fmt(p)}</li>`).join('')}</ul></section>`).join('');
+  const secs = u.summary.map((s, i) => `<section class="sum-sec"><h2><span class="n">${String(i + 1).padStart(2, '0')}</span>${fmt(s.h)}</h2><ul>${s.p.map(p => `<li>${fmt(p)}</li>`).join('')}</ul>${s.svg ? `<figure class="fig">${s.svg}${s.cap ? `<figcaption>${fmt(s.cap)}</figcaption>` : ''}</figure>` : ''}</section>`).join('');
   const pit = u.pitfalls && u.pitfalls.length ? `<div class="callout"><h2>Where marks are lost</h2><ul>${u.pitfalls.map(p => `<li>${fmt(p)}</li>`).join('')}</ul></div>` : '';
   const rps = (u.practicals || []).map(n => { const p = rpById(n); return p ? `<a class="btn" href="#rp-${n}">RP${n}: ${esc(p.title)}</a>` : ''; }).join('');
   $('#app').innerHTML = topbar(`<a class="pill-btn" href="#hub">← Hub</a>`) + `

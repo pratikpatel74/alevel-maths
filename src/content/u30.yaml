@@ -9,6 +9,8 @@ desc: "Properties of the normal distribution, finding probabilities, the standar
 practicals: []
 summary:
   - h: "Properties"
+    fig: normal-curve
+    cap: "The normal curve is symmetrical about the mean μ. About 68% of values lie within 1 standard deviation of the mean and about 95% within 2. Points of inflection are at μ ± σ."
     p:
       - "X ~ N(μ, σ²) is a **continuous** distribution: bell-shaped, **symmetric** about the mean μ, with mean = median = mode."
       - "About **68%** of values lie within 1σ of μ, **95%** within 2σ, and **99.7%** within 3σ."

@@ -20,6 +20,8 @@ summary:
       - "Rewrite roots and fractions as powers first: √x = x^(1/2), 1/x² = x⁻²."
       - "dy/dx is the gradient function. d²y/dx² is the **second derivative**."
   - h: "Tangents and normals"
+    fig: tangent-normal
+    cap: "For y = ½x², dy/dx = x, so at (2, 2) the tangent has gradient 2. The normal is perpendicular, so its gradient is −1 ÷ 2 = −½. Then use y − y₁ = m(x − x₁)."
     p:
       - "Gradient of the **tangent** at x = a is f′(a)."
       - "The **normal** is perpendicular to the tangent: gradient −1/f′(a)."

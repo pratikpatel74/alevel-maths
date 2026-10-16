@@ -20,6 +20,8 @@ summary:
       - "**Third law**: for every action there is an equal and opposite reaction (on a different object)."
       - "Resolve forces in the direction of motion and use F = ma. Perpendicular to the motion, forces balance."
   - h: "Connected particles"
+    fig: pulley
+    cap: "Both particles have the same acceleration a, and the light inextensible string has the same tension T throughout. Write F = ma for each particle separately, in its own direction of motion, then solve the two equations together."
     p:
       - "For two particles joined by a light inextensible string, both have the **same acceleration** and the **tension is the same** throughout."
       - "Write F = ma for **each particle** separately, or for the **whole system** (tension is then internal and cancels)."

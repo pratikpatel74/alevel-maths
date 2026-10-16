@@ -19,6 +19,8 @@ summary:
       - "Take moments about a point where an **unknown force acts**, so it disappears from the equation."
       - "A **uniform** rod's weight acts at its **centre**. For a **non-uniform** rod, the centre of mass is elsewhere and may need to be found."
   - h: "Tilting and ladders"
+    fig: ladder
+    cap: "A uniform ladder of length L against a smooth wall: the wall gives only a horizontal reaction S, the ground gives a normal reaction R and friction F towards the wall. Take moments about the foot to remove R and F from the equation."
     p:
       - "When a rod is **on the point of tilting** about a support, the reaction at the **other** support is **zero**."
       - "**Ladders**: a ladder against a smooth wall has a horizontal reaction at the wall and a normal reaction plus friction at the ground. Resolve and take moments (usually about the foot)."

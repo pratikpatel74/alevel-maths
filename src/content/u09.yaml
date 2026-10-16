@@ -20,6 +20,8 @@ summary:
       - "`∫ₐᵇ f(x) dx = F(b) − F(a)`, where F is the integral of f. No + c needed."
       - "The **Fundamental Theorem of Calculus** links differentiation and integration."
   - h: "Areas"
+    fig: area-under-curve
+    cap: "An integral counts area below the x-axis as negative. When a curve crosses the axis, integrate each part separately (here 0 to 3, then 3 to 4) and add the sizes of the areas."
     p:
       - "The area between a curve and the **x-axis** from x = a to x = b is ∫ₐᵇ y dx."
       - "Areas **below** the x-axis give **negative** integrals. Find each part separately and add the magnitudes."

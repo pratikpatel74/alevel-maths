@@ -16,6 +16,8 @@ summary:
       - "`Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2)`"
       - "`Distance = √[(x₂ − x₁)² + (y₂ − y₁)²]`"
   - h: "Circles"
+    fig: circle
+    cap: "A circle with centre (a, b) and radius r has equation (x − a)² + (y − b)² = r². The tangent at any point is perpendicular to the radius there, so its gradient is −1 ÷ (gradient of the radius)."
     p:
       - "Centre (a, b), radius r: `(x − a)² + (y − b)² = r²`"
       - "If given in expanded form x² + y² + 2fx + 2gy + c = 0, **complete the square** in x and in y to find the centre and radius."

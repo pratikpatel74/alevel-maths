@@ -18,6 +18,8 @@ summary:
       - "**Staircase** diagrams (converging from one side) and **cobweb** diagrams (alternating sides) show convergence."
       - "Iteration converges if |g′(x)| < 1 near the root. Different rearrangements can converge or diverge."
   - h: "Newton–Raphson"
+    fig: newton-raphson
+    cap: "f(x) = x³ − 2x − 2. Start at x₀ = 2.6, follow the tangent down to the x-axis to get x₁ = 2.032, then repeat from x₁. It fails if f′(x) is close to 0 near the starting point (the tangent is nearly flat)."
     p:
       - "`xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)`"
       - "Uses the tangent at xₙ to estimate where the curve meets the x-axis."

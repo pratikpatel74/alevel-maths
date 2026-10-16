@@ -21,6 +21,8 @@ summary:
       - "**Reciprocal graphs** y = k/x and y = k/x² have **asymptotes** at x = 0 and y = 0."
       - "**Proportion**: y ∝ x means y = kx (straight line through the origin). y ∝ 1/x means y = k/x."
   - h: "Transformations of y = f(x)"
+    fig: transformations
+    cap: "Adding outside the function moves the graph **up**: f(x) + 3 is 3 units up. Changing x inside moves it **sideways the opposite way** to the sign: f(x − 2) is 2 units to the right."
     p:
       - "`y = f(x) + a`: translation by **(0, a)**, i.e. up a."
       - "`y = f(x + a)`: translation by **(−a, 0)**, i.e. left a."

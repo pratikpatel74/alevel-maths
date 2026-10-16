@@ -15,6 +15,8 @@ summary:
       - "**Area**: `Area = ½ab sin C`."
       - "**Ambiguous case**: when using the sine rule to find an angle, there may be two possible angles, θ and 180° − θ."
   - h: "Exact values and graphs"
+    fig: trig-graphs
+    cap: "Both graphs repeat every 360° and stay between −1 and 1. cos x is sin x shifted 90° to the left. Use the symmetry to find second solutions: sin x = sin(180° − x) and cos x = cos(360° − x)."
     p:
       - "sin 30° = ½, sin 45° = √2/2, sin 60° = √3/2. cos 30° = √3/2, cos 45° = √2/2, cos 60° = ½. tan 30° = 1/√3, tan 45° = 1, tan 60° = √3."
       - "y = sin x and y = cos x have **period 360°** and range −1 to 1. y = tan x has **period 180°** and asymptotes at x = 90°, 270°, ..."
