@@ -3,7 +3,7 @@
 # and are attached to a summary section with `fig: <name>` and `cap: "<caption>"`.
 import yaml, json, glob, sys, collections, re, os, html
 
-TEMPLATE_VERSION = 2
+TEMPLATE_VERSION = 3
 
 SITE = yaml.safe_load(open("content/site.yaml"))
 PLAN = SITE["plan"]
@@ -64,9 +64,16 @@ unused = sorted(set(os.path.splitext(os.path.basename(f))[0] for f in glob.glob(
 if unused: print("Note: diagrams not used by any topic:", ", ".join(unused))
 pr = yaml.safe_load(open("content/practicals.yaml"))
 ids = {u["id"] for u in units}
+vid_count = 0
 for p in pr:
     if p["unit"] not in ids:
         p["_pending"] = True
+    for v in p.get("videos", []) or []:
+        if not re.fullmatch(r"[A-Za-z0-9_-]{11}", str(v.get("yt", ""))):
+            errors.append(f"RP{p['n']}: video needs an 11-character YouTube id in yt")
+        if not v.get("title") or not v.get("by"):
+            errors.append(f"RP{p['n']}: video needs title and by")
+        vid_count += 1
 
 # practicals whose unit isn't built yet still show; link handled in page
 if errors:
@@ -82,6 +89,6 @@ data = {
 tpl = open("template.html").read().replace("__TITLE__", SITE["meta"]["title"])
 js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 open("../index.html", "w").write(tpl.replace("__DATA__", js))
-print(f"OK (template v{TEMPLATE_VERSION}): {len(units)} units, {sum(len(u['questions']) for u in units)} questions, {len(pr)} practicals, {len(figs_used)} diagrams")
+print(f"OK (template v{TEMPLATE_VERSION}): {len(units)} units, {sum(len(u['questions']) for u in units)} questions, {len(pr)} practicals, {vid_count} videos, {len(figs_used)} diagrams")
 for u in units:
     print(f"  {u['id']:5} {dict(sorted(collections.Counter(q['a'] for q in u['questions']).items()))}")

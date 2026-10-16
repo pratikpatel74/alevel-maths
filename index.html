@@ -173,6 +173,17 @@ a { color:inherit; }
 .rp-top .spec { font-size:0.74rem; color:var(--dim); margin-top:2px; }
 .rp h4 { font-size:0.68rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim); margin:14px 0 6px; }
 .rp ol, .rp ul { padding-left:20px; display:flex; flex-direction:column; gap:5px; font-size:0.9rem; line-height:1.6; }
+.vids { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,300px),1fr)); gap:14px; }
+.vid { min-width:0; }
+.vid-frame { position:relative; display:block; width:100%; aspect-ratio:16/9; border:0; padding:0; border-radius:10px; overflow:hidden; background:#000; cursor:pointer; }
+.vid-frame img { width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; transition:opacity .15s; }
+.vid-frame:hover img, .vid-frame:focus-visible img { opacity:1; }
+.vid-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.vid-play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:64px; height:44px; border-radius:12px; background:rgba(0,0,0,0.72); display:grid; place-items:center; }
+.vid-frame:hover .vid-play, .vid-frame:focus-visible .vid-play { background:#e62117; }
+.vid-cap { font-size:0.8rem; color:var(--muted); margin-top:6px; line-height:1.45; }
+.vid-cap b { color:var(--text); font-weight:600; }
+.vid-note { font-size:0.72rem; color:var(--dim); margin-top:8px; }
 .vars { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,180px),1fr)); gap:8px; }
 .var { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:10px 12px; font-size:0.84rem; min-width:0; }
 .var b { display:block; font-size:0.64rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--dim); margin-bottom:3px; }
@@ -324,11 +335,27 @@ function renderSummary(u) {
 }
 
 /* ---------- Practicals ---------- */
+function vidCard(v) {
+  const id = encodeURIComponent(v.yt);
+  return `<div class="vid"><button class="vid-frame" onclick="playVid(this,'${id}')" aria-label="Play video: ${esc(v.title)}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="vid-play"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l11 6-11 6z" fill="#fff"/></svg></span></button>
+  <div class="vid-cap"><b>${esc(v.title)}</b><br>${esc(v.by)} · <a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></div>`;
+}
+function playVid(btn, id) {
+  const f = document.createElement('iframe');
+  f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+  f.title = btn.getAttribute('aria-label').replace(/^Play video: /, '');
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  f.referrerPolicy = 'strict-origin-when-cross-origin';
+  const box = document.createElement('div'); box.className = 'vid-frame'; box.style.cursor = 'auto'; box.appendChild(f);
+  btn.replaceWith(box);
+}
 function rpCard(p) {
   const u = unitById(p.unit);
   const cls = u ? secClass(u) : 'sec1';
   return `<article class="rp ${cls}" id="rp-card-${p.n}"><div class="rp-top"><span class="rp-no">RP ${p.n}</span><div><h3>${esc(p.title)}</h3><div class="spec">Spec ${esc(p.spec)} · Year ${p.year}${u ? ` · <a href="#s-${u.id}">${esc(u.title)}</a>` : ''}</div></div></div>
   <p style="font-size:0.9rem;color:var(--muted)">${fmt(p.aim)}</p>
+  ${(p.videos || []).length ? `<h4>Video walkthrough${p.videos.length > 1 ? 's' : ''}</h4><div class="vids">${p.videos.map(vidCard).join('')}</div><div class="vid-note">Videos are by the teachers named and play from YouTube.</div>` : ''}
   <h4>Method</h4><ol>${p.method.map(m => `<li>${fmt(m)}</li>`).join('')}</ol>
   <h4>Variables</h4><div class="vars"><div class="var"><b>Independent</b>${fmt(p.iv)}</div><div class="var"><b>Dependent</b>${fmt(p.dv)}</div><div class="var"><b>Control</b>${fmt(p.cv)}</div></div>
   <h4>Exam points</h4><ul>${p.exam.map(m => `<li>${fmt(m)}</li>`).join('')}</ul></article>`;
